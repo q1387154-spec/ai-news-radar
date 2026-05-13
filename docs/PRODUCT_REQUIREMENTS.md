@@ -86,36 +86,45 @@
 
 | 信源 | 类型 | 接入方式 | 状态 |
 |------|------|---------|------|
-| 青浦区政府官网 (qingpu.gov.cn) | 政府官网 | Jina 兜底抓取 | 待接入 |
-| 长三角生态绿色一体化发展示范区 | 政府官网 | Jina 兜底抓取 | 待接入 |
-| 青浦区经委/科委 | 政府官网 | Jina 兜底抓取 | 待接入 |
+| 青浦区政府官网 (qingpu.gov.cn) | 政府官网 | Jina 兜底（需验证） | 待接入 |
+| 长三角生态绿色一体化发展示范区 | 政府官网 | Jina 兜底（需验证） | 待接入 |
+| 青浦区经委 (qingpu.gov.cn/jw） | 政府官网 | Jina 兜底（需验证） | 待接入 |
+| 青浦区科委 (qingpu.gov.cn/kjj） | 政府官网 | Jina 兜底（需验证） | 待接入 |
+| 青浦区人社局 | 政府官网 | Jina 兜底（需验证） | 待接入 |
 
 ### 第二优先级：上海市级
 
 | 信源 | 类型 | 接入方式 | 状态 |
 |------|------|---------|------|
-| 上海市经信委 (sheitc.sh.gov.cn) | 政府官网 | Jina 兜底 + RSS | 待确认RSS |
-| 上海市科委 (stcsm.sh.gov.cn) | 政府官网 | Jina 兜底 + RSS | 待确认RSS |
-| 上海市人社局 (rsj.sh.gov.cn) | 政府官网 | Jina 兜底 + RSS | 待确认RSS |
-| 上海市人民政府 (shanghai.gov.cn) | 政府官网 | Jina 兜底抓取 | 待接入 |
-| 交通运输部 (mot.gov.cn) | 国家官网 | Jina 兜底抓取 | 待接入 |
-| 上海人才市场 (shjob.gov.cn) | 招聘平台 | RSS（若有）/ Jina | 待确认 |
+| 上海市经信委 (sheitc.sh.gov.cn) | 政府官网 | RSS + Jina 兜底（需验证） | 待确认 |
+| 上海市科委 (stcsm.sh.gov.cn) | 政府官网 | RSS + Jina 兜底（需验证） | 待确认 |
+| 上海市人社局 (rsj.sh.gov.cn) | 政府官网 | RSS + Jina 兜底（需验证） | 待确认 |
+| 上海市商务委 (sw.sh.gov.cn) | 政府官网 | Jina 兜底（需验证） | 🆕 新增 |
+| 上海市人民政府 (shanghai.gov.cn) | 政府官网 | Jina 兜底（需验证） | 待接入 |
+| 上海市税务局 (shanghai.chinatax.gov.cn) | 政府官网 | Jina 兜底（需验证） | 🆕 新增 |
+| 交通运输部 (mot.gov.cn) | 国家官网 | RSS + Jina 兜底（需验证） | 待确认 |
+| 上海人才市场 (shjob.gov.cn) | 招聘平台 | RSS / Jina | 待确认 |
+| 中国公共招聘网 (cjob.gov.cn) | 招聘平台 | RSS | 🆕 新增 |
+| 人力资源和社会保障部 (mohrss.gov.cn) | 国家官网 | RSS + Jina 兜底（需验证） | 🆕 新增 |
 
 ### 第三优先级：国家级
 
 | 信源 | 类型 | 接入方式 | 状态 |
 |------|------|---------|------|
-| 国家发改委 (ndrc.gov.cn) | 政府官网 | Jina 兜底抓取 | 待接入 |
-| 工业和信息化部 (miit.gov.cn) | 政府官网 | RSS + Jina | 待确认 |
+| 国家发改委 (ndrc.gov.cn) | 政府官网 | Jina 兜底（需验证） | 待接入 |
+| 国家税务总局 (chinatax.gov.cn) | 政府官网 | Jina 兜底（需验证） | 🆕 新增 |
+| 工业和信息化部 (miit.gov.cn) | 政府官网 | RSS + Jina 兜底（需验证） | 待确认 |
 | 国家公务员局 (scs.gov.cn) | 招聘官网 | RSS（若有）/ Jina | 待确认 |
+| 国家知识产权局 (cnipa.gov.cn) | 政府官网 | Jina 兜底（需验证） | 🆕 新增 |
 
 ### 行业/技术信源（增强覆盖）
 
 | 信源 | 类型 | 接入方式 |
 |------|------|---------|
-| 国家邮政局 | 政府官网 | Jina 兜底抓取 |
+| 国家邮政局 | 政府官网 | Jina 兜底 |
 | 中国物流与采购联合会 | 行业协会 | RSS（若有） |
 | 物流沙龙、运联传媒 | 行业媒体 | RSS |
+| 国聘行动（guitou.cn） | 央企招聘 | RSS（若有）/ Jina |
 
 ---
 
@@ -165,9 +174,21 @@
 |--------|------|
 | 优先级调整 | 政策申报类信源优先抓取，AI新闻类降权 |
 | 新增信源 | 按第四章清单，逐步接入政府官网 RSS + Jina 兜底 |
-| 数据结构 | `data/latest.json` 需增加地域字段（`region: "qingpu\|shanghai\|national"`） |
-| 申报日历 | 新增 `data/calendar.json`，GitHub Actions 每周一更新当月节点 |
+| 数据结构 | `data/latest.json` 需增加 `region` 字段（`region: "qingpu\|shanghai\|national"`）和 `funding_amount` 字段（如"最高补贴 500 万元"） |
+| 申报日历 | 新增 `data/calendar.json`，GitHub Actions **每日**更新（不是每周一），Banner 从 `calendar.json` 读取，无数据时显示"暂无申报窗口期信息" |
 | 部署分支 | `gh-pages` 分支，托管 `index.html` + `data/` |
+
+### ⚠️ Jina 兜底抓取已知风险
+
+| 风险 | 说明 | 应对 |
+|------|------|------|
+| 反爬/CAPTCHA | gov.cn 子站大量部署人机验证 | RSS 优先；Jina 失败则标记"人工监控"，不阻塞其他信源 |
+| 动态渲染 | Vue/React 页面 Jina 可能抓到空壳 | 逐站验证；失败则换用 RSS 或标注为手动关注 |
+| robots.txt 限制 | gov.cn 通常禁止爬虫 | 仅抓取公开页面；不绕过验证 |
+| Jina API 限流 | 免费 tier 有 QPS 上限 | 控制抓取频率；30分钟全量抓取不现实，改为按需/每日 |
+| 编码乱码 | 部分页面编码不规范 | 抓取后校验字段完整性；异常则丢弃 |
+
+**降级策略**：RSS > Jina 验证通过 > 标注"人工关注" > 放弃
 
 ### GitHub Pages 部署
 
@@ -213,15 +234,18 @@
 | 4 | 上传 `docs/CUSTOM_ROUTING.md` | ✅ 已存入 fork |
 | 5 | 触发首次 Actions 运行 | `gh workflow run update-news.yml` |
 
-### 第二阶段：信源接入（第2-3天）
+### 第二阶段：信源接入（第2-4天）
+
+> ⚠️ gov.cn 系网站 RSS 支持率估计 ≤ 30%，大部分站点需走 Jina 兜底。
 
 | 步骤 | 文件/操作 | 说明 |
 |------|----------|------|
-| 6 | 检查各政府官网 RSS 支持情况 | 批量检测 `sheitc.sh.gov.cn`、`rsj.sh.gov.cn` 等 |
-| 7 | 确认有 RSS 的站点 | 加入 `feeds/follow.opml` |
-| 8 | 无 RSS 的官网（qingpu.gov.cn 等） | 配置 Jina 兜底抓取（修改 `update_news.py`） |
-| 9 | 更新 `docs/SOURCE_COVERAGE.md` | 记录接入的信源清单 |
+| 6 | 批量检测 RSS 支持情况（预计 ≤ 30% 可用） | 工具：`curl -I` 检测各站点 RSS autodiscovery |
+| 7 | 有 RSS 的站点加入 `feeds/follow.opml` | 优先接入 |
+| 8 | 无 RSS 的官网逐站 Jina 验证（失败则标注"人工监控"） | 不阻塞其他信源接入 |
+| 9 | 更新 `docs/SOURCE_COVERAGE.md` | 记录接入状态：✅已接入 / ⚠️Jina失败 / 🔴人工关注 |
 | 10 | 本地运行测试 | `python scripts/update_news.py --output-dir data` |
+| 10b | 微信公号信源 | 使用 RSSHub/RSS+ 接入"上海发布"等公号 RSS（如有） |
 
 ### 第三阶段：前端定制（第4-5天）
 
@@ -237,10 +261,11 @@
 
 | 步骤 | 文件/操作 | 说明 |
 |------|----------|------|
-| 16 | 创建 `data/calendar.json` 结构 | 字段：申报名称、级别、开始时间、截止时间、链接 |
-| 17 | 编写 `scripts/update_calendar.py` | 抓取/人工整理当年申报节点 |
-| 18 | 配置 GitHub Actions 每周一 run | 修改 `update-news.yml` |
+| 16 | 创建 `data/calendar.json` 结构 | 字段：申报名称、级别、地域、开始时间、截止时间、链接 |
+| 17 | 编写 `scripts/update_calendar.py` | 抓取/人工整理当年申报节点；Banner 逻辑：无数据时显示"暂无申报窗口期信息" |
+| 18 | 配置 GitHub Actions **每日** run | 修改 `update-news.yml`，每日凌晨抓取当月节点 |
 | 19 | 测试 Actions run | 验证 `calendar.json` 正确生成 |
+| 19b | 增加 `funding_amount` 字段 | `data/latest.json` 增加补贴金额字段（手动维护或从政策文本提取）|
 
 ### 第五阶段：上线与验证（第7天）
 
