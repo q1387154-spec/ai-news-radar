@@ -43,13 +43,6 @@ jobs:
             --delay 2
 
       # ── Phase 2: 微信公众号抓取（RSSHub，需要自建实例）───────────────
-      # RSSHub 启动（如果 secrets.RSSHUB_URL 提供了地址）
-      - name: Start RSSHub (optional)
-        if: vars.RSSHUB_URL != ''
-        run: |
-          echo "RSSHub URL configured: ${{ vars.RSSHUB_URL }}"
-          # RSSHub runs externally; scripts/fetch_wx.py will use it
-
       - name: Fetch WeChat public accounts
         if: vars.RSSHUB_URL != ''
         env:
@@ -92,27 +85,21 @@ jobs:
       # ── Commit ────────────────────────────────────────────────────────
       - name: Commit and push
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          # 提交政策情报数据
-          git add data/latest-gov.json \
-                  data/latest-wechat.json \
-                  data/latest.json \
-                  data/source-status-gov.json \
-                  data/source-status.json
-
-          # 提交 AI 新闻（如果启用了）
-          git add data/latest-24h.json \
-                  data/latest-24h-all.json \
-                  data/archive.json \
-                  data/source-status.json \
-                  data/waytoagi-7d.json \
-                  data/title-zh-cache.json || true
-
-          if git diff --cached --quiet; then
+          set -x
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global --add safe.directory /github/workspace
+          # 列出实际生成的文件
+          ls -la data/
+          # 逐个添加文件
+          git add data/latest-gov.json 2>/dev/null && echo "added latest-gov.json" || echo "latest-gov.json not found"
+          git add data/latest.json 2>/dev/null && echo "added latest.json" || echo "latest.json not found"
+          git add data/source-status-gov.json 2>/dev/null && echo "added source-status-gov.json" || echo "source-status-gov.json not found"
+          git add data/source-status.json 2>/dev/null && echo "added source-status.json" || echo "source-status.json not found"
+          # 检查是否有变化
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update policy intelligence snapshot" || echo "COMMIT FAILED"
+            git push || echo "PUSH FAILED"
+          else
             echo "No changes to commit"
-            exit 0
           fi
-          git commit -m "chore: update policy intelligence snapshot"
-          git push
