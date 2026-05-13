@@ -1,0 +1,77 @@
+{
+  "青浦区人民政府": {
+    "ok": 1,
+    "fail": 0,
+    "url": "https://www.shqp.gov.cn"
+  },
+  "上海市人社局": {
+    "ok": 1,
+    "fail": 0,
+    "url": "https://rsj.sh.gov.cn"
+  },
+  "上海市商务委": {
+    "ok": 1,
+    "fail": 0,
+    "url": "https://sww.sh.gov.cn"
+  },
+  "上海市交通委": {
+    "ok": 1,
+    "fail": 0,
+    "url": "https://jtw.sh.gov.cn"
+  },
+  "上海市科委": {
+    "ok": 1,
+    "fail": 0,
+    "url": "https://stcsm.sh.gov.cn"
+  },
+  "上海市经信委": {
+    "ok": 1,
+    "fail": 0,
+    "url": "https://sheitc.sh.gov.cn"
+  },
+  "上海市税务局": {
+    "ok": 1,
+    "fail": 0,
+    "url": "https://shanghai.chinatax.gov.cn"
+  },
+  "上海市发改委": {
+    "ok": 1,
+    "fail": 0,
+    "url": "https://fgw.sh.gov.cn"
+  },
+  "上海市邮政管理局": {
+    "ok": 1,
+    "fail": 0,
+    "url": "https://sh.spb.gov.cn"
+  },
+  "国务院": {
+    "ok": 1,
+    "fail": 0,
+    "url": "https://www.gov.cn"
+  },
+  "国家邮政局": {
+    "ok": 1,
+    "fail": 0,
+    "url": "https://www.spb.gov.cn"
+  },
+  "交通运输部": {
+    "ok": 1,
+    "fail": 0,
+    "url": "https://www.mot.gov.cn"
+  },
+  "工信部": {
+    "ok": 1,
+    "fail": 0,
+    "url": "https://www.miit.gov.cn"
+  },
+  "国家发改委": {
+    "ok": 1,
+    "fail": 0,
+    "url": "https://www.ndrc.gov.cn"
+  },
+  "国家税务总局": {
+    "ok": 1,
+    "fail": 0,
+    "url": "https://www.chinatax.gov.cn"
+  }
+}
