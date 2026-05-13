@@ -17,6 +17,9 @@ const state = {
   waytoagiData: null,
   sourceStatus: null,
   generatedAt: null,
+  categoryFilter: "all",
+  regionFilter: "all",
+  bannerText: "",
 };
 
 const statsEl = document.getElementById("stats");
@@ -249,7 +252,7 @@ function renderModeSwitch() {
   if (allDedupeLabelEl) allDedupeLabelEl.textContent = state.allDedup ? "去重开" : "去重关";
   if (state.mode === "ai") {
     modeHintEl.textContent = `AI强相关 · ${fmtNumber(state.totalAi)} 条`;
-    if (listTitleEl) listTitleEl.textContent = "AI 信号流";
+    if (listTitleEl) listTitleEl.textContent = "政策信号流";
   } else {
     const allCount = state.allDedup
       ? (state.totalAllMode || state.itemsAll.length)
@@ -270,11 +273,48 @@ function modeItems() {
 
 function getFilteredItems() {
   const q = state.query.trim().toLowerCase();
+  const catMap = {
+    policy: ["高企","科小","研发加计","工程技术研究中心","科技成果转化","职业技能补贴","稳岗","博士后","增值税","企业所得税","研发费","专精特新","单项冠军","小巨人","加计扣除","高企认定","科小入库"],
+    logistics: ["无人配送","自动驾驶","末端配送","无人机","快递","低空经济","物流基础设施","供应链安全","智慧物流","工业互联网"],
+    ai: ["大模型","人工智能","AI模型","机器学习","ChatGPT","GPT","LLM","AIGC"],
+    job: ["招聘","求职","简历","面试","事业单位","央企","国企","社招","公务员","编制","遴选","选调","笔试","报名"],
+    tax: ["税收","补贴","退税","减免","增值税","企业所得税","残保金","超长期国债","设备更新"],
+    compliance: ["法规","监管","条例","备案","合规","数据要素"],
+  };
   return modeItems().filter((item) => {
     if (state.siteFilter && item.site_id !== state.siteFilter) return false;
-    if (!q) return true;
+    if (!q) {
+      // category filter
+      if (state.categoryFilter !== "all") {
+        const kw = catMap[state.categoryFilter] || [];
+        const text = `${item.title || ""} ${item.title_zh || ""} ${item.site_name || ""}`.toLowerCase();
+        const matched = kw.some(k => text.includes(k));
+        if (!matched) return false;
+      }
+      // region filter
+      if (state.regionFilter !== "all") {
+        const siteLower = (item.site_name || "").toLowerCase();
+        const urlLower = (item.url || "").toLowerCase();
+        const combined = siteLower + " " + urlLower;
+        if (state.regionFilter === "qingpu" && !combined.includes("qingpu")) return false;
+        if (state.regionFilter === "yrd" && !combined.includes("长三角") && !combined.includes("生态绿色一体化")) return false;
+        if (state.regionFilter === "shanghai" && !combined.includes("上海") && !(item.site_id && item.site_id.includes("sh"))) return false;
+        if (state.regionFilter === "national" && combined.includes("gov.cn") && !combined.includes("shanghai") && !combined.includes("qingpu")) {
+          // national: exclude shanghai/qingpu
+        } else if (state.regionFilter === "national") {
+          // if site is clearly non-national, skip
+        }
+      }
+      return true;
+    }
     const hay = `${item.title || ""} ${item.title_zh || ""} ${item.title_en || ""} ${item.site_name || ""} ${item.source || ""}`.toLowerCase();
-    return hay.includes(q);
+    if (!hay.includes(q)) return false;
+    if (state.categoryFilter !== "all") {
+      const kw = catMap[state.categoryFilter] || [];
+      const matched = kw.some(k => hay.includes(k));
+      if (!matched) return false;
+    }
+    return true;
   });
 }
 
@@ -733,3 +773,59 @@ if (waytoagi7dBtnEl) {
 }
 
 init();
+
+// =====================
+// 中通吉定制初始化
+// =====================
+
+// 分类标签切换
+document.querySelectorAll('.cat-tab').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.cat-tab').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    state.categoryFilter = btn.dataset.category;
+    renderList();
+  });
+});
+
+// 地域筛选切换
+document.querySelectorAll('.region-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.region-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    state.regionFilter = btn.dataset.region;
+    renderList();
+  });
+});
+
+// 申报窗口期 Banner（加载 calendar.json）
+const bannerEl = document.getElementById('bannerText');
+const declBannerEl = document.getElementById('declarationBanner');
+fetch('data/calendar.json')
+  .then(r => r.ok ? r.json() : null)
+  .then(data => {
+    if (!data || !data.items || data.items.length === 0) {
+      if (bannerEl) bannerEl.textContent = '暂无申报窗口期信息';
+      return;
+    }
+    const now = Date.now();
+    const upcoming = data.items
+      .filter(item => item.deadline && new Date(item.deadline).getTime() > now)
+      .sort((a, b) => new Date(a.deadline) - new Date(b.deadline));
+    if (upcoming.length === 0) {
+      if (bannerEl) bannerEl.textContent = '近期无申报窗口期';
+      return;
+    }
+    const nearest = upcoming[0];
+    const daysLeft = Math.ceil((new Date(nearest.deadline).getTime() - now) / 86400000);
+    if (bannerEl) {
+      bannerEl.textContent = `${nearest.name} · 距截止约 ${daysLeft} 天 · ${nearest.level || ''}`;
+    }
+  })
+  .catch(() => {
+    if (bannerEl) {
+      bannerEl.textContent = '暂无申报窗口期信息';
+      bannerEl.parentElement.classList.add('empty');
+    }
+  });
+

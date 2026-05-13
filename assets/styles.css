@@ -840,3 +840,110 @@ summary:focus-visible {
     flex-direction: column;
   }
 }
+
+/* =====================
+   中通吉定制样式
+   ===================== */
+
+/* 申报 Banner */
+.declaration-banner {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid rgba(18, 106, 115, 0.35);
+  border-radius: var(--radius);
+  background: rgba(18, 106, 115, 0.08);
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.declaration-banner .banner-icon {
+  font-size: 16px;
+}
+
+.declaration-banner .banner-text {
+  flex: 1;
+}
+
+.declaration-banner .banner-text.empty {
+  color: var(--muted);
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* 分类标签 */
+.category-tabs {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 12px;
+}
+
+.cat-tab {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--muted);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+
+.cat-tab:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.cat-tab.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  font-weight: 700;
+}
+
+/* 地域筛选 */
+.region-filter {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.region-btn {
+  border: 1px solid var(--line);
+  background: var(--surface-soft);
+  color: var(--muted);
+  border-radius: var(--radius);
+  padding: 4px 12px;
+  font-size: 12px;
+  transition: all 0.15s;
+}
+
+.region-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.region-btn.active {
+  background: rgba(18, 106, 115, 0.1);
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* 响应式补充 */
+@media (max-width: 460px) {
+  .category-tabs,
+  .region-filter {
+    gap: 6px;
+  }
+  .cat-tab {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}

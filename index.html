@@ -3,26 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI News Radar｜24 小时 AI 更新雷达</title>
+    <title>物流快递政策情报雷达｜中通吉</title>
     <meta
       name="description"
-      content="自动整理过去 24 小时值得看的 AI、模型和开发者工具更新；伯乐Skill（Scout Skill）帮你从一堆信源里选出千里马。"
+      content="帮中通吉团队每天扫一遍物流/快递相关政策申报信息：高企认定、职业技能补贴、稳岗返还、无人配送、低空经济、数字化转型。数据来源：青浦/长三角/上海/国家三级穿透，自动更新。"
     />
-    <link rel="canonical" href="https://learnprompt.github.io/ai-news-radar/" />
-    <meta property="og:title" content="AI News Radar｜24 小时 AI 更新雷达" />
-    <meta
-      property="og:description"
-      content="自动整理过去 24 小时值得看的 AI、模型和开发者工具更新；伯乐Skill（Scout Skill）帮你从一堆信源里选出千里马。"
-    />
+    <meta property="og:title" content="物流快递政策情报雷达｜中通吉" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://learnprompt.github.io/ai-news-radar/" />
-    <meta property="og:site_name" content="AI News Radar" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="AI News Radar｜24 小时 AI 更新雷达" />
-    <meta
-      name="twitter:description"
-      content="自动整理过去 24 小时值得看的 AI、模型和开发者工具更新；伯乐Skill（Scout Skill）帮你从一堆信源里选出千里马。"
-    />
+    <meta property="og:site_name" content="物流快递政策情报雷达" />
     <link rel="icon" href="./assets/logo.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./assets/styles.css" />
   </head>
@@ -31,14 +19,14 @@
       <header class="hero">
         <div class="hero-main">
           <div class="hero-headline">
-            <img class="hero-logo" src="./assets/logo.svg" alt="AI News Radar Logo" />
+            <img class="hero-logo" src="./assets/logo.svg" alt="Logo" />
             <div>
-              <p class="hero-tag">AI NEWS RADAR</p>
-              <h1>24 小时 AI 更新雷达</h1>
+              <p class="hero-tag">物流政策情报</p>
+              <h1>24 小时政策申报雷达</h1>
             </div>
           </div>
           <p class="hero-sub">
-            过去 24 小时值得看的 AI/科技更新，附 WaytoAGI 近 7 日变化。
+            青浦/长三角 → 上海市 → 国家，三级穿透。专注：高企认定、职业技能补贴、稳岗返还、无人配送、低空经济、数字化转型。
           </p>
         </div>
         <div class="hero-meta">
@@ -48,11 +36,32 @@
 
         <section class="stats" id="stats"></section>
 
-        <section class="coverage-strip" id="coverageStrip" aria-label="Source coverage status"></section>
+        <div class="declaration-banner" id="declarationBanner">
+          <span class="banner-icon">🔔</span>
+          <span class="banner-text" id="bannerText">申报窗口期加载中...</span>
+        </div>
+
+        <div class="category-tabs" id="categoryTabs">
+          <button class="cat-tab active" data-category="all">全部</button>
+          <button class="cat-tab" data-category="policy">🏛 政策申报</button>
+          <button class="cat-tab" data-category="logistics">🚚 物流科技</button>
+          <button class="cat-tab" data-category="ai">🤖 AI技术</button>
+          <button class="cat-tab" data-category="job">💼 招聘求职</button>
+          <button class="cat-tab" data-category="tax">💰 财税补贴</button>
+          <button class="cat-tab" data-category="compliance">📋 监管合规</button>
+        </div>
+
+        <div class="region-filter" id="regionFilter">
+          <button class="region-btn active" data-region="all">全部地域</button>
+          <button class="region-btn" data-region="qingpu">🏛 青浦</button>
+          <button class="region-btn" data-region="yrd">🌐 长三角</button>
+          <button class="region-btn" data-region="shanghai">📍 上海</button>
+          <button class="region-btn" data-region="national">🇨🇳 国家</button>
+        </div>
       </header>
 
       <section class="primary-controls">
-        <input id="searchInput" type="search" placeholder="搜索 AI 信号 / 来源" />
+        <input id="searchInput" type="search" placeholder="搜索政策/补贴/申报关键词" />
         <div class="mode-hint" id="modeHint">AI强相关</div>
       </section>
 
@@ -87,24 +96,9 @@
         </div>
       </details>
 
-      <section class="waytoagi-wrap">
-        <div class="waytoagi-head">
-          <h2>WaytoAGI 更新日志</h2>
-          <div class="waytoagi-tools">
-            <div class="waytoagi-switch">
-              <button id="waytoagiTodayBtn" class="waytoagi-btn active" type="button">最近更新日</button>
-              <button id="waytoagi7dBtn" class="waytoagi-btn" type="button">近7日</button>
-            </div>
-            <span id="waytoagiUpdatedAt">加载中...</span>
-          </div>
-        </div>
-        <div id="waytoagiMeta" class="waytoagi-meta"></div>
-        <div id="waytoagiList" class="waytoagi-list"></div>
-      </section>
-
       <section class="list-wrap">
         <div class="list-head">
-          <h2 id="listTitle">AI 信号流</h2>
+          <h2 id="listTitle">政策信号流</h2>
           <span id="resultCount">0 条</span>
         </div>
         <div id="newsList" class="news-list"></div>
