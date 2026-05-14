@@ -1,160 +1,182 @@
-<div align="center">
+# 物流政策情报雷达
 
-# AI News Radar
+> 从海量信息中找出真正值得行动的政策机会。
 
-## 24 小时 AI 更新雷达｜伯乐Skill
-
-**伯乐Skill（Scout Skill）帮你从一堆信源里选出千里马。**
-
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-green?style=flat-square)](https://learnprompt.github.io/ai-news-radar/)
-[![Actions](https://img.shields.io/github/actions/workflow/status/LearnPrompt/ai-news-radar/update-news.yml?branch=master&label=update&style=flat-square)](https://github.com/LearnPrompt/ai-news-radar/actions/workflows/update-news.yml)
-[![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square)](LICENSE)
-
-[在线页面](https://learnprompt.github.io/ai-news-radar/) · [English](README.en.md) · [伯乐Skill](skills/ai-news-radar/README.md) · [信息源策略](docs/SOURCE_COVERAGE.md)
-
-</div>
+**不是新闻聚合器，是一个产业政策情报网络。**
 
 ---
 
-## 这是什么
+## 定位
 
-AI News Radar 是一个自动更新的 24 小时 AI 更新雷达。
+帮物流/快递企业每天扫一遍政策申报信息：
 
-普通用户直接打开网页，看最近 24 小时 AI、模型、开发者工具和技术生态更新。维护者可以 fork 这个仓库，接入自己的 OPML/RSS、公开 feed、静态页面或 AgentMail 邮箱情报。Codex / Claude Code 这类 Agent 可以使用项目内置的 **伯乐Skill**，继续帮你判断信息源、维护抓取逻辑、部署 GitHub Pages。
+- **高企认定** / **专精特新** / **小巨人**
+- **超长期国债** / **两重两新** / **设备更新**
+- **低空经济** / **无人配送** / **自动驾驶**
+- **AI+物流** / **数字化转型** / **数据要素**
+- **职业技能补贴** / **稳岗返还**
+- **国企招聘** / **社招** / **遴选**
 
-这个项目不是“又一个新闻网页”。
+---
 
-它的核心是**伯乐Skill**，帮你从一堆信源里选出千里马。哪些源值得长期追踪，哪些源适合做成RSS/OPML，哪些源只能接付费的API，哪些源看起来更新很多但实际上跟你长期关注的方面比方AI只占了里面的5%不到。
+## 核心架构：三层情报体系
 
-先判断清楚，再接入。
-
-## 为什么需要伯乐Skill
-
-好新闻分散在各处，
-
-官方博客发一点，更新日志发一点，X 上有人提前爆料，聚合站又把同一个新闻转来转去。
-
-我以为的自己在追前沿，实际每天都在重复三件事，
-
-打开几十个页面，肉眼+人脑过滤重复内容，猜哪条值得看。
-
-伯乐Skill先替你完成第一轮判断，**哪些信源是千里马，哪些是噪音**。
-
-你可以随意增加信息源，还可以把一个信息源纳入输入范围，先让它在单独的展示区域运行一个月，再判断要不要录入。
-
-AI News Radar从来都不是单纯把信息抓回来，
-
-它更像是一条轻量的新闻pipeline，把来源判断、抓取、去重、AI强相关过滤、信息源健康状态和静态网页发布串起来，上线后不消耗模型额度。
-
-## 现在能做什么
-
-- 追踪官方 AI 节点，OpenAI News、OpenAI Codex Changelog、OpenAI Skills、Anthropic、Google DeepMind、Google AI、Hugging Face、GitHub AI 等
-- 读取高信号日报和Newsletter公开来源，例如 AI Breakfast
-- 读取网页自带的feed，例如 Follow Builders 的 X builders、Anthropic Engineering、Claude Blog、AI podcasts
-- 同时接入多个公开聚合源，例如 AI HOT，补足普通官方源看不到的盲区
-- 支持OPML/RSS批量导入
-- 支持AgentMail邮箱订阅高质量AI日报
-- 输出24小时双视图，`AI强相关` 和 `全量`
-- 中英双语标题和站点分组
-- 兼容飞书文档，追加了WaytoAGI开源社区最近更新日和近7日变化
-
-## 工作原理
-
-```mermaid
-flowchart LR
-    source["信息源清单"] --> classify["伯乐Skill判断信源类型"]
-
-    classify --> official["官方 RSS / changelog"]
-    classify --> opml["私人 OPML / RSS"]
-    classify --> publicFeed["公开 GitHub feed / JSON"]
-    classify --> staticPage["公开页面 / Jina 兜底"]
-    classify --> privateMail["AgentMail 邮箱订阅"]
-    classify --> skip["跳过高风险来源"]
-
-    official --> fetch["抓取与结构化"]
-    opml --> fetch
-    publicFeed --> fetch
-    staticPage --> fetch
-    privateMail --> fetch
-
-    fetch --> dedup["去重与归一化"]
-    dedup --> filter["AI 强相关过滤"]
-    filter --> status["源健康与覆盖统计"]
-    filter --> data["data/*.json"]
-    status --> data
-    data --> pages["GitHub Pages 网页"]
-    data --> agent["Codex / Claude Code 继续维护"]
+```
+第一层（官方政策层）  →  决定能不能做、有没有钱
+第二层（行业解读层）  →  提前预判风向，识别起风方向
+第三层（机会层）      →  谁先拿到钱
 ```
 
-AI News Radar学习了现代新闻学的技术，不是简单堆信息源，一次性放几万条信息出来等于没用，所以我选择把新闻处理拆成稳定pipeline，抓取，去重，过滤，补充状态，生成静态站点。
+**传播链分析**：真正的政策顺序经常是：
 
-在保证稳定性的同时追求轻量化，公开版不要求用户配置LLM API Key，不依赖登录态，cookies，X API和邮箱。需要这些进阶能力时，可以通过伯乐Skill用GitHub Secrets或本地环境变量接入。
+```
+智库吹风
+    ↓
+行业公众号（提前解读）
+    ↓
+地方试点
+    ↓
+部委征求意见稿
+    ↓
+正式政策
+```
+
+伯乐不追末端的正式文件，而是顺着传播链往上追。
+
+---
+
+## 订阅原则
+
+### 只抓高价值栏目
+
+| 栏目 | 说明 |
+|------|------|
+| 通知公告 | 第一时间政策信号 |
+| 政策文件 | 正式政策依据 |
+| 项目申报 | 直接对应资金窗口 |
+| 实施细则 | 落地执行标准 |
+| 公示 | 资金分配公开 |
+| 专项资金 | 对应预算规模 |
+
+**跳过**：新闻动态、工作动态、领导活动、会议报道
+
+### 公众号价值评分
+
+不做"公众号大全"。每个来源打分：
+
+```
+Source Score = 政策提前量×30% + 专业度×30% + 原创率×20% + 产业关联度×20%
+```
+
+### 文章反向锁定
+
+不是订阅公众号列表，而是：
+1. 文章命中关键词 → 溯源到公众号
+2. 判断该公众号是否值得加入源池
+3. 连续命中 → 自动升级为固定追踪源
+
+---
+
+## 自动抽取字段
+
+每条政策命中后，自动抽取 7 个关键字段：
+
+```
+【deadline】         申报截止时间
+【补贴金额】         具体金额或"最高X万元"
+【适用企业】         规模/行业/资质要求
+【高企要求】         是否需要高新技术企业资质
+【专精特新要求】     是否需要专精特新/小巨人资质
+【研发投入要求】     是否需要研发费用占比
+【窗口期】           从发布到截止的天数
+【最大风险点】       最容易在哪里被打回或陪跑
+```
+
+---
+
+## 六大赛道关键词
+
+| 赛道 | 关键词 |
+|------|--------|
+| 低空经济/无人配送 | 低空经济, eVTOL, 无人机物流, 空域改革, 车路云 |
+| 超长期国债/两新 | 超长期国债, 两重两新, 设备更新, 技改, 专项债 |
+| AI+物流 | 智慧物流, 物流大模型, AI调度, 数字孪生, 数据要素 |
+| 专精特新/高企 | 专精特新, 高企, 研发费用加计扣除, 小巨人 |
+| 求职/国企 | 社招, 国企招聘, 遴选, 事业单位, 交通系统 |
+| 物流行业研究 | 物流, 快递, 供应链AI, 仓储, 网络货运 |
+
+---
+
+## 信源层级
+
+### 第一层：国家部委（一级 · 高可信）
+
+- 国家发改委 / 工信部 / 科技部 / 财政部
+- 交通运输部 / 国家邮政局 / 民航局
+- 人力资源和社会保障部 / 国家数据局
+
+### 第二层：上海市级（二级）
+
+- 上海经信委（最关键：AI / 数字化 / 技改 / 专精特新）
+- 上海发改委（超长期国债核心）
+- 上海交通委（核心主线：无人配送 / 自动驾驶 / 智慧物流）
+- 上海人社局 / 国资委 / 公务员局
+
+### 第三层：青浦区（三级 · 高价值）
+
+- 青浦经委（申报密集区）
+- 青浦发改委 / 青浦人社局
+
+---
+
+## 技术架构
+
+```
+RSS/OPML → 抓取 → LLM结构化解析 → 企业画像匹配
+    → 政策评分 + 申报策略 → 逆向风险过滤
+    → 前端展示（政策机会卡片）
+```
+
+- 定时抓取，无需服务器
+- GitHub Actions 自动更新
+- 静态部署到 GitHub Pages
+
+---
 
 ## 快速开始
 
-普通用户不用安装，直接打开在线页面即可。
-
-想fork改造新版本，可以本地运行：
-
 ```bash
-git clone https://github.com/LearnPrompt/ai-news-radar.git
-cd ai-news-radar
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-python scripts/update_news.py --output-dir data --window-hours 24
+# 本地运行
+python scripts/update_news.py --output-dir data --window-hours 24 --rss-opml feeds/policy.opml
+
+# 预览
 python -m http.server 8080
 ```
 
-打开：
+---
+
+## 伯乐Skill（Scout Skill）
+
+项目内置 **伯乐Skill**，帮助判断每个信源该用 RSS、OPML、公开 feed、静态页面还是跳过。
+
+如果你在 Claude Code / Codex / OpenClaw 等 Agent 中使用：
 
 ```text
-http://localhost:8080
+请使用伯乐Skill，先问我要信息源清单，然后帮我判断每个信源该用 RSS、OPML、公开 feed、静态页面、Jina 兜底还是跳过。目标是部署一个不需要服务器的物流政策雷达。不要把任何 API Key、cookies、token 写入仓库。
 ```
 
-如果你有自己的 OPML：
+---
 
-```bash
-cp feeds/follow.example.opml feeds/follow.opml
-# 把自己的订阅源写进 feeds/follow.opml，不提交这个文件
-python scripts/update_news.py --output-dir data --window-hours 24 --rss-opml feeds/follow.opml
-```
+## 文件索引
 
-## 给Agent看的教程
+| 文件 | 用途 |
+|------|------|
+| `skills/ai-news-radar/SKILL.md` | Agent 执行手册（三层架构 / 源评分 / 传播链） |
+| `skills/ai-news-radar/README.md` | 伯乐Skill 公开定位 |
+| `feeds/policy.opml` | 官方政策 RSS 订阅（精简高价值版） |
+| `feeds/policy-scout.opml` | 行业解读层订阅（第二层） |
+| `AGENTS.md` | 路由规则和模块说明 |
 
-如果你想让Codex / Claude Code / OpenClaw / Hermes帮你搭自己的版本，可以直接说：
+---
 
-```text
-请使用伯乐Skill，先问我要信息源清单，然后帮我判断每个信源该用RSS、公开feed、静态页面、Jina兜底、AgentMail邮箱还是跳过。目标是部署一个不需要服务器、能用GitHub Actions自动更新的 AI 日报网站。不要把任何API Key、cookies、token、私有邮件内容写入仓库。
-```
-
-项目内置 Skill 在：
-
-- `skills/ai-news-radar/README.md`
-- `skills/ai-news-radar/SKILL.md`
-
-新Agent接手验收时，推荐先读：
-
-- `README.md`
-- `README.en.md`
-- `docs/GPT_HANDOFF.md`
-- `docs/SOURCE_COVERAGE.md`
-- `docs/V2_PRODUCT_BRIEF.md`
-
-## GitHub 自动更新
-
-`.github/workflows/update-news.yml` 已经配置好定时任务。
-
-- 默认每 30 分钟运行一次
-- 自动生成并提交 `data/*.json`
-- 如果没有设置 `FOLLOW_OPML_B64`，线上工作流会自动使用公开示例 `feeds/follow.example.opml`，让页面展示 RSS/OPML 能力
-- 如果设置 `FOLLOW_OPML_B64`，会优先自动解码为私有 `feeds/follow.opml`
-- 如果设置 `EMAIL_DIGEST_ENABLED=1`、`AGENTMAIL_API_KEY`、`AGENTMAIL_INBOX_ID`，会生成脱敏邮箱摘要
-- 只有额外设置 `EMAIL_DIGEST_PUBLISH=1`，才会提交 `data/email-digest.json`
-- 如果设置 `X_API_ENABLED=1`、`X_BEARER_TOKEN` 和预算变量，会在每日指定UTC窗口用官方X API抓取少量公开Post；默认关闭，且当前X API按返回资源计费
-
-默认情况下，本项目不需要任何API Key就能跑核心流程。高级源配置模板见 `examples/advanced-sources.env.example`，预算说明见 `docs/research/advanced-source-free-tier-budget-2026-05-10.md`，X API演示配置见 `docs/guides/x-api-demo-config.md`；单账号/单newsletter演示见 `docs/guides/rileybrown-alphasignal-demo.md`。
-
-## License
-
-[MIT](LICENSE)
+**不是让你看更多信息，而是帮你找到真正值得行动的机会。**
