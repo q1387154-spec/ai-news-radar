@@ -49,11 +49,6 @@
     "fail": 0,
     "url": "https://www.gov.cn"
   },
-  "国家邮政局": {
-    "ok": 1,
-    "fail": 0,
-    "url": "https://www.spb.gov.cn"
-  },
   "交通运输部": {
     "ok": 1,
     "fail": 0,
