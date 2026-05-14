@@ -1,0 +1,407 @@
+{
+  "generated_at": "2026-05-14T05:00:00.524216+00:00",
+  "source": "gov-fetch + llm-parse",
+  "total": 4,
+  "high_priority": 0,
+  "by_level": {
+    "S": 0,
+    "A": 0,
+    "B": 0,
+    "C": 4
+  },
+  "opportunities": [
+    {
+      "id": "32a36663d2aabd44",
+      "title": "关于印发《全国公共信用信息基础目录(2026年版)》和《全国失信惩戒措施基础清单(2026年版)》的通知(发改财金〔2026〕447号)",
+      "url": "https://www.ndrc.gov.cn/xxgk/zcfb/tz/202604/t20260403_1404508.html",
+      "source": "国家发改委",
+      "source_level": "国家级",
+      "published_at": "",
+      "deadline": "",
+      "days_left": 0,
+      "parsed": {
+        "id": "32a36663d2aabd44",
+        "title": "关于印发《全国公共信用信息基础目录(2026年版)》和《全国失信惩戒措施基础清单(2026年版)》的通知(发改财金〔2026〕447号)",
+        "url": "https://www.ndrc.gov.cn/xxgk/zcfb/tz/202604/t20260403_1404508.html",
+        "source": "国家发改委",
+        "source_level": "国家级",
+        "published_at": "",
+        "parsed_at": "2026-05-14T04:59:48.303487+00:00",
+        "confidence": 0.7000000000000001,
+        "parse_error": null,
+        "级别": "国家级",
+        "地区": [
+          "全国"
+        ],
+        "主管部门": [
+          "发改委",
+          "人民银行"
+        ],
+        "发布时间": "2026-03-30",
+        "申报截止时间": null,
+        "政策类型": "社会信用体系",
+        "支持方向": [],
+        "支持金额": {
+          "描述": null,
+          "金额": null,
+          "单位": null
+        },
+        "申报条件": {
+          "必要资质": null,
+          "规模要求": null,
+          "投资要求": null
+        },
+        "材料要求": [],
+        "评审方式": null,
+        "是否后补贴": null,
+        "验收要求": null,
+        "风险提示": [],
+        "政策原文关键词": [
+          "公共信用信息",
+          "失信惩戒",
+          "社会信用体系"
+        ],
+        "适合申报企业": []
+      },
+      "match_score": 0.43,
+      "matched_tags": [],
+      "missing_tags": [],
+      "score": 48.2,
+      "level": "C",
+      "priority": "P3",
+      "dimensions": {
+        "amount": 50.0,
+        "difficulty": 100.0,
+        "hit_rate": 43.0,
+        "region": 50.0,
+        "industry": 0.0,
+        "urgency": 50.0
+      },
+      "is_pre_subsidy": true,
+      "risk_level": "低",
+      "risk_score": 0.0,
+      "risk_advice": "风险低，建议申报",
+      "is_worth_applying": true,
+      "roi": {
+        "subsidy": 0,
+        "labor_cost": 2.0,
+        "material_cost": 0.3,
+        "advance_fund": 0,
+        "risk_factor": 0.16,
+        "expected_net": -2.3,
+        "roi": -1.0,
+        "roi_label": "低"
+      },
+      "recommended_project": "智慧物流建设项目",
+      "packaging_keywords": [
+        "新质生产力",
+        "补链强链",
+        "数字化转型",
+        "智慧物流"
+      ],
+      "reasons": [],
+      "warnings": []
+    },
+    {
+      "id": "8181746a29b45ca5",
+      "title": "关于优化完善无线电频率占用费标准的通知(发改价格〔2026〕413号)",
+      "url": "https://www.ndrc.gov.cn/xxgk/zcfb/tz/202603/t20260327_1404395.html",
+      "source": "国家发改委",
+      "source_level": "国家级",
+      "published_at": "",
+      "deadline": "",
+      "days_left": 0,
+      "parsed": {
+        "id": "8181746a29b45ca5",
+        "title": "关于优化完善无线电频率占用费标准的通知(发改价格〔2026〕413号)",
+        "url": "https://www.ndrc.gov.cn/xxgk/zcfb/tz/202603/t20260327_1404395.html",
+        "source": "国家发改委",
+        "source_level": "国家级",
+        "published_at": "",
+        "parsed_at": "2026-05-14T05:00:00.519489+00:00",
+        "confidence": 0.8,
+        "parse_error": null,
+        "级别": "国家级",
+        "地区": [
+          "全国"
+        ],
+        "主管部门": [
+          "发改委",
+          "财政部"
+        ],
+        "发布时间": "2026-03-27",
+        "申报截止时间": null,
+        "政策类型": "收费标准",
+        "支持方向": [
+          "卫星系统",
+          "5G-R铁路专用无线通信",
+          "工业专网",
+          "无人驾驶航空器",
+          "宽带数字集群通信",
+          "微波站",
+          "宽带无线接入"
+        ],
+        "支持金额": {
+          "描述": "收费标准调整，非补贴政策",
+          "金额": null,
+          "单位": null
+        },
+        "申报条件": {},
+        "材料要求": [],
+        "评审方式": null,
+        "是否后补贴": null,
+        "验收要求": null,
+        "风险提示": [
+          "该文件为收费政策调整，非扶持补贴政策",
+          "具体收费标准见附件PDF"
+        ],
+        "政策原文关键词": [
+          "无线电频率",
+          "占用费",
+          "卫星系统",
+          "5G-R",
+          "工业专网",
+          "无人驾驶航空器"
+        ],
+        "适合申报企业": []
+      },
+      "match_score": 0.38,
+      "matched_tags": [],
+      "missing_tags": [],
+      "score": 47.0,
+      "level": "C",
+      "priority": "P3",
+      "dimensions": {
+        "amount": 50.0,
+        "difficulty": 100.0,
+        "hit_rate": 38.0,
+        "region": 50.0,
+        "industry": 0.0,
+        "urgency": 50.0
+      },
+      "is_pre_subsidy": true,
+      "risk_level": "低",
+      "risk_score": 0.0,
+      "risk_advice": "风险低，建议申报",
+      "is_worth_applying": true,
+      "roi": {
+        "subsidy": 0,
+        "labor_cost": 2.0,
+        "material_cost": 0.3,
+        "advance_fund": 0,
+        "risk_factor": 0.17,
+        "expected_net": -2.3,
+        "roi": -1.0,
+        "roi_label": "低"
+      },
+      "recommended_project": "卫星系统示范项目",
+      "packaging_keywords": [
+        "卫星系统",
+        "5G-R铁路专用无线通信",
+        "工业专网",
+        "无人驾驶航空器",
+        "宽带数字集群通信",
+        "微波站",
+        "宽带无线接入",
+        "新质生产力"
+      ],
+      "reasons": [
+        "🎯 支持方向: 卫星系统, 5G-R铁路专用无线通信"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "688ea1110b762566",
+      "title": "关于核定南水北调中线干线工程供水价格的通知(发改价格〔2026〕630号)",
+      "url": "https://www.ndrc.gov.cn/xxgk/zcfb/tz/202605/t20260511_1405152.html",
+      "source": "国家发改委",
+      "source_level": "国家级",
+      "published_at": "",
+      "deadline": "",
+      "days_left": 0,
+      "parsed": {
+        "id": "688ea1110b762566",
+        "title": "关于核定南水北调中线干线工程供水价格的通知(发改价格〔2026〕630号)",
+        "url": "https://www.ndrc.gov.cn/xxgk/zcfb/tz/202605/t20260511_1405152.html",
+        "source": "国家发改委",
+        "source_level": "国家级",
+        "published_at": "",
+        "parsed_at": "2026-05-14T04:59:07.019346+00:00",
+        "confidence": 0.7000000000000001,
+        "parse_error": null,
+        "级别": "国家级",
+        "地区": [
+          "北京市",
+          "天津市",
+          "河北省",
+          "河南省"
+        ],
+        "主管部门": [
+          "国家发展改革委"
+        ],
+        "发布时间": "2026-05-11",
+        "申报截止时间": null,
+        "政策类型": "价格核定",
+        "支持方向": [],
+        "支持金额": {},
+        "申报条件": {},
+        "材料要求": [],
+        "评审方式": null,
+        "是否后补贴": null,
+        "验收要求": null,
+        "风险提示": [],
+        "政策原文关键词": [
+          "南水北调",
+          "供水价格",
+          "两部制水价"
+        ],
+        "适合申报企业": []
+      },
+      "match_score": 0.34,
+      "matched_tags": [],
+      "missing_tags": [],
+      "score": 43.0,
+      "level": "C",
+      "priority": "P3",
+      "dimensions": {
+        "amount": 50.0,
+        "difficulty": 100.0,
+        "hit_rate": 34.0,
+        "region": 30.0,
+        "industry": 0.0,
+        "urgency": 50.0
+      },
+      "is_pre_subsidy": true,
+      "risk_level": "低",
+      "risk_score": 0.0,
+      "risk_advice": "风险低，建议申报",
+      "is_worth_applying": true,
+      "roi": {
+        "subsidy": 0,
+        "labor_cost": 2.0,
+        "material_cost": 0.3,
+        "advance_fund": 0,
+        "risk_factor": 0.18,
+        "expected_net": -2.3,
+        "roi": -1.0,
+        "roi_label": "低"
+      },
+      "recommended_project": "智慧物流建设项目",
+      "packaging_keywords": [
+        "新质生产力",
+        "补链强链",
+        "数字化转型",
+        "智慧物流"
+      ],
+      "reasons": [],
+      "warnings": []
+    },
+    {
+      "id": "afe00840a1fe2674",
+      "title": "西藏生态安全屏障保护与建设规划(修编)",
+      "url": "https://www.ndrc.gov.cn/xxgk/zcfb/tz/202604/t20260427_1404891.html",
+      "source": "国家发改委",
+      "source_level": "国家级",
+      "published_at": "",
+      "deadline": "",
+      "days_left": 0,
+      "parsed": {
+        "id": "afe00840a1fe2674",
+        "title": "西藏生态安全屏障保护与建设规划(修编)",
+        "url": "https://www.ndrc.gov.cn/xxgk/zcfb/tz/202604/t20260427_1404891.html",
+        "source": "国家发改委",
+        "source_level": "国家级",
+        "published_at": "",
+        "parsed_at": "2026-05-14T04:59:19.694665+00:00",
+        "confidence": 0.8,
+        "parse_error": null,
+        "级别": "国家级",
+        "地区": [
+          "西藏"
+        ],
+        "主管部门": [
+          "发改委"
+        ],
+        "发布时间": "2026-04-27",
+        "申报截止时间": null,
+        "政策类型": "专项资金",
+        "支持方向": [
+          "生态保护",
+          "生态修复",
+          "草地保护",
+          "湿地保护",
+          "生物多样性"
+        ],
+        "支持金额": {
+          "描述": null,
+          "金额": null,
+          "单位": null
+        },
+        "申报条件": {
+          "必要资质": null,
+          "规模要求": null,
+          "投资要求": null
+        },
+        "材料要求": [],
+        "评审方式": null,
+        "是否后补贴": null,
+        "验收要求": null,
+        "风险提示": [
+          "本文有删减，具体内容需查看附件PDF"
+        ],
+        "政策原文关键词": [
+          "生态安全屏障",
+          "西藏",
+          "生态保护",
+          "建设规划",
+          "修编"
+        ],
+        "适合申报企业": []
+      },
+      "match_score": 0.29,
+      "matched_tags": [],
+      "missing_tags": [],
+      "score": 41.8,
+      "level": "C",
+      "priority": "P3",
+      "dimensions": {
+        "amount": 50.0,
+        "difficulty": 100.0,
+        "hit_rate": 29.0,
+        "region": 30.0,
+        "industry": 0.0,
+        "urgency": 50.0
+      },
+      "is_pre_subsidy": true,
+      "risk_level": "低",
+      "risk_score": 0.0,
+      "risk_advice": "风险低，建议申报",
+      "is_worth_applying": true,
+      "roi": {
+        "subsidy": 0,
+        "labor_cost": 2.0,
+        "material_cost": 0.3,
+        "advance_fund": 0,
+        "risk_factor": 0.19,
+        "expected_net": -2.3,
+        "roi": -1.0,
+        "roi_label": "低"
+      },
+      "recommended_project": "生态保护示范项目",
+      "packaging_keywords": [
+        "生态保护",
+        "生态修复",
+        "草地保护",
+        "湿地保护",
+        "生物多样性",
+        "新质生产力",
+        "补链强链",
+        "数字化转型"
+      ],
+      "reasons": [
+        "🎯 支持方向: 生态保护, 生态修复"
+      ],
+      "warnings": []
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>物流政策情报雷达 - 政策源订阅</title>
+    <owner>克劳 (Policy OS)</owner>
+    <dateCreated>2026-05-14</dateCreated>
+    <description>物流/快递企业政策监控专用源</description>
+  </head>
+  <body>
+    <!-- ========== 国家级政策 (P0) ========== -->
+    <outline text="🏛 国家级政策">
+      <outline text="国家发改委"
+        title="国家发改委通知公告"
+        type="rss"
+        xmlUrl="https://www.ndrc.gov.cn/xxgk/zcfb/tz/"
+        htmlUrl="https://www.ndrc.gov.cn/"
+        category="national"
+        policyLevel="国家级"
+        priority="P0"/>
+      <outline text="工信部"
+        title="工信部政策文件"
+        type="rss"
+        xmlUrl="https://www.miit.gov.cn/zwgk/zcwj/"
+        htmlUrl="https://www.miit.gov.cn/"
+        category="national"
+        policyLevel="国家级"
+        priority="P0"/>
+      <outline text="科技部"
+        title="科技部通知公告"
+        type="rss"
+        xmlUrl="https://www.most.gov.cn/zwgk/tz/"
+        htmlUrl="https://www.most.gov.cn/"
+        category="national"
+        policyLevel="国家级"
+        priority="P0"/>
+      <outline text="财政部"
+        title="财政部政策"
+        type="rss"
+        xmlUrl="https://www.mof.gov.cn/zhengwuxinxi/zhengcefabu/"
+        htmlUrl="https://www.mof.gov.cn/"
+        category="national"
+        policyLevel="国家级"
+        priority="P1"/>
+    </outline>
+
+    <!-- ========== 上海市政策 (P0) ========== -->
+    <outline text="📍 上海市政策">
+      <outline text="上海经信委"
+        title="上海经信委通知"
+        type="rss"
+        xmlUrl="https://www.sheitc.sh.gov.cn/zwgk/tz/"
+        htmlUrl="https://www.sheitc.sh.gov.cn/"
+        category="municipal"
+        policyLevel="市级"
+        priority="P0"/>
+      <outline text="上海发改委"
+        title="上海发改委通知"
+        type="rss"
+        xmlUrl="https://fgw.sh.gov.cn/tzgg/index.html"
+        htmlUrl="https://fgw.sh.gov.cn/"
+        category="municipal"
+        policyLevel="市级"
+        priority="P0"/>
+      <outline text="上海科委"
+        title="上海科委通知"
+        type="rss"
+        xmlUrl="https://stcsm.sh.gov.cn/zwgk/tz/"
+        htmlUrl="https://stcsm.sh.gov.cn/"
+        category="municipal"
+        policyLevel="市级"
+        priority="P0"/>
+      <outline text="上海财政局"
+        title="上海财政局政策"
+        type="rss"
+        xmlUrl="https://www.czj.sh.gov.cn/zxft/index.html"
+        htmlUrl="https://www.czj.sh.gov.cn/"
+        category="municipal"
+        policyLevel="市级"
+        priority="P1"/>
+    </outline>
+
+    <!-- ========== 青浦区政策 (P0) ========== -->
+    <outline text="🏛 青浦区政策">
+      <outline text="青浦区政府"
+        title="青浦区政府通知"
+        type="rss"
+        xmlUrl="http://www.shqp.gov.cn/zwgk/tzgg/"
+        htmlUrl="http://www.shqp.gov.cn/"
+        category="district"
+        policyLevel="区县级"
+        priority="P0"/>
+      <outline text="青浦经委"
+        title="青浦经委通知"
+        type="rss"
+        xmlUrl="http://www.shqp.gov.cn/jxw/"
+        htmlUrl="http://www.shqp.gov.cn/"
+        category="district"
+        policyLevel="区县级"
+        priority="P0"/>
+      <outline text="青浦科委"
+        title="青浦科委通知"
+        type="rss"
+        xmlUrl="http://www.shqp.gov.cn/kjj/"
+        htmlUrl="http://www.shqp.gov.cn/"
+        category="district"
+        policyLevel="区县级"
+        priority="P0"/>
+    </outline>
+
+    <!-- ========== 长三角政策 ========== -->
+    <outline text="🌐 长三角政策">
+      <outline text="长三角示范区"
+        title="长三角示范区通知"
+        type="rss"
+        xmlUrl="https://www.csjdzx.gov.cn/col/col709/index.html"
+        htmlUrl="https://www.csjdzx.gov.cn/"
+        category="yrd"
+        policyLevel="区域级"
+        priority="P0"/>
+    </outline>
+
+    <!-- ========== 物流专项政策 (P0) ========== -->
+    <outline text="🚚 物流专项政策">
+      <outline text="国家邮政局"
+        title="国家邮政局通知"
+        type="rss"
+        xmlUrl="http://www.spb.gov.cn/zwgk/tz/"
+        htmlUrl="http://www.spb.gov.cn/"
+        category="logistics"
+        policyLevel="国家级"
+        priority="P0"/>
+      <outline text="交通运输部"
+        title="交通运输部通知"
+        type="rss"
+        xmlUrl="https://www.mot.gov.cn/zheng不久的/zhengw"
+        htmlUrl="https://www.mot.gov.cn/"
+        category="logistics"
+        policyLevel="国家级"
+        priority="P0"/>
+      <outline text="上海交通委"
+        title="上海交通委通知"
+        type="rss"
+        xmlUrl="https://jtj.sh.gov.cn/zwgk/tz/"
+        htmlUrl="https://jtj.sh.gov.cn/"
+        category="logistics"
+        policyLevel="市级"
+        priority="P0"/>
+    </outline>
+
+    <!-- ========== 低空经济政策 (P0) ========== -->
+    <outline text="🚁 低空经济">
+      <outline text="民航局"
+        title="民航局政策"
+        type="rss"
+        xmlUrl="https://www.caac.gov.cn/zwgk/zcwj/"
+        htmlUrl="https://www.caac.gov.cn/"
+        category="uav"
+        policyLevel="国家级"
+        priority="P0"/>
+    </outline>
+
+    <!-- ========== AI/数字化转型 (P0) ========== -->
+    <outline text="🤖 AI/数字化转型">
+      <outline text="工信部AI专项"
+        title="工信部AI政策"
+        type="rss"
+        xmlUrl="https://www.miit.gov.cn/zwgk/zcwj/bmgzj/"
+        htmlUrl="https://www.miit.gov.cn/"
+        category="ai"
+        policyLevel="国家级"
+        priority="P0"/>
+      <outline text="上海数字化转型"
+        title="上海数字化转型政策"
+        type="rss"
+        xmlUrl="https://www.sheitc.sh.gov.cn/xxgzdt/"
+        htmlUrl="https://www.sheitc.sh.gov.cn/"
+        category="ai"
+        policyLevel="市级"
+        priority="P0"/>
+    </outline>
+
+    <!-- ========== 人社/稳岗政策 (P1) ========== -->
+    <outline text="💼 人社政策">
+      <outline text="人社部"
+        title="人社部通知"
+        type="rss"
+        xmlUrl="https://www.mohrss.gov.cn/zwgk/zt/"
+        htmlUrl="https://www.mohrss.gov.cn/"
+        category="hr"
+        policyLevel="国家级"
+        priority="P1"/>
+      <outline text="上海人社局"
+        title="上海人社局通知"
+        type="rss"
+        xmlUrl="https://rsj.sh.gov.cn/zwzc_23085/"
+        htmlUrl="https://rsj.sh.gov.cn/"
+        category="hr"
+        policyLevel="市级"
+        priority="P1"/>
+    </outline>
+
+  </body>
+</opml>
