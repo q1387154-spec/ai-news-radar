@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>物流政策情报雷达 - 政策源订阅</title>
+    <owner>克劳 (Policy OS)</owner>
+    <dateCreated>2026-05-14</dateCreated>
+  </head>
+  <body>
+    <!-- 国家级政策 -->
+    <outline text="🏛 国家级">
+      <outline text="发改委"
+        title="国家发改委"
+        type="rss"
+        xmlUrl="http://www.ndrc.gov.cn/rss/
+"
+        htmlUrl="https://www.ndrc.gov.cn/"
+        category="national"
+        policyLevel="国家级"
+        priority="P0"/>
+      <outline text="工信部"
+        title="工信部"
+        type="rss"
+        xmlUrl="https://www.miit.gov.cn/rss/
+"
+        htmlUrl="https://www.miit.gov.cn/"
+        category="national"
+        policyLevel="国家级"
+        priority="P0"/>
+      <outline text="科技部"
+        title="科技部"
+        type="rss"
+        xmlUrl="https://www.most.gov.cn/rss/
+"
+        htmlUrl="https://www.most.gov.cn/"
+        category="national"
+        policyLevel="国家级"
+        priority="P0"/>
+      <outline text="财政部"
+        title="财政部"
+        type="rss"
+        xmlUrl="https://www.mof.gov.cn/rss/
+"
+        htmlUrl="https://www.mof.gov.cn/"
+        category="national"
+        policyLevel="国家级"
+        priority="P1"/>
+      <outline text="商务部"
+        title="商务部"
+        type="rss"
+        xmlUrl="https://www.mofcom.gov.cn/rss/
+"
+        htmlUrl="https://www.mofcom.gov.cn/"
+        category="national"
+        policyLevel="P1"/>
+    </outline>
+
+    <!-- 上海政策 -->
+    <outline text="📍 上海市">
+      <outline text="上海经信委"
+        title="上海经信委"
+        type="rss"
+        xmlUrl="https://www.sheitc.sh.gov.cn/rss/
+"
+        htmlUrl="https://www.sheitc.sh.gov.cn/"
+        category="municipal"
+        policyLevel="市级"
+        priority="P0"/>
+      <outline text="上海发改委"
+        title="上海发改委"
+        type="rss"
+        xmlUrl="https://fgw.sh.gov.cn/rss/
+"
+        htmlUrl="https://fgw.sh.gov.cn/"
+        category="municipal"
+        policyLevel="市级"
+        priority="P0"/>
+      <outline text="上海科委"
+        title="上海科委"
+        type="rss"
+        xmlUrl="https://stcsm.sh.gov.cn/rss/
+"
+        htmlUrl="https://stcsm.sh.gov.cn/"
+        category="municipal"
+        policyLevel="市级"
+        priority="P0"/>
+      <outline text="上海财政局"
+        title="上海财政局"
+        type="rss"
+        xmlUrl="https://www.czj.sh.gov.cn/rss/
+"
+        htmlUrl="https://www.czj.sh.gov.cn/"
+        category="municipal"
+        policyLevel="市级"
+        priority="P1"/>
+    </outline>
+
+    <!-- 青浦区 -->
+    <outline text="🏛 青浦区">
+      <outline text="青浦区政府"
+        title="青浦区政府"
+        type="rss"
+        xmlUrl="http://www.shqp.gov.cn/rss/
+"
+        htmlUrl="http://www.shqp.gov.cn/"
+        category="district"
+        policyLevel="区县级"
+        priority="P0"/>
+    </outline>
+
+    <!-- 长三角 -->
+    <outline text="🌐 长三角">
+      <outline text="长三角示范区"
+        title="长三角示范区"
+        type="rss"
+        xmlUrl="https://www.csjdzx.gov.cn/rss/
+"
+        htmlUrl="https://www.csjdzx.gov.cn/"
+        category="yrd"
+        policyLevel="区域级"
+        priority="P0"/>
+    </outline>
+
+    <!-- 物流专项 -->
+    <outline text="🚚 物流专项">
+      <outline text="国家邮政局"
+        title="国家邮政局"
+        type="rss"
+        xmlUrl="http://www.spb.gov.cn/rss/
+"
+        htmlUrl="http://www.spb.gov.cn/"
+        category="logistics"
+        policyLevel="国家级"
+        priority="P0"/>
+      <outline text="交通运输部"
+        title="交通运输部"
+        type="rss"
+        xmlUrl="https://www.mot.gov.cn/rss/
+"
+        htmlUrl="https://www.mot.gov.cn/"
+        category="logistics"
+        policyLevel="国家级"
+        priority="P0"/>
+      <outline text="上海交通委"
+        title="上海交通委"
+        type="rss"
+        xmlUrl="https://jtj.sh.gov.cn/rss/
+"
+        htmlUrl="https://jtj.sh.gov.cn/"
+        category="logistics"
+        policyLevel="市级"
+        priority="P0"/>
+    </outline>
+
+    <!-- AI/数字化 -->
+    <outline text="🤖 AI/数字化">
+      <outline text="工信部AI专项"
+        title="工信部AI"
+        type="rss"
+        xmlUrl="https://www.miit.gov.cn/rss/ai/
+"
+        htmlUrl="https://www.miit.gov.cn/"
+        category="ai"
+        policyLevel="国家级"
+        priority="P0"/>
+    </outline>
+
+    <!-- 低空经济 -->
+    <outline text="🚁 低空经济">
+      <outline text="民航局"
+        title="民航局"
+        type="rss"
+        xmlUrl="https://www.caac.gov.cn/rss/
+"
+        htmlUrl="https://www.caac.gov.cn/"
+        category="uav"
+        policyLevel="国家级"
+        priority="P0"/>
+    </outline>
+  </body>
+</opml>
