@@ -18,6 +18,7 @@ import argparse
 import json
 import sys
 import os
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional
@@ -37,10 +38,24 @@ OUTPUT_FILE = DATA_DIR / "policy-opportunities.json"
 
 
 def fetch_gov():
-    """抓取政府网站"""
+    """抓取政府网站（60分钟内用缓存）"""
+    if FETCHED_FILE.exists():
+        age = time.time() - FETCHED_FILE.stat().st_mtime
+        if age < 3600:
+            with open(FETCHED_FILE, encoding='utf-8') as f:
+                cached = json.load(f)
+            items = cached.get('items', [])
+            print(f"抓取完成(缓存): {len(items)} 条")
+            seen_urls = set()
+            unique = []
+            for item in items:
+                if item["url"] not in seen_urls:
+                    seen_urls.add(item["url"])
+                    unique.append(item)
+            return unique
+
     items = fetch_all(limit_per_source=30)
 
-    # 保存原始抓取
     FETCHED_FILE.parent.mkdir(parents=True, exist_ok=True)
     FETCHED_FILE.write_text(
         json.dumps({"fetched_at": datetime.now(UTC).isoformat(), "items": items}, ensure_ascii=False, indent=2),
@@ -48,7 +63,6 @@ def fetch_gov():
     )
     print(f"抓取完成: {len(items)} 条")
 
-    # 简化去重（保留唯一URL）
     seen_urls = set()
     unique = []
     for item in items:
@@ -88,6 +102,8 @@ def parse_with_llm(items: list, limit: int = 10) -> list:
 
         except Exception as e:
             print(f"  ❌ 异常: {e}")
+
+        time.sleep(1)  # 避免Jina Reader限流
 
     return parsed
 

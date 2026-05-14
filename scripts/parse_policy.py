@@ -17,6 +17,9 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import time
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 import json
 import os
 import sys
@@ -218,28 +221,35 @@ def clean_policy_html(html: str) -> str:
 
 
 def fetch_policy_content(url: str, session: requests.Session = None) -> str:
-    """抓取政策页面内容"""
+    """抓取政策页面内容（带重试）"""
     if session is None:
         session = requests.Session()
+        # 配置重试适配器
+        retry = Retry(total=3, backoff_factor=1, status_forcelist=[500, 502, 503, 504])
+        adapter = HTTPAdapter(max_retries=retry)
+        session.mount('http://', adapter)
+        session.mount('https://', adapter)
 
-    try:
-        # 优先尝试Jina Reader (更好的正文提取)
-        jina_url = f"https://r.jina.ai/{url}"
-        headers = {
-            "Accept": "text/plain",
-            "X-Timeout": "15",
-            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
-        }
-        resp = session.get(jina_url, timeout=20, headers=headers)
-
-        if resp.status_code == 200 and len(resp.text) > 200:
-            return resp.text[:8000]
-    except Exception:
-        pass
+    # 尝试Jina Reader（带重试）
+    jina_url = f"https://r.jina.ai/{url}"
+    headers = {
+        "Accept": "text/plain",
+        "X-Timeout": "15",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+    }
+    for attempt in range(3):
+        try:
+            resp = session.get(jina_url, timeout=25, headers=headers)
+            if resp.status_code == 200 and len(resp.text) > 200:
+                return resp.text[:8000]
+        except Exception:
+            if attempt < 2:
+                time.sleep(2 ** attempt)  # 指数退避
+            pass
 
     # 降级：直接抓取
     try:
-        resp = session.get(url, timeout=20)
+        resp = session.get(url, timeout=15)
         resp.raise_for_status()
         return clean_policy_html(resp.text)
     except Exception as e:

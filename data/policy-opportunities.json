@@ -1,32 +1,32 @@
 {
-  "generated_at": "2026-05-14T10:30:40.395148+00:00",
+  "generated_at": "2026-05-14T14:57:09.018639+00:00",
   "source": "gov-fetch + llm-parse",
-  "total": 19,
+  "total": 37,
   "high_priority": 0,
   "by_level": {
     "S": 0,
     "A": 0,
-    "B": 6,
-    "C": 13
+    "B": 15,
+    "C": 22
   },
   "opportunities": [
     {
-      "id": "95ca780f1ec17a97",
-      "title": "推动公共设施建设充分体现儿童友好理念",
-      "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404198.html \"专家解读文章之三 | 推动公共设施建设充分体现儿童友好理念\"",
+      "id": "d5e6a5bfe0f28023",
+      "title": "国家发展改革委国务院妇儿工委办公室关于在全社会推进儿童友好建设的意见答记者问",
+      "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404203.html \"国家发展改革委新闻发言人就《国家发展改革委国务院妇儿工委办公室关于在全社会推进儿童友好建设的意见》答记者问\"",
       "source": "国家发改委",
       "source_level": "国家级",
       "published_at": "",
       "deadline": "",
       "days_left": 0,
       "parsed": {
-        "id": "95ca780f1ec17a97",
-        "title": "推动公共设施建设充分体现儿童友好理念",
-        "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404198.html \"专家解读文章之三 | 推动公共设施建设充分体现儿童友好理念\"",
+        "id": "d5e6a5bfe0f28023",
+        "title": "国家发展改革委国务院妇儿工委办公室关于在全社会推进儿童友好建设的意见答记者问",
+        "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404203.html \"国家发展改革委新闻发言人就《国家发展改革委国务院妇儿工委办公室关于在全社会推进儿童友好建设的意见》答记者问\"",
         "source": "国家发改委",
         "source_level": "国家级",
         "published_at": "",
-        "parsed_at": "2026-05-14T10:29:36.434974+00:00",
+        "parsed_at": "2026-05-14T14:42:26.542022+00:00",
         "confidence": 0.65,
         "parse_error": null,
         "级别": "国家级",
@@ -40,23 +40,14 @@
         "申报截止时间": null,
         "政策类型": null,
         "支持方向": [],
-        "支持金额": {
-          "描述": null,
-          "金额": null,
-          "单位": null
-        },
-        "申报条件": {
-          "必要资质": [],
-          "规模要求": null,
-          "投资要求": null
-        },
+        "支持金额": {},
+        "申报条件": {},
         "材料要求": [],
         "评审方式": null,
         "是否后补贴": null,
         "验收要求": null,
         "风险提示": [
-          "政策原文URL返回404错误，内容不可获取",
-          "该链接为专家解读文章，非可直接申报的政策文件"
+          "政策原文页面404未找到，无法获取完整政策内容"
         ],
         "政策原文关键词": [],
         "适合申报企业": []
@@ -101,23 +92,23 @@
       "warnings": []
     },
     {
-      "id": "77755a66b6a26bd2",
-      "title": "关于推动低空保险高质量发展的实施意见(发改低空〔2026〕123号)",
-      "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202602/t20260212_1403717.html \"关于推动低空保险高质量发展的实施意见(发改低空〔2026〕123号",
+      "id": "37464824000b68e9",
+      "title": "关于加快招标投标领域人工智能推广应用的实施意见",
+      "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202602/t20260210_1403680.html \"关于加快招标投标领域人工智能推广应用的实施意见(发改法规〔2026〕195号",
       "source": "国家发改委",
       "source_level": "国家级",
       "published_at": "",
       "deadline": "",
       "days_left": 0,
       "parsed": {
-        "id": "77755a66b6a26bd2",
-        "title": "关于推动低空保险高质量发展的实施意见(发改低空〔2026〕123号)",
-        "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202602/t20260212_1403717.html \"关于推动低空保险高质量发展的实施意见(发改低空〔2026〕123号",
+        "id": "37464824000b68e9",
+        "title": "关于加快招标投标领域人工智能推广应用的实施意见",
+        "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202602/t20260210_1403680.html \"关于加快招标投标领域人工智能推广应用的实施意见(发改法规〔2026〕195号",
         "source": "国家发改委",
         "source_level": "国家级",
         "published_at": "",
-        "parsed_at": "2026-05-14T10:30:01.168211+00:00",
-        "confidence": 0.75,
+        "parsed_at": "2026-05-14T14:45:06.167703+00:00",
+        "confidence": 0.65,
         "parse_error": null,
         "级别": "国家级",
         "地区": [
@@ -126,45 +117,34 @@
         "主管部门": [
           "发改委"
         ],
-        "发布时间": "2026-02-12",
+        "发布时间": null,
         "申报截止时间": null,
         "政策类型": null,
-        "支持方向": [
-          "低空经济"
-        ],
+        "支持方向": [],
         "支持金额": {},
-        "申报条件": {
-          "必要资质": null,
-          "规模要求": null,
-          "投资要求": null
-        },
+        "申报条件": {},
         "材料要求": [],
         "评审方式": null,
         "是否后补贴": null,
         "验收要求": null,
         "风险提示": [
-          "政策原文URL返回404错误，无法获取完整政策内容",
-          "申报截止时间、支持内容等关键信息无法确认"
+          "无法获取政策原文，无法提取申报信息"
         ],
-        "政策原文关键词": [
-          "低空保险"
-        ],
+        "政策原文关键词": [],
         "适合申报企业": []
       },
-      "match_score": 0.68,
-      "matched_tags": [
-        "低空经济"
-      ],
+      "match_score": 0.63,
+      "matched_tags": [],
       "missing_tags": [],
-      "score": 59.5,
+      "score": 60.8,
       "level": "B",
       "priority": "P2",
       "dimensions": {
         "amount": 50.0,
         "difficulty": 100.0,
-        "hit_rate": 68.0,
+        "hit_rate": 63.0,
         "region": 50.0,
-        "industry": 33.3,
+        "industry": 50.0,
         "urgency": 50.0
       },
       "is_pre_subsidy": true,
@@ -177,22 +157,19 @@
         "labor_cost": 2.0,
         "material_cost": 0.3,
         "advance_fund": 0,
-        "risk_factor": 0.11,
+        "risk_factor": 0.12,
         "expected_net": -2.3,
         "roi": -1.0,
         "roi_label": "低"
       },
-      "recommended_project": "无人机配送试点",
+      "recommended_project": "智慧物流建设项目",
       "packaging_keywords": [
-        "低空经济",
         "新质生产力",
         "补链强链",
         "数字化转型",
         "智慧物流"
       ],
-      "reasons": [
-        "🎯 支持方向: 低空经济"
-      ],
+      "reasons": [],
       "warnings": []
     },
     {
@@ -211,7 +188,7 @@
         "source": "国家发改委",
         "source_level": "国家级",
         "published_at": "",
-        "parsed_at": "2026-05-14T10:30:17.865788+00:00",
+        "parsed_at": "2026-05-14T14:44:57.085555+00:00",
         "confidence": 0.75,
         "parse_error": null,
         "级别": "国家级",
@@ -219,22 +196,21 @@
           "全国"
         ],
         "主管部门": [
-          "发改委",
-          "金融监管总局"
+          "发改委"
         ],
-        "发布时间": null,
+        "发布时间": "2026-02-12",
         "申报截止时间": null,
         "政策类型": "产业基金",
         "支持方向": [
           "低空经济"
         ],
         "支持金额": {
-          "描述": "具体金额待政策原文确认",
+          "描述": null,
           "金额": null,
           "单位": null
         },
         "申报条件": {
-          "必要资质": [],
+          "必要资质": null,
           "规模要求": null,
           "投资要求": null
         },
@@ -243,15 +219,16 @@
         "是否后补贴": null,
         "验收要求": null,
         "风险提示": [
-          "政策原文无法访问(404错误)"
+          "政策原文页面返回404错误，无法获取具体政策内容",
+          "建议访问国家发展改革委官网获取完整政策文件"
         ],
         "政策原文关键词": [
           "低空保险",
           "高质量发展"
         ],
         "适合申报企业": [
-          "保险公司",
-          "低空经济企业"
+          "保险企业",
+          "低空经济相关企业"
         ]
       },
       "match_score": 0.613,
@@ -299,22 +276,126 @@
       "warnings": []
     },
     {
-      "id": "f1c7002e10371f2f",
-      "title": "专家解读文章之二 | 推动公共政策制定充分考虑儿童视角",
-      "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404199.html \"专家解读文章之二 | 推动公共政策制定充分考虑儿童视角\"",
+      "id": "77755a66b6a26bd2",
+      "title": "关于推动低空保险高质量发展的实施意见",
+      "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202602/t20260212_1403717.html \"关于推动低空保险高质量发展的实施意见(发改低空〔2026〕123号",
       "source": "国家发改委",
       "source_level": "国家级",
       "published_at": "",
       "deadline": "",
       "days_left": 0,
       "parsed": {
-        "id": "f1c7002e10371f2f",
-        "title": "专家解读文章之二 | 推动公共政策制定充分考虑儿童视角",
-        "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404199.html \"专家解读文章之二 | 推动公共政策制定充分考虑儿童视角\"",
+        "id": "77755a66b6a26bd2",
+        "title": "关于推动低空保险高质量发展的实施意见",
+        "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202602/t20260212_1403717.html \"关于推动低空保险高质量发展的实施意见(发改低空〔2026〕123号",
         "source": "国家发改委",
         "source_level": "国家级",
         "published_at": "",
-        "parsed_at": "2026-05-14T10:29:31.477499+00:00",
+        "parsed_at": "2026-05-14T14:44:37.543051+00:00",
+        "confidence": 0.75,
+        "parse_error": null,
+        "级别": "国家级",
+        "地区": [
+          "全国"
+        ],
+        "主管部门": [
+          "发改委"
+        ],
+        "发布时间": null,
+        "申报截止时间": null,
+        "政策类型": null,
+        "支持方向": [
+          "低空经济",
+          "低空保险"
+        ],
+        "支持金额": {
+          "描述": null,
+          "金额": null,
+          "单位": null
+        },
+        "申报条件": {
+          "必要资质": null,
+          "规模要求": null,
+          "投资要求": null
+        },
+        "材料要求": [],
+        "评审方式": null,
+        "是否后补贴": null,
+        "验收要求": null,
+        "风险提示": [
+          "政策原文无法获取（404错误），无法提取完整的申报要求和支持细则"
+        ],
+        "政策原文关键词": [
+          "低空保险",
+          "高质量发展"
+        ],
+        "适合申报企业": [
+          "保险企业",
+          "低空经济相关企业"
+        ]
+      },
+      "match_score": 0.563,
+      "matched_tags": [
+        "低空经济"
+      ],
+      "missing_tags": [],
+      "score": 56.6,
+      "level": "B",
+      "priority": "P2",
+      "dimensions": {
+        "amount": 50.0,
+        "difficulty": 100.0,
+        "hit_rate": 56.3,
+        "region": 50.0,
+        "industry": 33.3,
+        "urgency": 50.0
+      },
+      "is_pre_subsidy": true,
+      "risk_level": "低",
+      "risk_score": 0.0,
+      "risk_advice": "风险低，建议申报",
+      "is_worth_applying": true,
+      "roi": {
+        "subsidy": 0,
+        "labor_cost": 2.0,
+        "material_cost": 0.3,
+        "advance_fund": 0,
+        "risk_factor": 0.14,
+        "expected_net": -2.3,
+        "roi": -1.0,
+        "roi_label": "低"
+      },
+      "recommended_project": "无人机配送试点",
+      "packaging_keywords": [
+        "低空经济",
+        "低空保险",
+        "新质生产力",
+        "补链强链",
+        "数字化转型",
+        "智慧物流"
+      ],
+      "reasons": [
+        "🎯 支持方向: 低空经济, 低空保险"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "d3c0b10ca989c878",
+      "title": "关于在全社会推进儿童友好建设的意见",
+      "url": "http://www.ndrc.gov.cn/xxgk/jd/zctj/202603/t20260317_1404201.html \"一图读懂 | 关于在全社会推进儿童友好建设的意见\"",
+      "source": "国家发改委",
+      "source_level": "国家级",
+      "published_at": "",
+      "deadline": "",
+      "days_left": 0,
+      "parsed": {
+        "id": "d3c0b10ca989c878",
+        "title": "关于在全社会推进儿童友好建设的意见",
+        "url": "http://www.ndrc.gov.cn/xxgk/jd/zctj/202603/t20260317_1404201.html \"一图读懂 | 关于在全社会推进儿童友好建设的意见\"",
+        "source": "国家发改委",
+        "source_level": "国家级",
+        "published_at": "",
+        "parsed_at": "2026-05-14T14:42:42.592858+00:00",
         "confidence": 0.6,
         "parse_error": null,
         "级别": null,
@@ -374,22 +455,103 @@
       "warnings": []
     },
     {
-      "id": "98d0226ff2e3f674",
-      "title": "专家解读文章之四 | 推动公共服务供给充分保障儿童优先",
-      "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404187.html \"专家解读文章之四 | 推动公共服务供给充分保障儿童优先\"",
+      "id": "28d553d15440a07f",
+      "title": "专家解读文章之一 | 推进儿童友好建设迈向更高水平",
+      "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404200.html \"专家解读文章之一 | 推进儿童友好建设迈向更高水平\"",
       "source": "国家发改委",
       "source_level": "国家级",
       "published_at": "",
       "deadline": "",
       "days_left": 0,
       "parsed": {
-        "id": "98d0226ff2e3f674",
-        "title": null,
-        "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404187.html \"专家解读文章之四 | 推动公共服务供给充分保障儿童优先\"",
+        "id": "28d553d15440a07f",
+        "title": "专家解读文章之一 | 推进儿童友好建设迈向更高水平",
+        "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404200.html \"专家解读文章之一 | 推进儿童友好建设迈向更高水平\"",
         "source": "国家发改委",
         "source_level": "国家级",
         "published_at": "",
-        "parsed_at": "2026-05-14T10:29:40.543510+00:00",
+        "parsed_at": "2026-05-14T14:43:03.248131+00:00",
+        "confidence": 0.6,
+        "parse_error": null,
+        "级别": null,
+        "地区": [],
+        "主管部门": [],
+        "发布时间": null,
+        "申报截止时间": null,
+        "政策类型": null,
+        "支持方向": [],
+        "支持金额": {},
+        "申报条件": {
+          "必要资质": null,
+          "规模要求": null,
+          "投资要求": null
+        },
+        "材料要求": [],
+        "评审方式": null,
+        "是否后补贴": null,
+        "验收要求": null,
+        "风险提示": [
+          "政策原文页面返回404错误，无法获取详细内容"
+        ],
+        "政策原文关键词": [],
+        "适合申报企业": []
+      },
+      "match_score": 0.54,
+      "matched_tags": [],
+      "missing_tags": [],
+      "score": 55.5,
+      "level": "B",
+      "priority": "P2",
+      "dimensions": {
+        "amount": 50.0,
+        "difficulty": 100.0,
+        "hit_rate": 54.0,
+        "region": 30.0,
+        "industry": 50.0,
+        "urgency": 50.0
+      },
+      "is_pre_subsidy": true,
+      "risk_level": "低",
+      "risk_score": 0.0,
+      "risk_advice": "风险低，建议申报",
+      "is_worth_applying": true,
+      "roi": {
+        "subsidy": 0,
+        "labor_cost": 2.0,
+        "material_cost": 0.3,
+        "advance_fund": 0,
+        "risk_factor": 0.14,
+        "expected_net": -2.3,
+        "roi": -1.0,
+        "roi_label": "低"
+      },
+      "recommended_project": "智慧物流建设项目",
+      "packaging_keywords": [
+        "新质生产力",
+        "补链强链",
+        "数字化转型",
+        "智慧物流"
+      ],
+      "reasons": [],
+      "warnings": []
+    },
+    {
+      "id": "95ca780f1ec17a97",
+      "title": "专家解读文章之三 | 推动公共设施建设充分体现儿童友好理念",
+      "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404198.html \"专家解读文章之三 | 推动公共设施建设充分体现儿童友好理念\"",
+      "source": "国家发改委",
+      "source_level": "国家级",
+      "published_at": "",
+      "deadline": "",
+      "days_left": 0,
+      "parsed": {
+        "id": "95ca780f1ec17a97",
+        "title": null,
+        "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404198.html \"专家解读文章之三 | 推动公共设施建设充分体现儿童友好理念\"",
+        "source": "国家发改委",
+        "source_level": "国家级",
+        "published_at": "",
+        "parsed_at": "2026-05-14T14:43:33.857165+00:00",
         "confidence": 0.5,
         "parse_error": null,
         "级别": null,
@@ -400,7 +562,11 @@
         "政策类型": null,
         "支持方向": [],
         "支持金额": {},
-        "申报条件": {},
+        "申报条件": {
+          "必要资质": null,
+          "规模要求": null,
+          "投资要求": null
+        },
         "材料要求": [],
         "评审方式": null,
         "是否后补贴": null,
@@ -451,23 +617,23 @@
       "warnings": []
     },
     {
-      "id": "b9c0dddefe2ccfbc",
-      "title": "国家发展改革委新闻发言人就《国家发展改革委等部门关于加快招标投标领域人工智能推广应用的实施意见》答记者问",
-      "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202602/t20260210_1403683.html \"国家发展改革委新闻发言人就《国家发展改革委等部门关于加快招标投标领域人工智能推广应用的实施意见》答记者问\"",
+      "id": "461a8fe25dd0b3c7",
+      "title": "以儿童友好建设引领筑牢六大保护",
+      "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404186.html \"专家解读文章之五 | 以儿童友好建设引领筑牢六大保护\"",
       "source": "国家发改委",
       "source_level": "国家级",
       "published_at": "",
       "deadline": "",
       "days_left": 0,
       "parsed": {
-        "id": "b9c0dddefe2ccfbc",
-        "title": null,
-        "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202602/t20260210_1403683.html \"国家发展改革委新闻发言人就《国家发展改革委等部门关于加快招标投标领域人工智能推广应用的实施意见》答记者问\"",
+        "id": "461a8fe25dd0b3c7",
+        "title": "以儿童友好建设引领筑牢六大保护",
+        "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404186.html \"专家解读文章之五 | 以儿童友好建设引领筑牢六大保护\"",
         "source": "国家发改委",
         "source_level": "国家级",
         "published_at": "",
-        "parsed_at": "2026-05-14T10:30:33.575624+00:00",
-        "confidence": 0.5,
+        "parsed_at": "2026-05-14T14:43:59.775973+00:00",
+        "confidence": 0.6,
         "parse_error": null,
         "级别": null,
         "地区": [],
@@ -483,7 +649,8 @@
         "是否后补贴": null,
         "验收要求": null,
         "风险提示": [
-          "原始政策页面返回404错误，无法获取政策原文内容"
+          "原文链接返回404错误，政策内容无法获取",
+          "政策原文不存在或已被删除"
         ],
         "政策原文关键词": [],
         "适合申报企业": []
@@ -528,260 +695,8 @@
       "warnings": []
     },
     {
-      "id": "9a4be0227ef8785f",
-      "title": "关于核定南水北调中线干线工程供水价格的通知(发改价格〔2026〕630号)",
-      "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202605/t20260511_1405152.html \"关于核定南水北调中线干线工程供水价格的通知(发改价格〔2026〕630号",
-      "source": "国家发改委",
-      "source_level": "国家级",
-      "published_at": "",
-      "deadline": "",
-      "days_left": 0,
-      "parsed": {
-        "id": "9a4be0227ef8785f",
-        "title": "关于核定南水北调中线干线工程供水价格的通知(发改价格〔2026〕630号)",
-        "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202605/t20260511_1405152.html \"关于核定南水北调中线干线工程供水价格的通知(发改价格〔2026〕630号",
-        "source": "国家发改委",
-        "source_level": "国家级",
-        "published_at": "",
-        "parsed_at": "2026-05-14T10:28:15.731116+00:00",
-        "confidence": 0.65,
-        "parse_error": null,
-        "级别": "国家级",
-        "地区": [
-          "全国"
-        ],
-        "主管部门": [
-          "发改委"
-        ],
-        "发布时间": "2026-05-11",
-        "申报截止时间": null,
-        "政策类型": null,
-        "支持方向": [],
-        "支持金额": {},
-        "申报条件": {},
-        "材料要求": [],
-        "评审方式": null,
-        "是否后补贴": null,
-        "验收要求": null,
-        "风险提示": [
-          "政策原文链接返回404错误，无法获取实际政策内容"
-        ],
-        "政策原文关键词": [
-          "南水北调",
-          "供水价格"
-        ],
-        "适合申报企业": []
-      },
-      "match_score": 0.43,
-      "matched_tags": [],
-      "missing_tags": [],
-      "score": 48.2,
-      "level": "C",
-      "priority": "P3",
-      "dimensions": {
-        "amount": 50.0,
-        "difficulty": 100.0,
-        "hit_rate": 43.0,
-        "region": 50.0,
-        "industry": 0.0,
-        "urgency": 50.0
-      },
-      "is_pre_subsidy": true,
-      "risk_level": "低",
-      "risk_score": 0.0,
-      "risk_advice": "风险低，建议申报",
-      "is_worth_applying": true,
-      "roi": {
-        "subsidy": 0,
-        "labor_cost": 2.0,
-        "material_cost": 0.3,
-        "advance_fund": 0,
-        "risk_factor": 0.16,
-        "expected_net": -2.3,
-        "roi": -1.0,
-        "roi_label": "低"
-      },
-      "recommended_project": "智慧物流建设项目",
-      "packaging_keywords": [
-        "新质生产力",
-        "补链强链",
-        "数字化转型",
-        "智慧物流"
-      ],
-      "reasons": [],
-      "warnings": []
-    },
-    {
-      "id": "87f8b8252ee25506",
-      "title": "关于优化完善无线电频率占用费标准的通知(发改价格〔2026〕413号)",
-      "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202603/t20260327_1404395.html \"关于优化完善无线电频率占用费标准的通知(发改价格〔2026〕413号",
-      "source": "国家发改委",
-      "source_level": "国家级",
-      "published_at": "",
-      "deadline": "",
-      "days_left": 0,
-      "parsed": {
-        "id": "87f8b8252ee25506",
-        "title": "关于优化完善无线电频率占用费标准的通知(发改价格〔2026〕413号)",
-        "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202603/t20260327_1404395.html \"关于优化完善无线电频率占用费标准的通知(发改价格〔2026〕413号",
-        "source": "国家发改委",
-        "source_level": "国家级",
-        "published_at": "",
-        "parsed_at": "2026-05-14T10:28:47.501659+00:00",
-        "confidence": 0.65,
-        "parse_error": null,
-        "级别": "国家级",
-        "地区": [
-          "全国"
-        ],
-        "主管部门": [
-          "发改委"
-        ],
-        "发布时间": null,
-        "申报截止时间": null,
-        "政策类型": "其他",
-        "支持方向": [],
-        "支持金额": {},
-        "申报条件": {},
-        "材料要求": [],
-        "评审方式": null,
-        "是否后补贴": null,
-        "验收要求": null,
-        "风险提示": [
-          "政策原文页面返回404错误，无法获取完整政策内容"
-        ],
-        "政策原文关键词": [
-          "无线电频率",
-          "占用费"
-        ],
-        "适合申报企业": []
-      },
-      "match_score": 0.43,
-      "matched_tags": [],
-      "missing_tags": [],
-      "score": 48.2,
-      "level": "C",
-      "priority": "P3",
-      "dimensions": {
-        "amount": 50.0,
-        "difficulty": 100.0,
-        "hit_rate": 43.0,
-        "region": 50.0,
-        "industry": 0.0,
-        "urgency": 50.0
-      },
-      "is_pre_subsidy": true,
-      "risk_level": "低",
-      "risk_score": 0.0,
-      "risk_advice": "风险低，建议申报",
-      "is_worth_applying": true,
-      "roi": {
-        "subsidy": 0,
-        "labor_cost": 2.0,
-        "material_cost": 0.3,
-        "advance_fund": 0,
-        "risk_factor": 0.16,
-        "expected_net": -2.3,
-        "roi": -1.0,
-        "roi_label": "低"
-      },
-      "recommended_project": "智慧物流建设项目",
-      "packaging_keywords": [
-        "新质生产力",
-        "补链强链",
-        "数字化转型",
-        "智慧物流"
-      ],
-      "reasons": [],
-      "warnings": []
-    },
-    {
-      "id": "d5e6a5bfe0f28023",
-      "title": "国家发展改革委新闻发言人就《国家发展改革委国务院妇儿工委办公室关于在全社会推进儿童友好建设的意见》答记者问",
-      "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404203.html \"国家发展改革委新闻发言人就《国家发展改革委国务院妇儿工委办公室关于在全社会推进儿童友好建设的意见》答记者问\"",
-      "source": "国家发改委",
-      "source_level": "国家级",
-      "published_at": "",
-      "deadline": "",
-      "days_left": 0,
-      "parsed": {
-        "id": "d5e6a5bfe0f28023",
-        "title": "国家发展改革委新闻发言人就《国家发展改革委国务院妇儿工委办公室关于在全社会推进儿童友好建设的意见》答记者问",
-        "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404203.html \"国家发展改革委新闻发言人就《国家发展改革委国务院妇儿工委办公室关于在全社会推进儿童友好建设的意见》答记者问\"",
-        "source": "国家发改委",
-        "source_level": "国家级",
-        "published_at": "",
-        "parsed_at": "2026-05-14T10:29:15.618274+00:00",
-        "confidence": 0.65,
-        "parse_error": null,
-        "级别": "国家级",
-        "地区": [
-          "全国"
-        ],
-        "主管部门": [
-          "发改委",
-          "国务院妇儿工委办公室"
-        ],
-        "发布时间": null,
-        "申报截止时间": null,
-        "政策类型": null,
-        "支持方向": [],
-        "支持金额": {},
-        "申报条件": {},
-        "材料要求": [],
-        "评审方式": null,
-        "是否后补贴": null,
-        "验收要求": null,
-        "风险提示": [
-          "政策原文页面返回404错误，实际内容无法获取"
-        ],
-        "政策原文关键词": [
-          "儿童友好建设"
-        ],
-        "适合申报企业": []
-      },
-      "match_score": 0.43,
-      "matched_tags": [],
-      "missing_tags": [],
-      "score": 48.2,
-      "level": "C",
-      "priority": "P3",
-      "dimensions": {
-        "amount": 50.0,
-        "difficulty": 100.0,
-        "hit_rate": 43.0,
-        "region": 50.0,
-        "industry": 0.0,
-        "urgency": 50.0
-      },
-      "is_pre_subsidy": true,
-      "risk_level": "低",
-      "risk_score": 0.0,
-      "risk_advice": "风险低，建议申报",
-      "is_worth_applying": true,
-      "roi": {
-        "subsidy": 0,
-        "labor_cost": 2.0,
-        "material_cost": 0.3,
-        "advance_fund": 0,
-        "risk_factor": 0.16,
-        "expected_net": -2.3,
-        "roi": -1.0,
-        "roi_label": "低"
-      },
-      "recommended_project": "智慧物流建设项目",
-      "packaging_keywords": [
-        "新质生产力",
-        "补链强链",
-        "数字化转型",
-        "智慧物流"
-      ],
-      "reasons": [],
-      "warnings": []
-    },
-    {
       "id": "c04c13726e015f89",
-      "title": "关于加强投资项目在线审批监管平台和工程建设项目审批管理系统数据共享的通知(发改办投资〔2026〕88号)",
+      "title": "关于加强投资项目在线审批监管平台和工程建设项目审批管理系统数据共享的通知",
       "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202602/t20260213_1403763.html \"关于加强投资项目在线审批监管平台和工程建设项目审批管理系统数据共享的通知(发改办投资〔2026〕88号",
       "source": "国家发改委",
       "source_level": "国家级",
@@ -790,18 +705,16 @@
       "days_left": 0,
       "parsed": {
         "id": "c04c13726e015f89",
-        "title": "关于加强投资项目在线审批监管平台和工程建设项目审批管理系统数据共享的通知(发改办投资〔2026〕88号)",
+        "title": "关于加强投资项目在线审批监管平台和工程建设项目审批管理系统数据共享的通知",
         "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202602/t20260213_1403763.html \"关于加强投资项目在线审批监管平台和工程建设项目审批管理系统数据共享的通知(发改办投资〔2026〕88号",
         "source": "国家发改委",
         "source_level": "国家级",
         "published_at": "",
-        "parsed_at": "2026-05-14T10:29:54.117527+00:00",
+        "parsed_at": "2026-05-14T14:44:23.308510+00:00",
         "confidence": 0.65,
         "parse_error": null,
         "级别": "国家级",
-        "地区": [
-          "全国"
-        ],
+        "地区": [],
         "主管部门": [
           "发改委"
         ],
@@ -816,27 +729,23 @@
         "是否后补贴": null,
         "验收要求": null,
         "风险提示": [
-          "政策原文无法访问(404错误)，实际政策内容、支持方向、申报条件等信息无法确认"
+          "政策原文无法访问(404错误)，申报条件和支持金额无法确认"
         ],
-        "政策原文关键词": [
-          "数据共享",
-          "在线审批",
-          "工程建设项目审批"
-        ],
+        "政策原文关键词": [],
         "适合申报企业": []
       },
-      "match_score": 0.43,
+      "match_score": 0.54,
       "matched_tags": [],
       "missing_tags": [],
-      "score": 48.2,
-      "level": "C",
-      "priority": "P3",
+      "score": 55.5,
+      "level": "B",
+      "priority": "P2",
       "dimensions": {
         "amount": 50.0,
         "difficulty": 100.0,
-        "hit_rate": 43.0,
-        "region": 50.0,
-        "industry": 0.0,
+        "hit_rate": 54.0,
+        "region": 30.0,
+        "industry": 50.0,
         "urgency": 50.0
       },
       "is_pre_subsidy": true,
@@ -849,7 +758,7 @@
         "labor_cost": 2.0,
         "material_cost": 0.3,
         "advance_fund": 0,
-        "risk_factor": 0.16,
+        "risk_factor": 0.14,
         "expected_net": -2.3,
         "roi": -1.0,
         "roi_label": "低"
@@ -865,38 +774,31 @@
       "warnings": []
     },
     {
-      "id": "63c1cb44c74237fe",
-      "title": "关于印发《全国公共信用信息基础目录(2026年版)》和《全国失信惩戒措施基础清单(2026年版)》的通知(发改财金〔2026〕447号)",
-      "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202604/t20260403_1404508.html \"关于印发《全国公共信用信息基础目录(2026年版",
-      "source": "国家发改委",
+      "id": "74b7409556f5a730",
+      "title": "天津局召开市邮政业发展“十五五”规划专题调...",
+      "url": "http://www.spb.gov.cn/gjyzj/c100015/c100016/202605/0ce7a71d2f224e4b9ef8c06926ff8dcc.shtml \"天津局召开市邮政业发展“十五五”规划专题调研座谈会\"",
+      "source": "国家邮政局",
       "source_level": "国家级",
       "published_at": "",
       "deadline": "",
       "days_left": 0,
       "parsed": {
-        "id": "63c1cb44c74237fe",
-        "title": "关于印发《全国公共信用信息基础目录(2026年版)》和《全国失信惩戒措施基础清单(2026年版)》的通知(发改财金〔2026〕447号)",
-        "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202604/t20260403_1404508.html \"关于印发《全国公共信用信息基础目录(2026年版",
-        "source": "国家发改委",
+        "id": "74b7409556f5a730",
+        "title": null,
+        "url": "http://www.spb.gov.cn/gjyzj/c100015/c100016/202605/0ce7a71d2f224e4b9ef8c06926ff8dcc.shtml \"天津局召开市邮政业发展“十五五”规划专题调研座谈会\"",
+        "source": "国家邮政局",
         "source_level": "国家级",
         "published_at": "",
-        "parsed_at": "2026-05-14T10:28:42.025862+00:00",
-        "confidence": 0.75,
+        "parsed_at": "2026-05-14T14:49:04.420611+00:00",
+        "confidence": 0.5,
         "parse_error": null,
-        "级别": "国家级",
-        "地区": [
-          "全国"
-        ],
-        "主管部门": [
-          "发改委"
-        ],
-        "发布时间": "2026-04-03",
+        "级别": null,
+        "地区": [],
+        "主管部门": [],
+        "发布时间": null,
         "申报截止时间": null,
-        "政策类型": "信用管理",
-        "支持方向": [
-          "信用信息归集",
-          "失信惩戒"
-        ],
+        "政策类型": null,
+        "支持方向": [],
         "支持金额": {},
         "申报条件": {},
         "材料要求": [],
@@ -904,29 +806,360 @@
         "是否后补贴": null,
         "验收要求": null,
         "风险提示": [
-          "本政策非产业扶持类政策，不涉及资金支持",
-          "原文无法访问(404)，以上信息基于URL推断"
+          "政策原文页面返回404错误，无法获取完整政策内容"
+        ],
+        "政策原文关键词": [],
+        "适合申报企业": []
+      },
+      "match_score": 0.54,
+      "matched_tags": [],
+      "missing_tags": [],
+      "score": 55.5,
+      "level": "B",
+      "priority": "P2",
+      "dimensions": {
+        "amount": 50.0,
+        "difficulty": 100.0,
+        "hit_rate": 54.0,
+        "region": 30.0,
+        "industry": 50.0,
+        "urgency": 50.0
+      },
+      "is_pre_subsidy": true,
+      "risk_level": "低",
+      "risk_score": 0.0,
+      "risk_advice": "风险低，建议申报",
+      "is_worth_applying": true,
+      "roi": {
+        "subsidy": 0,
+        "labor_cost": 2.0,
+        "material_cost": 0.3,
+        "advance_fund": 0,
+        "risk_factor": 0.14,
+        "expected_net": -2.3,
+        "roi": -1.0,
+        "roi_label": "低"
+      },
+      "recommended_project": "智慧物流建设项目",
+      "packaging_keywords": [
+        "新质生产力",
+        "补链强链",
+        "数字化转型",
+        "智慧物流"
+      ],
+      "reasons": [],
+      "warnings": []
+    },
+    {
+      "id": "6e710a3b6608a9b1",
+      "title": "行业多项工作被纳入西安“十五五”规划纲要",
+      "url": "http://www.spb.gov.cn/gjyzj/c100015/c100017/202605/dcc3bbf50dd6490bb0c16fae9b1bf927.shtml \"行业多项工作被纳入西安“十五五”规划纲要\"",
+      "source": "国家邮政局",
+      "source_level": "国家级",
+      "published_at": "",
+      "deadline": "",
+      "days_left": 0,
+      "parsed": {
+        "id": "6e710a3b6608a9b1",
+        "title": "行业多项工作被纳入西安“十五五”规划纲要",
+        "url": "http://www.spb.gov.cn/gjyzj/c100015/c100017/202605/dcc3bbf50dd6490bb0c16fae9b1bf927.shtml \"行业多项工作被纳入西安“十五五”规划纲要\"",
+        "source": "国家邮政局",
+        "source_level": "国家级",
+        "published_at": "",
+        "parsed_at": "2026-05-14T14:49:26.959917+00:00",
+        "confidence": 0.6,
+        "parse_error": null,
+        "级别": null,
+        "地区": [
+          "西安"
+        ],
+        "主管部门": [],
+        "发布时间": null,
+        "申报截止时间": null,
+        "政策类型": null,
+        "支持方向": [],
+        "支持金额": {},
+        "申报条件": {
+          "必要资质": [],
+          "规模要求": null,
+          "投资要求": null
+        },
+        "材料要求": [],
+        "评审方式": null,
+        "是否后补贴": null,
+        "验收要求": null,
+        "风险提示": [
+          "无法获取政策原文内容，URL返回404错误，政策详情未知"
+        ],
+        "政策原文关键词": [],
+        "适合申报企业": []
+      },
+      "match_score": 0.54,
+      "matched_tags": [],
+      "missing_tags": [],
+      "score": 55.5,
+      "level": "B",
+      "priority": "P2",
+      "dimensions": {
+        "amount": 50.0,
+        "difficulty": 100.0,
+        "hit_rate": 54.0,
+        "region": 30.0,
+        "industry": 50.0,
+        "urgency": 50.0
+      },
+      "is_pre_subsidy": true,
+      "risk_level": "低",
+      "risk_score": 0.0,
+      "risk_advice": "风险低，建议申报",
+      "is_worth_applying": true,
+      "roi": {
+        "subsidy": 0,
+        "labor_cost": 2.0,
+        "material_cost": 0.3,
+        "advance_fund": 0,
+        "risk_factor": 0.14,
+        "expected_net": -2.3,
+        "roi": -1.0,
+        "roi_label": "低"
+      },
+      "recommended_project": "智慧物流建设项目",
+      "packaging_keywords": [
+        "新质生产力",
+        "补链强链",
+        "数字化转型",
+        "智慧物流"
+      ],
+      "reasons": [],
+      "warnings": []
+    },
+    {
+      "id": "c56a023d6326f4e9",
+      "title": "行业多项工作被纳入呼伦贝尔“十五五”规划纲...",
+      "url": "http://www.spb.gov.cn/gjyzj/c100015/c100017/202605/0841e9e44bb04d69943e8b520ef88a87.shtml \"行业多项工作被纳入呼伦贝尔“十五五”规划纲要\"",
+      "source": "国家邮政局",
+      "source_level": "国家级",
+      "published_at": "",
+      "deadline": "",
+      "days_left": 0,
+      "parsed": {
+        "id": "c56a023d6326f4e9",
+        "title": null,
+        "url": "http://www.spb.gov.cn/gjyzj/c100015/c100017/202605/0841e9e44bb04d69943e8b520ef88a87.shtml \"行业多项工作被纳入呼伦贝尔“十五五”规划纲要\"",
+        "source": "国家邮政局",
+        "source_level": "国家级",
+        "published_at": "",
+        "parsed_at": "2026-05-14T14:49:37.504204+00:00",
+        "confidence": 0.5,
+        "parse_error": null,
+        "级别": null,
+        "地区": [],
+        "主管部门": [],
+        "发布时间": null,
+        "申报截止时间": null,
+        "政策类型": null,
+        "支持方向": [],
+        "支持金额": {},
+        "申报条件": {
+          "必要资质": null,
+          "规模要求": null,
+          "投资要求": null
+        },
+        "材料要求": [],
+        "评审方式": null,
+        "是否后补贴": null,
+        "验收要求": null,
+        "风险提示": [
+          "政策原文页面不存在(404错误)，无法提取政策信息"
+        ],
+        "政策原文关键词": [],
+        "适合申报企业": []
+      },
+      "match_score": 0.54,
+      "matched_tags": [],
+      "missing_tags": [],
+      "score": 55.5,
+      "level": "B",
+      "priority": "P2",
+      "dimensions": {
+        "amount": 50.0,
+        "difficulty": 100.0,
+        "hit_rate": 54.0,
+        "region": 30.0,
+        "industry": 50.0,
+        "urgency": 50.0
+      },
+      "is_pre_subsidy": true,
+      "risk_level": "低",
+      "risk_score": 0.0,
+      "risk_advice": "风险低，建议申报",
+      "is_worth_applying": true,
+      "roi": {
+        "subsidy": 0,
+        "labor_cost": 2.0,
+        "material_cost": 0.3,
+        "advance_fund": 0,
+        "risk_factor": 0.14,
+        "expected_net": -2.3,
+        "roi": -1.0,
+        "roi_label": "低"
+      },
+      "recommended_project": "智慧物流建设项目",
+      "packaging_keywords": [
+        "新质生产力",
+        "补链强链",
+        "数字化转型",
+        "智慧物流"
+      ],
+      "reasons": [],
+      "warnings": []
+    },
+    {
+      "id": "fe117fc58113fffd",
+      "title": "韶关寄递物流“村村通”全覆盖建设工作方案印...",
+      "url": "http://www.spb.gov.cn/gjyzj/c100015/c100017/202605/a969fd60eb794cabb628cb7477909af2.shtml \"韶关寄递物流“村村通”全覆盖建设工作方案印发\"",
+      "source": "国家邮政局",
+      "source_level": "国家级",
+      "published_at": "",
+      "deadline": "",
+      "days_left": 0,
+      "parsed": {
+        "id": "fe117fc58113fffd",
+        "title": null,
+        "url": "http://www.spb.gov.cn/gjyzj/c100015/c100017/202605/a969fd60eb794cabb628cb7477909af2.shtml \"韶关寄递物流“村村通”全覆盖建设工作方案印发\"",
+        "source": "国家邮政局",
+        "source_level": "国家级",
+        "published_at": "",
+        "parsed_at": "2026-05-14T14:50:08.490670+00:00",
+        "confidence": 0.5,
+        "parse_error": null,
+        "级别": null,
+        "地区": [],
+        "主管部门": [],
+        "发布时间": null,
+        "申报截止时间": null,
+        "政策类型": null,
+        "支持方向": [],
+        "支持金额": {},
+        "申报条件": {},
+        "材料要求": [],
+        "评审方式": null,
+        "是否后补贴": null,
+        "验收要求": null,
+        "风险提示": [
+          "URL返回404错误，政策原文不可访问，无法提取任何信息"
+        ],
+        "政策原文关键词": [],
+        "适合申报企业": []
+      },
+      "match_score": 0.54,
+      "matched_tags": [],
+      "missing_tags": [],
+      "score": 55.5,
+      "level": "B",
+      "priority": "P2",
+      "dimensions": {
+        "amount": 50.0,
+        "difficulty": 100.0,
+        "hit_rate": 54.0,
+        "region": 30.0,
+        "industry": 50.0,
+        "urgency": 50.0
+      },
+      "is_pre_subsidy": true,
+      "risk_level": "低",
+      "risk_score": 0.0,
+      "risk_advice": "风险低，建议申报",
+      "is_worth_applying": true,
+      "roi": {
+        "subsidy": 0,
+        "labor_cost": 2.0,
+        "material_cost": 0.3,
+        "advance_fund": 0,
+        "risk_factor": 0.14,
+        "expected_net": -2.3,
+        "roi": -1.0,
+        "roi_label": "低"
+      },
+      "recommended_project": "智慧物流建设项目",
+      "packaging_keywords": [
+        "新质生产力",
+        "补链强链",
+        "数字化转型",
+        "智慧物流"
+      ],
+      "reasons": [],
+      "warnings": []
+    },
+    {
+      "id": "3bac1eb82a41eea8",
+      "title": "“十五五”邮政业标准体系建设指南",
+      "url": "http://www.spb.gov.cn/gjyzj/c100009/c100010/202603/26eee423827b466bad0826dc17824593.shtml \"“十五五”邮政业标准体系建设指南诚邀您建言献策\"",
+      "source": "国家邮政局",
+      "source_level": "国家级",
+      "published_at": "",
+      "deadline": "",
+      "days_left": 0,
+      "parsed": {
+        "id": "3bac1eb82a41eea8",
+        "title": "“十五五”邮政业标准体系建设指南",
+        "url": "http://www.spb.gov.cn/gjyzj/c100009/c100010/202603/26eee423827b466bad0826dc17824593.shtml \"“十五五”邮政业标准体系建设指南诚邀您建言献策\"",
+        "source": "国家邮政局",
+        "source_level": "国家级",
+        "published_at": "",
+        "parsed_at": "2026-05-14T14:48:32.799530+00:00",
+        "confidence": 0.75,
+        "parse_error": null,
+        "级别": "国家级",
+        "地区": [
+          "全国"
+        ],
+        "主管部门": [
+          "邮政局"
+        ],
+        "发布时间": null,
+        "申报截止时间": null,
+        "政策类型": "专项资金",
+        "支持方向": [
+          "邮政业标准体系",
+          "物流标准化"
+        ],
+        "支持金额": {
+          "描述": null,
+          "金额": null,
+          "单位": null
+        },
+        "申报条件": {
+          "必要资质": [],
+          "规模要求": null,
+          "投资要求": null
+        },
+        "材料要求": [],
+        "评审方式": null,
+        "是否后补贴": null,
+        "验收要求": null,
+        "风险提示": [
+          "政策原文链接已失效(404)"
         ],
         "政策原文关键词": [
-          "公共信用信息",
-          "失信惩戒",
-          "基础目录",
-          "基础清单"
+          "十五五",
+          "邮政业",
+          "标准体系"
         ],
         "适合申报企业": []
       },
       "match_score": 0.38,
       "matched_tags": [],
       "missing_tags": [],
-      "score": 47.0,
-      "level": "C",
-      "priority": "P3",
+      "score": 52.0,
+      "level": "B",
+      "priority": "P2",
       "dimensions": {
         "amount": 50.0,
         "difficulty": 100.0,
         "hit_rate": 38.0,
         "region": 50.0,
-        "industry": 0.0,
+        "industry": 33.3,
         "urgency": 50.0
       },
       "is_pre_subsidy": true,
@@ -944,18 +1177,214 @@
         "roi": -1.0,
         "roi_label": "低"
       },
-      "recommended_project": "信用信息归集示范项目",
+      "recommended_project": "邮政业标准体系示范项目",
       "packaging_keywords": [
-        "信用信息归集",
-        "失信惩戒",
+        "邮政业标准体系",
+        "物流标准化",
         "新质生产力",
         "补链强链",
         "数字化转型",
         "智慧物流"
       ],
       "reasons": [
-        "🎯 支持方向: 信用信息归集, 失信惩戒"
+        "🎯 支持方向: 邮政业标准体系, 物流标准化"
       ],
+      "warnings": []
+    },
+    {
+      "id": "4ca8078df28f23a8",
+      "title": "关于征求《快递电子运单》国家标准第1号修改单（征求意见稿）意见的通知",
+      "url": "http://www.spb.gov.cn/gjyzj/c100025/c100029/202509/866717c0531f4c5484841cde460559ad.shtml \"关于征求《快递电子运单》国家标准第1号修改单（征求意见稿）意见的通知\"",
+      "source": "国家邮政局",
+      "source_level": "国家级",
+      "published_at": "",
+      "deadline": "",
+      "days_left": 0,
+      "parsed": {
+        "id": "4ca8078df28f23a8",
+        "title": "关于征求《快递电子运单》国家标准第1号修改单（征求意见稿）意见的通知",
+        "url": "http://www.spb.gov.cn/gjyzj/c100025/c100029/202509/866717c0531f4c5484841cde460559ad.shtml \"关于征求《快递电子运单》国家标准第1号修改单（征求意见稿）意见的通知\"",
+        "source": "国家邮政局",
+        "source_level": "国家级",
+        "published_at": "",
+        "parsed_at": "2026-05-14T14:48:47.441367+00:00",
+        "confidence": 0.75,
+        "parse_error": null,
+        "级别": "国家级",
+        "地区": [
+          "全国"
+        ],
+        "主管部门": [
+          "国家邮政局"
+        ],
+        "发布时间": null,
+        "申报截止时间": null,
+        "政策类型": "标准制定",
+        "支持方向": [
+          "快递电子运单",
+          "标准化"
+        ],
+        "支持金额": {
+          "描述": null,
+          "金额": null,
+          "单位": null
+        },
+        "申报条件": {
+          "必要资质": null,
+          "规模要求": null,
+          "投资要求": null
+        },
+        "材料要求": [],
+        "评审方式": null,
+        "是否后补贴": null,
+        "验收要求": null,
+        "风险提示": [
+          "政策原文链接返回404错误，无法获取完整政策内容"
+        ],
+        "政策原文关键词": [
+          "快递电子运单",
+          "国家标准",
+          "修改单"
+        ],
+        "适合申报企业": []
+      },
+      "match_score": 0.38,
+      "matched_tags": [],
+      "missing_tags": [],
+      "score": 52.0,
+      "level": "B",
+      "priority": "P2",
+      "dimensions": {
+        "amount": 50.0,
+        "difficulty": 100.0,
+        "hit_rate": 38.0,
+        "region": 50.0,
+        "industry": 33.3,
+        "urgency": 50.0
+      },
+      "is_pre_subsidy": true,
+      "risk_level": "低",
+      "risk_score": 0.0,
+      "risk_advice": "风险低，建议申报",
+      "is_worth_applying": true,
+      "roi": {
+        "subsidy": 0,
+        "labor_cost": 2.0,
+        "material_cost": 0.3,
+        "advance_fund": 0,
+        "risk_factor": 0.17,
+        "expected_net": -2.3,
+        "roi": -1.0,
+        "roi_label": "低"
+      },
+      "recommended_project": "快递电子运单示范项目",
+      "packaging_keywords": [
+        "快递电子运单",
+        "标准化",
+        "新质生产力",
+        "补链强链",
+        "数字化转型",
+        "智慧物流"
+      ],
+      "reasons": [
+        "🎯 支持方向: 快递电子运单, 标准化"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "63c1cb44c74237fe",
+      "title": "关于印发《全国公共信用信息基础目录(2026年版)》和《全国失信惩戒措施基础清单(2026年版)》的通知",
+      "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202604/t20260403_1404508.html \"关于印发《全国公共信用信息基础目录(2026年版",
+      "source": "国家发改委",
+      "source_level": "国家级",
+      "published_at": "",
+      "deadline": "",
+      "days_left": 0,
+      "parsed": {
+        "id": "63c1cb44c74237fe",
+        "title": "关于印发《全国公共信用信息基础目录(2026年版)》和《全国失信惩戒措施基础清单(2026年版)》的通知",
+        "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202604/t20260403_1404508.html \"关于印发《全国公共信用信息基础目录(2026年版",
+        "source": "国家发改委",
+        "source_level": "国家级",
+        "published_at": "",
+        "parsed_at": "2026-05-14T14:41:07.326350+00:00",
+        "confidence": 0.65,
+        "parse_error": null,
+        "级别": "国家级",
+        "地区": [
+          "全国"
+        ],
+        "主管部门": [
+          "发改委"
+        ],
+        "发布时间": "2026-04-03",
+        "申报截止时间": null,
+        "政策类型": "资质认定",
+        "支持方向": [],
+        "支持金额": {
+          "描述": null,
+          "金额": null,
+          "单位": null
+        },
+        "申报条件": {
+          "必要资质": [],
+          "规模要求": null,
+          "投资要求": null
+        },
+        "材料要求": [],
+        "评审方式": null,
+        "是否后补贴": false,
+        "验收要求": null,
+        "风险提示": [
+          "政策原文内容无法获取(URL返回404错误)",
+          "该政策为信用信息管理规范性文件，非财政奖补政策",
+          "涉及失信惩戒措施，企业需关注自身信用状况"
+        ],
+        "政策原文关键词": [
+          "公共信用信息",
+          "失信惩戒",
+          "基础目录",
+          "基础清单"
+        ],
+        "适合申报企业": []
+      },
+      "match_score": 0.43,
+      "matched_tags": [],
+      "missing_tags": [],
+      "score": 48.2,
+      "level": "C",
+      "priority": "P3",
+      "dimensions": {
+        "amount": 50.0,
+        "difficulty": 100.0,
+        "hit_rate": 43.0,
+        "region": 50.0,
+        "industry": 0.0,
+        "urgency": 50.0
+      },
+      "is_pre_subsidy": true,
+      "risk_level": "低",
+      "risk_score": 0.0,
+      "risk_advice": "风险低，建议申报",
+      "is_worth_applying": true,
+      "roi": {
+        "subsidy": 0,
+        "labor_cost": 2.0,
+        "material_cost": 0.3,
+        "advance_fund": 0,
+        "risk_factor": 0.16,
+        "expected_net": -2.3,
+        "roi": -1.0,
+        "roi_label": "低"
+      },
+      "recommended_project": "智慧物流建设项目",
+      "packaging_keywords": [
+        "新质生产力",
+        "补链强链",
+        "数字化转型",
+        "智慧物流"
+      ],
+      "reasons": [],
       "warnings": []
     },
     {
@@ -974,7 +1403,7 @@
         "source": "国家发改委",
         "source_level": "国家级",
         "published_at": "",
-        "parsed_at": "2026-05-14T10:28:56.265105+00:00",
+        "parsed_at": "2026-05-14T14:41:48.897015+00:00",
         "confidence": 0.75,
         "parse_error": null,
         "级别": "国家级",
@@ -986,12 +1415,14 @@
         ],
         "发布时间": null,
         "申报截止时间": null,
-        "政策类型": null,
+        "政策类型": "综合性指导意见",
         "支持方向": [
-          "儿童友好城市建设"
+          "儿童友好城市建设",
+          "儿童公共服务",
+          "儿童权益保障"
         ],
         "支持金额": {
-          "描述": null,
+          "描述": "无明确资金支持条款",
           "金额": null,
           "单位": null
         },
@@ -1005,12 +1436,18 @@
         "是否后补贴": null,
         "验收要求": null,
         "风险提示": [
-          "政策原文无法访问(404错误)，无法提取完整政策信息"
+          "政策原文页面返回404错误，无法获取完整政策内容",
+          "本数据基于政策标题和发文字号推断，具体条款以官方发布为准"
         ],
         "政策原文关键词": [
-          "儿童友好"
+          "儿童友好",
+          "社会建设"
         ],
-        "适合申报企业": []
+        "适合申报企业": [
+          "教育机构",
+          "儿童服务机构",
+          "城市建设相关企业"
+        ]
       },
       "match_score": 0.38,
       "matched_tags": [],
@@ -1044,13 +1481,15 @@
       "recommended_project": "儿童友好城市建设示范项目",
       "packaging_keywords": [
         "儿童友好城市建设",
+        "儿童公共服务",
+        "儿童权益保障",
         "新质生产力",
         "补链强链",
         "数字化转型",
         "智慧物流"
       ],
       "reasons": [
-        "🎯 支持方向: 儿童友好城市建设"
+        "🎯 支持方向: 儿童友好城市建设, 儿童公共服务"
       ],
       "warnings": []
     },
@@ -1070,7 +1509,7 @@
         "source": "国家发改委",
         "source_level": "国家级",
         "published_at": "",
-        "parsed_at": "2026-05-14T10:29:03.831182+00:00",
+        "parsed_at": "2026-05-14T14:42:04.722231+00:00",
         "confidence": 0.75,
         "parse_error": null,
         "级别": "国家级",
@@ -1080,25 +1519,37 @@
         "主管部门": [
           "发改委"
         ],
-        "发布时间": null,
+        "发布时间": "2026-03-17",
         "申报截止时间": null,
-        "政策类型": "指导意见",
+        "政策类型": "综合政策",
         "支持方向": [
           "儿童友好城市建设"
         ],
-        "支持金额": {},
-        "申报条件": {},
+        "支持金额": {
+          "描述": "无具体金额",
+          "金额": null,
+          "单位": null
+        },
+        "申报条件": {
+          "必要资质": null,
+          "规模要求": null,
+          "投资要求": null
+        },
         "材料要求": [],
         "评审方式": null,
         "是否后补贴": null,
         "验收要求": null,
         "风险提示": [
-          "政策原文链接已失效（404），无法获取具体政策内容"
+          "政策原文页面返回404错误，无法获取详细政策内容"
         ],
         "政策原文关键词": [
-          "儿童友好"
+          "儿童友好",
+          "城市建设"
         ],
-        "适合申报企业": []
+        "适合申报企业": [
+          "城市建设相关企业",
+          "社会服务企业"
+        ]
       },
       "match_score": 0.38,
       "matched_tags": [],
@@ -1143,22 +1594,22 @@
       "warnings": []
     },
     {
-      "id": "d3c0b10ca989c878",
-      "title": "关于在全社会推进儿童友好建设的意见",
-      "url": "http://www.ndrc.gov.cn/xxgk/jd/zctj/202603/t20260317_1404201.html \"一图读懂 | 关于在全社会推进儿童友好建设的意见\"",
+      "id": "f1c7002e10371f2f",
+      "title": "专家解读文章之二 | 推动公共政策制定充分考虑儿童视角",
+      "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404199.html \"专家解读文章之二 | 推动公共政策制定充分考虑儿童视角\"",
       "source": "国家发改委",
       "source_level": "国家级",
       "published_at": "",
       "deadline": "",
       "days_left": 0,
       "parsed": {
-        "id": "d3c0b10ca989c878",
-        "title": "关于在全社会推进儿童友好建设的意见",
-        "url": "http://www.ndrc.gov.cn/xxgk/jd/zctj/202603/t20260317_1404201.html \"一图读懂 | 关于在全社会推进儿童友好建设的意见\"",
+        "id": "f1c7002e10371f2f",
+        "title": "专家解读文章之二 | 推动公共政策制定充分考虑儿童视角",
+        "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404199.html \"专家解读文章之二 | 推动公共政策制定充分考虑儿童视角\"",
         "source": "国家发改委",
         "source_level": "国家级",
         "published_at": "",
-        "parsed_at": "2026-05-14T10:29:22.008788+00:00",
+        "parsed_at": "2026-05-14T14:43:24.140869+00:00",
         "confidence": 0.75,
         "parse_error": null,
         "级别": "国家级",
@@ -1168,14 +1619,15 @@
         "主管部门": [
           "发改委"
         ],
-        "发布时间": null,
+        "发布时间": "2026-03-17",
         "申报截止时间": null,
         "政策类型": null,
         "支持方向": [
-          "儿童友好"
+          "儿童权益保护",
+          "公共政策"
         ],
         "支持金额": {
-          "描述": "无法获取",
+          "描述": null,
           "金额": null,
           "单位": null
         },
@@ -1189,11 +1641,12 @@
         "是否后补贴": null,
         "验收要求": null,
         "风险提示": [
-          "政策原文页面返回404错误，无法获取详细内容"
+          "本文为政策解读文章，非具体可申报政策，无资助金额和申报条件"
         ],
         "政策原文关键词": [
-          "儿童友好",
-          "儿童友好城市"
+          "儿童视角",
+          "公共政策",
+          "儿童权益"
         ],
         "适合申报企业": []
       },
@@ -1226,36 +1679,37 @@
         "roi": -1.0,
         "roi_label": "低"
       },
-      "recommended_project": "儿童友好示范项目",
+      "recommended_project": "儿童权益保护示范项目",
       "packaging_keywords": [
-        "儿童友好",
+        "儿童权益保护",
+        "公共政策",
         "新质生产力",
         "补链强链",
         "数字化转型",
         "智慧物流"
       ],
       "reasons": [
-        "🎯 支持方向: 儿童友好"
+        "🎯 支持方向: 儿童权益保护, 公共政策"
       ],
       "warnings": []
     },
     {
-      "id": "28d553d15440a07f",
-      "title": "推进儿童友好建设迈向更高水平",
-      "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404200.html \"专家解读文章之一 | 推进儿童友好建设迈向更高水平\"",
+      "id": "98d0226ff2e3f674",
+      "title": "推动公共服务供给充分保障儿童优先",
+      "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404187.html \"专家解读文章之四 | 推动公共服务供给充分保障儿童优先\"",
       "source": "国家发改委",
       "source_level": "国家级",
       "published_at": "",
       "deadline": "",
       "days_left": 0,
       "parsed": {
-        "id": "28d553d15440a07f",
-        "title": "推进儿童友好建设迈向更高水平",
-        "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404200.html \"专家解读文章之一 | 推进儿童友好建设迈向更高水平\"",
+        "id": "98d0226ff2e3f674",
+        "title": "推动公共服务供给充分保障儿童优先",
+        "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404187.html \"专家解读文章之四 | 推动公共服务供给充分保障儿童优先\"",
         "source": "国家发改委",
         "source_level": "国家级",
         "published_at": "",
-        "parsed_at": "2026-05-14T10:29:26.993369+00:00",
+        "parsed_at": "2026-05-14T14:43:47.601717+00:00",
         "confidence": 0.75,
         "parse_error": null,
         "级别": "国家级",
@@ -1269,24 +1723,20 @@
         "申报截止时间": null,
         "政策类型": null,
         "支持方向": [
-          "儿童友好"
+          "儿童公共服务"
         ],
         "支持金额": {},
-        "申报条件": {
-          "必要资质": null,
-          "规模要求": null,
-          "投资要求": null
-        },
+        "申报条件": {},
         "材料要求": [],
         "评审方式": null,
         "是否后补贴": null,
         "验收要求": null,
         "风险提示": [
-          "该页面返回404错误，政策原文无法访问",
-          "请核实正确的政策文件URL"
+          "原始政策页面返回404错误，无法获取完整政策原文"
         ],
         "政策原文关键词": [
-          "儿童友好"
+          "儿童优先",
+          "公共服务"
         ],
         "适合申报企业": []
       },
@@ -1319,215 +1769,16 @@
         "roi": -1.0,
         "roi_label": "低"
       },
-      "recommended_project": "儿童友好示范项目",
+      "recommended_project": "儿童公共服务示范项目",
       "packaging_keywords": [
-        "儿童友好",
+        "儿童公共服务",
         "新质生产力",
         "补链强链",
         "数字化转型",
         "智慧物流"
       ],
       "reasons": [
-        "🎯 支持方向: 儿童友好"
-      ],
-      "warnings": []
-    },
-    {
-      "id": "461a8fe25dd0b3c7",
-      "title": "以儿童友好建设引领筑牢六大保护",
-      "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404186.html \"专家解读文章之五 | 以儿童友好建设引领筑牢六大保护\"",
-      "source": "国家发改委",
-      "source_level": "国家级",
-      "published_at": "",
-      "deadline": "",
-      "days_left": 0,
-      "parsed": {
-        "id": "461a8fe25dd0b3c7",
-        "title": "以儿童友好建设引领筑牢六大保护",
-        "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404186.html \"专家解读文章之五 | 以儿童友好建设引领筑牢六大保护\"",
-        "source": "国家发改委",
-        "source_level": "国家级",
-        "published_at": "",
-        "parsed_at": "2026-05-14T10:29:47.080118+00:00",
-        "confidence": 0.75,
-        "parse_error": null,
-        "级别": "国家级",
-        "地区": [
-          "全国"
-        ],
-        "主管部门": [
-          "发改委"
-        ],
-        "发布时间": null,
-        "申报截止时间": null,
-        "政策类型": null,
-        "支持方向": [
-          "儿童友好城市",
-          "社会保护"
-        ],
-        "支持金额": {
-          "描述": null,
-          "金额": null,
-          "单位": null
-        },
-        "申报条件": {
-          "必要资质": [],
-          "规模要求": null,
-          "投资要求": null
-        },
-        "材料要求": [],
-        "评审方式": null,
-        "是否后补贴": null,
-        "验收要求": null,
-        "风险提示": [
-          "政策原文链接已失效(404错误)，无法获取完整政策内容",
-          "建议通过官方渠道重新获取政策文件"
-        ],
-        "政策原文关键词": [
-          "儿童友好"
-        ],
-        "适合申报企业": []
-      },
-      "match_score": 0.38,
-      "matched_tags": [],
-      "missing_tags": [],
-      "score": 47.0,
-      "level": "C",
-      "priority": "P3",
-      "dimensions": {
-        "amount": 50.0,
-        "difficulty": 100.0,
-        "hit_rate": 38.0,
-        "region": 50.0,
-        "industry": 0.0,
-        "urgency": 50.0
-      },
-      "is_pre_subsidy": true,
-      "risk_level": "低",
-      "risk_score": 0.0,
-      "risk_advice": "风险低，建议申报",
-      "is_worth_applying": true,
-      "roi": {
-        "subsidy": 0,
-        "labor_cost": 2.0,
-        "material_cost": 0.3,
-        "advance_fund": 0,
-        "risk_factor": 0.17,
-        "expected_net": -2.3,
-        "roi": -1.0,
-        "roi_label": "低"
-      },
-      "recommended_project": "儿童友好城市示范项目",
-      "packaging_keywords": [
-        "儿童友好城市",
-        "社会保护",
-        "新质生产力",
-        "补链强链",
-        "数字化转型",
-        "智慧物流"
-      ],
-      "reasons": [
-        "🎯 支持方向: 儿童友好城市, 社会保护"
-      ],
-      "warnings": []
-    },
-    {
-      "id": "37464824000b68e9",
-      "title": "关于加快招标投标领域人工智能推广应用的实施意见",
-      "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202602/t20260210_1403680.html \"关于加快招标投标领域人工智能推广应用的实施意见(发改法规〔2026〕195号",
-      "source": "国家发改委",
-      "source_level": "国家级",
-      "published_at": "",
-      "deadline": "",
-      "days_left": 0,
-      "parsed": {
-        "id": "37464824000b68e9",
-        "title": "关于加快招标投标领域人工智能推广应用的实施意见",
-        "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202602/t20260210_1403680.html \"关于加快招标投标领域人工智能推广应用的实施意见(发改法规〔2026〕195号",
-        "source": "国家发改委",
-        "source_level": "国家级",
-        "published_at": "",
-        "parsed_at": "2026-05-14T10:30:29.130663+00:00",
-        "confidence": 0.75,
-        "parse_error": null,
-        "级别": "国家级",
-        "地区": [
-          "全国"
-        ],
-        "主管部门": [
-          "发改委"
-        ],
-        "发布时间": "2026-02-10",
-        "申报截止时间": null,
-        "政策类型": null,
-        "支持方向": [
-          "AI推广应用",
-          "招标投标数字化"
-        ],
-        "支持金额": {
-          "描述": null,
-          "金额": null,
-          "单位": null
-        },
-        "申报条件": {
-          "必要资质": null,
-          "规模要求": null,
-          "投资要求": null
-        },
-        "材料要求": [],
-        "评审方式": null,
-        "是否后补贴": null,
-        "验收要求": null,
-        "风险提示": [
-          "政策原文内容无法获取(URL返回404错误)，无法提取完整申报信息"
-        ],
-        "政策原文关键词": [
-          "人工智能",
-          "招标投标",
-          "推广应用"
-        ],
-        "适合申报企业": []
-      },
-      "match_score": 0.38,
-      "matched_tags": [],
-      "missing_tags": [],
-      "score": 47.0,
-      "level": "C",
-      "priority": "P3",
-      "dimensions": {
-        "amount": 50.0,
-        "difficulty": 100.0,
-        "hit_rate": 38.0,
-        "region": 50.0,
-        "industry": 0.0,
-        "urgency": 50.0
-      },
-      "is_pre_subsidy": true,
-      "risk_level": "低",
-      "risk_score": 0.0,
-      "risk_advice": "风险低，建议申报",
-      "is_worth_applying": true,
-      "roi": {
-        "subsidy": 0,
-        "labor_cost": 2.0,
-        "material_cost": 0.3,
-        "advance_fund": 0,
-        "risk_factor": 0.17,
-        "expected_net": -2.3,
-        "roi": -1.0,
-        "roi_label": "低"
-      },
-      "recommended_project": "AI推广应用示范项目",
-      "packaging_keywords": [
-        "AI推广应用",
-        "招标投标数字化",
-        "新质生产力",
-        "补链强链",
-        "数字化转型",
-        "智慧物流"
-      ],
-      "reasons": [
-        "🎯 支持方向: AI推广应用, 招标投标数字化"
+        "🎯 支持方向: 儿童公共服务"
       ],
       "warnings": []
     },
@@ -1547,7 +1798,7 @@
         "source": "国家发改委",
         "source_level": "国家级",
         "published_at": "",
-        "parsed_at": "2026-05-14T10:30:40.388342+00:00",
+        "parsed_at": "2026-05-14T14:45:41.454887+00:00",
         "confidence": 0.75,
         "parse_error": null,
         "级别": "国家级",
@@ -1561,17 +1812,16 @@
         "申报截止时间": null,
         "政策类型": "保供稳价",
         "支持方向": [
-          "化肥生产",
-          "化肥流通",
-          "春耕保障"
+          "化肥保供",
+          "化肥稳价"
         ],
         "支持金额": {
-          "描述": null,
+          "描述": "无资金支持政策",
           "金额": null,
           "单位": null
         },
         "申报条件": {
-          "必要资质": null,
+          "必要资质": [],
           "规模要求": null,
           "投资要求": null
         },
@@ -1580,12 +1830,13 @@
         "是否后补贴": null,
         "验收要求": null,
         "风险提示": [
-          "政策原文网页返回404错误，无法获取具体政策内容"
+          "政策原文页面返回404错误，实际政策内容无法访问",
+          "本通知为保供稳价工作通知，非申报类政策，无直接资金支持"
         ],
         "政策原文关键词": [
           "化肥",
-          "保供稳价",
-          "春耕"
+          "春耕",
+          "保供稳价"
         ],
         "适合申报企业": []
       },
@@ -1618,18 +1869,884 @@
         "roi": -1.0,
         "roi_label": "低"
       },
-      "recommended_project": "化肥生产示范项目",
+      "recommended_project": "化肥保供示范项目",
       "packaging_keywords": [
-        "化肥生产",
-        "化肥流通",
-        "春耕保障",
+        "化肥保供",
+        "化肥稳价",
         "新质生产力",
         "补链强链",
         "数字化转型",
         "智慧物流"
       ],
       "reasons": [
-        "🎯 支持方向: 化肥生产, 化肥流通"
+        "🎯 支持方向: 化肥保供, 化肥稳价"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "b27feb3fafb74c86",
+      "title": "关于完善发电侧容量电价机制的通知",
+      "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202601/t20260130_1403524.html \"关于完善发电侧容量电价机制的通知(发改价格〔2026〕114号",
+      "source": "国家发改委",
+      "source_level": "国家级",
+      "published_at": "",
+      "deadline": "",
+      "days_left": 0,
+      "parsed": {
+        "id": "b27feb3fafb74c86",
+        "title": "关于完善发电侧容量电价机制的通知",
+        "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202601/t20260130_1403524.html \"关于完善发电侧容量电价机制的通知(发改价格〔2026〕114号",
+        "source": "国家发改委",
+        "source_level": "国家级",
+        "published_at": "",
+        "parsed_at": "2026-05-14T14:46:00.648037+00:00",
+        "confidence": 0.75,
+        "parse_error": null,
+        "级别": "国家级",
+        "地区": [
+          "全国"
+        ],
+        "主管部门": [
+          "发改委"
+        ],
+        "发布时间": "2026-01-30",
+        "申报截止时间": null,
+        "政策类型": "电价机制",
+        "支持方向": [
+          "电力行业",
+          "发电企业"
+        ],
+        "支持金额": {
+          "描述": "不适用",
+          "金额": null,
+          "单位": null
+        },
+        "申报条件": {
+          "必要资质": null,
+          "规模要求": null,
+          "投资要求": null
+        },
+        "材料要求": [],
+        "评审方式": null,
+        "是否后补贴": null,
+        "验收要求": null,
+        "风险提示": [],
+        "政策原文关键词": [
+          "发电侧",
+          "容量电价",
+          "电力市场"
+        ],
+        "适合申报企业": []
+      },
+      "match_score": 0.38,
+      "matched_tags": [],
+      "missing_tags": [],
+      "score": 47.0,
+      "level": "C",
+      "priority": "P3",
+      "dimensions": {
+        "amount": 50.0,
+        "difficulty": 100.0,
+        "hit_rate": 38.0,
+        "region": 50.0,
+        "industry": 0.0,
+        "urgency": 50.0
+      },
+      "is_pre_subsidy": true,
+      "risk_level": "低",
+      "risk_score": 0.0,
+      "risk_advice": "风险低，建议申报",
+      "is_worth_applying": true,
+      "roi": {
+        "subsidy": 0,
+        "labor_cost": 2.0,
+        "material_cost": 0.3,
+        "advance_fund": 0,
+        "risk_factor": 0.17,
+        "expected_net": -2.3,
+        "roi": -1.0,
+        "roi_label": "低"
+      },
+      "recommended_project": "电力行业示范项目",
+      "packaging_keywords": [
+        "电力行业",
+        "发电企业",
+        "新质生产力",
+        "补链强链",
+        "数字化转型",
+        "智慧物流"
+      ],
+      "reasons": [
+        "🎯 支持方向: 电力行业, 发电企业"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "1987866ee1a0e7e2",
+      "title": "关于进一步完善殡葬服务收费政策的通知",
+      "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202601/t20260127_1403485.html \"关于进一步完善殡葬服务收费政策的通知(发改价格〔2026〕108号",
+      "source": "国家发改委",
+      "source_level": "国家级",
+      "published_at": "",
+      "deadline": "",
+      "days_left": 0,
+      "parsed": {
+        "id": "1987866ee1a0e7e2",
+        "title": "关于进一步完善殡葬服务收费政策的通知",
+        "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202601/t20260127_1403485.html \"关于进一步完善殡葬服务收费政策的通知(发改价格〔2026〕108号",
+        "source": "国家发改委",
+        "source_level": "国家级",
+        "published_at": "",
+        "parsed_at": "2026-05-14T14:46:16.218930+00:00",
+        "confidence": 0.75,
+        "parse_error": null,
+        "级别": "国家级",
+        "地区": [
+          "全国"
+        ],
+        "主管部门": [
+          "发改委"
+        ],
+        "发布时间": "2026-01-27",
+        "申报截止时间": null,
+        "政策类型": "价格管理",
+        "支持方向": [
+          "殡葬服务"
+        ],
+        "支持金额": {
+          "描述": "政策为规范收费，非扶持资金",
+          "金额": 0,
+          "单位": "万"
+        },
+        "申报条件": {
+          "必要资质": [],
+          "规模要求": null,
+          "投资要求": null
+        },
+        "材料要求": [],
+        "评审方式": null,
+        "是否后补贴": false,
+        "验收要求": null,
+        "风险提示": [
+          "政策原文无法访问(404错误)，无法提取完整政策内容"
+        ],
+        "政策原文关键词": [
+          "殡葬服务",
+          "收费政策",
+          "价格管理"
+        ],
+        "适合申报企业": []
+      },
+      "match_score": 0.38,
+      "matched_tags": [],
+      "missing_tags": [],
+      "score": 47.0,
+      "level": "C",
+      "priority": "P3",
+      "dimensions": {
+        "amount": 50.0,
+        "difficulty": 100.0,
+        "hit_rate": 38.0,
+        "region": 50.0,
+        "industry": 0.0,
+        "urgency": 50.0
+      },
+      "is_pre_subsidy": true,
+      "risk_level": "低",
+      "risk_score": 0.0,
+      "risk_advice": "风险低，建议申报",
+      "is_worth_applying": true,
+      "roi": {
+        "subsidy": 0,
+        "labor_cost": 2.0,
+        "material_cost": 0.3,
+        "advance_fund": 0,
+        "risk_factor": 0.17,
+        "expected_net": -2.3,
+        "roi": -1.0,
+        "roi_label": "低"
+      },
+      "recommended_project": "殡葬服务示范项目",
+      "packaging_keywords": [
+        "殡葬服务",
+        "新质生产力",
+        "补链强链",
+        "数字化转型",
+        "智慧物流"
+      ],
+      "reasons": [
+        "🎯 支持方向: 殡葬服务"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "35fffc0e91af070e",
+      "title": "国家发展改革委有关负责同志就《关于进一步完善殡葬服务收费政策的通知》答记者问",
+      "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202601/t20260127_1403482.html \"国家发展改革委有关负责同志就《关于进一步完善殡葬服务收费政策的通知》答记者问\"",
+      "source": "国家发改委",
+      "source_level": "国家级",
+      "published_at": "",
+      "deadline": "",
+      "days_left": 0,
+      "parsed": {
+        "id": "35fffc0e91af070e",
+        "title": "国家发展改革委有关负责同志就《关于进一步完善殡葬服务收费政策的通知》答记者问",
+        "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202601/t20260127_1403482.html \"国家发展改革委有关负责同志就《关于进一步完善殡葬服务收费政策的通知》答记者问\"",
+        "source": "国家发改委",
+        "source_level": "国家级",
+        "published_at": "",
+        "parsed_at": "2026-05-14T14:46:38.870038+00:00",
+        "confidence": 0.75,
+        "parse_error": null,
+        "级别": "国家级",
+        "地区": [
+          "全国"
+        ],
+        "主管部门": [
+          "发改委"
+        ],
+        "发布时间": null,
+        "申报截止时间": null,
+        "政策类型": "公共服务定价",
+        "支持方向": [
+          "殡葬服务"
+        ],
+        "支持金额": {
+          "描述": null,
+          "金额": null,
+          "单位": null
+        },
+        "申报条件": {
+          "必要资质": null,
+          "规模要求": null,
+          "投资要求": null
+        },
+        "材料要求": [],
+        "评审方式": null,
+        "是否后补贴": null,
+        "验收要求": null,
+        "风险提示": [
+          "政策原文链接已失效(404)，无法获取详细内容"
+        ],
+        "政策原文关键词": [
+          "殡葬服务",
+          "收费政策"
+        ],
+        "适合申报企业": []
+      },
+      "match_score": 0.38,
+      "matched_tags": [],
+      "missing_tags": [],
+      "score": 47.0,
+      "level": "C",
+      "priority": "P3",
+      "dimensions": {
+        "amount": 50.0,
+        "difficulty": 100.0,
+        "hit_rate": 38.0,
+        "region": 50.0,
+        "industry": 0.0,
+        "urgency": 50.0
+      },
+      "is_pre_subsidy": true,
+      "risk_level": "低",
+      "risk_score": 0.0,
+      "risk_advice": "风险低，建议申报",
+      "is_worth_applying": true,
+      "roi": {
+        "subsidy": 0,
+        "labor_cost": 2.0,
+        "material_cost": 0.3,
+        "advance_fund": 0,
+        "risk_factor": 0.17,
+        "expected_net": -2.3,
+        "roi": -1.0,
+        "roi_label": "低"
+      },
+      "recommended_project": "殡葬服务示范项目",
+      "packaging_keywords": [
+        "殡葬服务",
+        "新质生产力",
+        "补链强链",
+        "数字化转型",
+        "智慧物流"
+      ],
+      "reasons": [
+        "🎯 支持方向: 殡葬服务"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "974e1d3b9b1fc681",
+      "title": "印发《关于推进城际铁路健康可持续发展的意见》的通知(发改基础〔2025〕1674号)",
+      "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202601/t20260124_1403433.html \"印发《关于推进城际铁路健康可持续发展的意见》的通知(发改基础〔2025〕1674号",
+      "source": "国家发改委",
+      "source_level": "国家级",
+      "published_at": "",
+      "deadline": "",
+      "days_left": 0,
+      "parsed": {
+        "id": "974e1d3b9b1fc681",
+        "title": "印发《关于推进城际铁路健康可持续发展的意见》的通知(发改基础〔2025〕1674号)",
+        "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202601/t20260124_1403433.html \"印发《关于推进城际铁路健康可持续发展的意见》的通知(发改基础〔2025〕1674号",
+        "source": "国家发改委",
+        "source_level": "国家级",
+        "published_at": "",
+        "parsed_at": "2026-05-14T14:46:54.254517+00:00",
+        "confidence": 0.75,
+        "parse_error": null,
+        "级别": "国家级",
+        "地区": [
+          "全国"
+        ],
+        "主管部门": [
+          "发改委"
+        ],
+        "发布时间": null,
+        "申报截止时间": null,
+        "政策类型": "基础设施",
+        "支持方向": [
+          "城际铁路",
+          "轨道交通"
+        ],
+        "支持金额": {
+          "描述": null,
+          "金额": null,
+          "单位": null
+        },
+        "申报条件": {
+          "必要资质": null,
+          "规模要求": null,
+          "投资要求": null
+        },
+        "材料要求": [],
+        "评审方式": null,
+        "是否后补贴": null,
+        "验收要求": null,
+        "风险提示": [
+          "政策原文页面404错误，无法获取详细内容"
+        ],
+        "政策原文关键词": [
+          "城际铁路",
+          "健康可持续",
+          "意见"
+        ],
+        "适合申报企业": []
+      },
+      "match_score": 0.38,
+      "matched_tags": [],
+      "missing_tags": [],
+      "score": 47.0,
+      "level": "C",
+      "priority": "P3",
+      "dimensions": {
+        "amount": 50.0,
+        "difficulty": 100.0,
+        "hit_rate": 38.0,
+        "region": 50.0,
+        "industry": 0.0,
+        "urgency": 50.0
+      },
+      "is_pre_subsidy": true,
+      "risk_level": "低",
+      "risk_score": 0.0,
+      "risk_advice": "风险低，建议申报",
+      "is_worth_applying": true,
+      "roi": {
+        "subsidy": 0,
+        "labor_cost": 2.0,
+        "material_cost": 0.3,
+        "advance_fund": 0,
+        "risk_factor": 0.17,
+        "expected_net": -2.3,
+        "roi": -1.0,
+        "roi_label": "低"
+      },
+      "recommended_project": "城际铁路示范项目",
+      "packaging_keywords": [
+        "城际铁路",
+        "轨道交通",
+        "新质生产力",
+        "补链强链",
+        "数字化转型",
+        "智慧物流"
+      ],
+      "reasons": [
+        "🎯 支持方向: 城际铁路, 轨道交通"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "2e08df389a0999c8",
+      "title": "达州多部门联合印发方案 促进快递行业党建提质增效实施方案",
+      "url": "http://www.spb.gov.cn/gjyzj/c100015/c100017/202605/136fdd1e5aae463dbabf9e85771612e2.shtml \"达州多部门联合印发方案 促进快递行业党建提质增效\"",
+      "source": "国家邮政局",
+      "source_level": "国家级",
+      "published_at": "",
+      "deadline": "",
+      "days_left": 0,
+      "parsed": {
+        "id": "2e08df389a0999c8",
+        "title": "达州多部门联合印发方案 促进快递行业党建提质增效实施方案",
+        "url": "http://www.spb.gov.cn/gjyzj/c100015/c100017/202605/136fdd1e5aae463dbabf9e85771612e2.shtml \"达州多部门联合印发方案 促进快递行业党建提质增效\"",
+        "source": "国家邮政局",
+        "source_level": "国家级",
+        "published_at": "",
+        "parsed_at": "2026-05-14T14:49:54.498772+00:00",
+        "confidence": 0.75,
+        "parse_error": null,
+        "级别": "市级",
+        "地区": [
+          "达州市"
+        ],
+        "主管部门": [
+          "邮政管理局"
+        ],
+        "发布时间": null,
+        "申报截止时间": null,
+        "政策类型": "党建工作",
+        "支持方向": [
+          "快递行业党建"
+        ],
+        "支持金额": {
+          "描述": "无直接资金支持",
+          "金额": null,
+          "单位": null
+        },
+        "申报条件": {
+          "必要资质": null,
+          "规模要求": null,
+          "投资要求": null
+        },
+        "材料要求": [],
+        "评审方式": null,
+        "是否后补贴": null,
+        "验收要求": null,
+        "风险提示": [
+          "政策原文无法访问(403错误)"
+        ],
+        "政策原文关键词": [
+          "党建",
+          "快递行业",
+          "多部门联合"
+        ],
+        "适合申报企业": [
+          "快递企业",
+          "物流企业"
+        ]
+      },
+      "match_score": 0.29,
+      "matched_tags": [],
+      "missing_tags": [],
+      "score": 46.8,
+      "level": "C",
+      "priority": "P3",
+      "dimensions": {
+        "amount": 50.0,
+        "difficulty": 100.0,
+        "hit_rate": 29.0,
+        "region": 30.0,
+        "industry": 33.3,
+        "urgency": 50.0
+      },
+      "is_pre_subsidy": true,
+      "risk_level": "低",
+      "risk_score": 0.0,
+      "risk_advice": "风险低，建议申报",
+      "is_worth_applying": true,
+      "roi": {
+        "subsidy": 0,
+        "labor_cost": 2.0,
+        "material_cost": 0.3,
+        "advance_fund": 0,
+        "risk_factor": 0.19,
+        "expected_net": -2.3,
+        "roi": -1.0,
+        "roi_label": "低"
+      },
+      "recommended_project": "快递行业党建示范项目",
+      "packaging_keywords": [
+        "快递行业党建",
+        "新质生产力",
+        "补链强链",
+        "数字化转型",
+        "智慧物流"
+      ],
+      "reasons": [
+        "🎯 支持方向: 快递行业党建"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "ac21e3db8c9d9f65",
+      "title": "关于做好2026年享受税收优惠政策的集成电路企业或项目、软件企业清单制定工作的通知",
+      "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202604/t20260409_1404580.html \"关于做好2026年享受税收优惠政策的集成电路企业或项目、软件企业清单制定工作的通知(发改高技〔2026〕487号",
+      "source": "国家发改委",
+      "source_level": "国家级",
+      "published_at": "",
+      "deadline": "",
+      "days_left": 0,
+      "parsed": {
+        "id": "ac21e3db8c9d9f65",
+        "title": "关于做好2026年享受税收优惠政策的集成电路企业或项目、软件企业清单制定工作的通知",
+        "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202604/t20260409_1404580.html \"关于做好2026年享受税收优惠政策的集成电路企业或项目、软件企业清单制定工作的通知(发改高技〔2026〕487号",
+        "source": "国家发改委",
+        "source_level": "国家级",
+        "published_at": "",
+        "parsed_at": "2026-05-14T14:40:48.538201+00:00",
+        "confidence": 0.75,
+        "parse_error": null,
+        "级别": "国家级",
+        "地区": [
+          "全国"
+        ],
+        "主管部门": [
+          "发改委"
+        ],
+        "发布时间": "2026-04-09",
+        "申报截止时间": null,
+        "政策类型": "税收优惠",
+        "支持方向": [
+          "集成电路",
+          "软件企业"
+        ],
+        "支持金额": {
+          "描述": "享受税收优惠政策",
+          "金额": null,
+          "单位": null
+        },
+        "申报条件": {
+          "必要资质": null,
+          "规模要求": null,
+          "投资要求": null
+        },
+        "材料要求": [],
+        "评审方式": null,
+        "是否后补贴": true,
+        "验收要求": null,
+        "风险提示": [
+          "政策原文无法访问(404)",
+          "具体申报条件和支持细节需参照正式文件"
+        ],
+        "政策原文关键词": [
+          "集成电路",
+          "软件企业",
+          "税收优惠",
+          "清单制定"
+        ],
+        "适合申报企业": [
+          "集成电路企业",
+          "软件企业"
+        ]
+      },
+      "match_score": 0.38,
+      "matched_tags": [],
+      "missing_tags": [],
+      "score": 45.5,
+      "level": "C",
+      "priority": "P3",
+      "dimensions": {
+        "amount": 50.0,
+        "difficulty": 90.0,
+        "hit_rate": 38.0,
+        "region": 50.0,
+        "industry": 0.0,
+        "urgency": 50.0
+      },
+      "is_pre_subsidy": false,
+      "risk_level": "低",
+      "risk_score": 0.0,
+      "risk_advice": "风险低，建议申报",
+      "is_worth_applying": true,
+      "roi": {
+        "subsidy": 0,
+        "labor_cost": 2.0,
+        "material_cost": 0.3,
+        "advance_fund": 0.0,
+        "risk_factor": 0.17,
+        "expected_net": -2.3,
+        "roi": -1.0,
+        "roi_label": "低"
+      },
+      "recommended_project": "集成电路示范项目",
+      "packaging_keywords": [
+        "集成电路",
+        "软件企业",
+        "新质生产力",
+        "补链强链",
+        "数字化转型",
+        "智慧物流"
+      ],
+      "reasons": [
+        "🎯 支持方向: 集成电路, 软件企业"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "87f8b8252ee25506",
+      "title": "关于优化完善无线电频率占用费标准的通知(发改价格〔2026〕413号)",
+      "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202603/t20260327_1404395.html \"关于优化完善无线电频率占用费标准的通知(发改价格〔2026〕413号",
+      "source": "国家发改委",
+      "source_level": "国家级",
+      "published_at": "",
+      "deadline": "",
+      "days_left": 0,
+      "parsed": {
+        "id": "87f8b8252ee25506",
+        "title": "关于优化完善无线电频率占用费标准的通知(发改价格〔2026〕413号)",
+        "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202603/t20260327_1404395.html \"关于优化完善无线电频率占用费标准的通知(发改价格〔2026〕413号",
+        "source": "国家发改委",
+        "source_level": "国家级",
+        "published_at": "",
+        "parsed_at": "2026-05-14T14:41:31.133192+00:00",
+        "confidence": 0.65,
+        "parse_error": null,
+        "级别": "国家级",
+        "地区": [],
+        "主管部门": [
+          "发改委"
+        ],
+        "发布时间": "2026-03-27",
+        "申报截止时间": null,
+        "政策类型": "其他",
+        "支持方向": [],
+        "支持金额": {},
+        "申报条件": {},
+        "材料要求": [],
+        "评审方式": null,
+        "是否后补贴": null,
+        "验收要求": null,
+        "风险提示": [
+          "政策原文链接返回404错误，无法获取完整内容",
+          "此政策为收费标准调整通知，非申报类支持政策"
+        ],
+        "政策原文关键词": [
+          "无线电频率",
+          "占用费",
+          "收费标准"
+        ],
+        "适合申报企业": []
+      },
+      "match_score": 0.34,
+      "matched_tags": [],
+      "missing_tags": [],
+      "score": 43.0,
+      "level": "C",
+      "priority": "P3",
+      "dimensions": {
+        "amount": 50.0,
+        "difficulty": 100.0,
+        "hit_rate": 34.0,
+        "region": 30.0,
+        "industry": 0.0,
+        "urgency": 50.0
+      },
+      "is_pre_subsidy": true,
+      "risk_level": "低",
+      "risk_score": 0.0,
+      "risk_advice": "风险低，建议申报",
+      "is_worth_applying": true,
+      "roi": {
+        "subsidy": 0,
+        "labor_cost": 2.0,
+        "material_cost": 0.3,
+        "advance_fund": 0,
+        "risk_factor": 0.18,
+        "expected_net": -2.3,
+        "roi": -1.0,
+        "roi_label": "低"
+      },
+      "recommended_project": "智慧物流建设项目",
+      "packaging_keywords": [
+        "新质生产力",
+        "补链强链",
+        "数字化转型",
+        "智慧物流"
+      ],
+      "reasons": [],
+      "warnings": []
+    },
+    {
+      "id": "2aa185494a26615a",
+      "title": "长株潭生态绿心加快绿色转型发展实施方案",
+      "url": "http://www.ndrc.gov.cn/xxgk/jd/zctj/202601/t20260109_1403162.html \"一图读懂 | 长株潭生态绿心加快绿色转型发展实施方案\"",
+      "source": "国家发改委",
+      "source_level": "国家级",
+      "published_at": "",
+      "deadline": "",
+      "days_left": 0,
+      "parsed": {
+        "id": "2aa185494a26615a",
+        "title": "长株潭生态绿心加快绿色转型发展实施方案",
+        "url": "http://www.ndrc.gov.cn/xxgk/jd/zctj/202601/t20260109_1403162.html \"一图读懂 | 长株潭生态绿心加快绿色转型发展实施方案\"",
+        "source": "国家发改委",
+        "source_level": "国家级",
+        "published_at": "",
+        "parsed_at": "2026-05-14T14:47:38.543806+00:00",
+        "confidence": 0.6,
+        "parse_error": null,
+        "级别": null,
+        "地区": [
+          "长株潭"
+        ],
+        "主管部门": [],
+        "发布时间": null,
+        "申报截止时间": null,
+        "政策类型": null,
+        "支持方向": [],
+        "支持金额": {},
+        "申报条件": {
+          "必要资质": null,
+          "规模要求": null,
+          "投资要求": null
+        },
+        "材料要求": [],
+        "评审方式": null,
+        "是否后补贴": null,
+        "验收要求": null,
+        "风险提示": [
+          "政策原文链接返回404错误，无法获取详细内容"
+        ],
+        "政策原文关键词": [
+          "生态绿心",
+          "绿色转型"
+        ],
+        "适合申报企业": []
+      },
+      "match_score": 0.34,
+      "matched_tags": [],
+      "missing_tags": [],
+      "score": 43.0,
+      "level": "C",
+      "priority": "P3",
+      "dimensions": {
+        "amount": 50.0,
+        "difficulty": 100.0,
+        "hit_rate": 34.0,
+        "region": 30.0,
+        "industry": 0.0,
+        "urgency": 50.0
+      },
+      "is_pre_subsidy": true,
+      "risk_level": "低",
+      "risk_score": 0.0,
+      "risk_advice": "风险低，建议申报",
+      "is_worth_applying": true,
+      "roi": {
+        "subsidy": 0,
+        "labor_cost": 2.0,
+        "material_cost": 0.3,
+        "advance_fund": 0,
+        "risk_factor": 0.18,
+        "expected_net": -2.3,
+        "roi": -1.0,
+        "roi_label": "低"
+      },
+      "recommended_project": "智慧物流建设项目",
+      "packaging_keywords": [
+        "新质生产力",
+        "补链强链",
+        "数字化转型",
+        "智慧物流"
+      ],
+      "reasons": [],
+      "warnings": []
+    },
+    {
+      "id": "9a4be0227ef8785f",
+      "title": "关于核定南水北调中线干线工程供水价格的通知(发改价格〔2026〕630号)",
+      "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202605/t20260511_1405152.html \"关于核定南水北调中线干线工程供水价格的通知(发改价格〔2026〕630号",
+      "source": "国家发改委",
+      "source_level": "国家级",
+      "published_at": "",
+      "deadline": "",
+      "days_left": 0,
+      "parsed": {
+        "id": "9a4be0227ef8785f",
+        "title": "关于核定南水北调中线干线工程供水价格的通知(发改价格〔2026〕630号)",
+        "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202605/t20260511_1405152.html \"关于核定南水北调中线干线工程供水价格的通知(发改价格〔2026〕630号",
+        "source": "国家发改委",
+        "source_level": "国家级",
+        "published_at": "",
+        "parsed_at": "2026-05-14T14:40:18.101687+00:00",
+        "confidence": 0.75,
+        "parse_error": null,
+        "级别": "国家级",
+        "地区": [
+          "沿线省市"
+        ],
+        "主管部门": [
+          "发改委"
+        ],
+        "发布时间": "2026-05-11",
+        "申报截止时间": null,
+        "政策类型": "政府定价",
+        "支持方向": [
+          "水利基础设施"
+        ],
+        "支持金额": {
+          "描述": "政府定价文件，不涉及补贴",
+          "金额": null,
+          "单位": null
+        },
+        "申报条件": {
+          "必要资质": [],
+          "规模要求": null,
+          "投资要求": null
+        },
+        "材料要求": [],
+        "评审方式": null,
+        "是否后补贴": false,
+        "验收要求": null,
+        "风险提示": [
+          "该文件为404错误页面，内容无法获取",
+          "此为水价核定文件，非申报类扶持政策"
+        ],
+        "政策原文关键词": [
+          "南水北调",
+          "供水价格"
+        ],
+        "适合申报企业": []
+      },
+      "match_score": 0.29,
+      "matched_tags": [],
+      "missing_tags": [],
+      "score": 41.8,
+      "level": "C",
+      "priority": "P3",
+      "dimensions": {
+        "amount": 50.0,
+        "difficulty": 100.0,
+        "hit_rate": 29.0,
+        "region": 30.0,
+        "industry": 0.0,
+        "urgency": 50.0
+      },
+      "is_pre_subsidy": true,
+      "risk_level": "低",
+      "risk_score": 0.0,
+      "risk_advice": "风险低，建议申报",
+      "is_worth_applying": true,
+      "roi": {
+        "subsidy": 0,
+        "labor_cost": 2.0,
+        "material_cost": 0.3,
+        "advance_fund": 0,
+        "risk_factor": 0.19,
+        "expected_net": -2.3,
+        "roi": -1.0,
+        "roi_label": "低"
+      },
+      "recommended_project": "水利基础设施示范项目",
+      "packaging_keywords": [
+        "水利基础设施",
+        "新质生产力",
+        "补链强链",
+        "数字化转型",
+        "智慧物流"
+      ],
+      "reasons": [
+        "🎯 支持方向: 水利基础设施"
       ],
       "warnings": []
     },
@@ -1649,7 +2766,7 @@
         "source": "国家发改委",
         "source_level": "国家级",
         "published_at": "",
-        "parsed_at": "2026-05-14T10:28:23.672669+00:00",
+        "parsed_at": "2026-05-14T14:40:34.219582+00:00",
         "confidence": 0.75,
         "parse_error": null,
         "级别": "国家级",
@@ -1661,18 +2778,18 @@
         ],
         "发布时间": "2026-04-27",
         "申报截止时间": null,
-        "政策类型": "专项资金",
+        "政策类型": null,
         "支持方向": [
           "生态保护",
           "生态建设"
         ],
         "支持金额": {
-          "描述": "无法获取",
+          "描述": null,
           "金额": null,
           "单位": null
         },
         "申报条件": {
-          "必要资质": [],
+          "必要资质": null,
           "规模要求": null,
           "投资要求": null
         },
@@ -1681,13 +2798,12 @@
         "是否后补贴": null,
         "验收要求": null,
         "风险提示": [
-          "政策原文页面返回404错误，无法获取具体政策内容",
-          "建议通过官方渠道重新获取完整政策文件"
+          "政策原文链接已失效(404)，无法获取具体政策内容"
         ],
         "政策原文关键词": [
           "西藏",
           "生态安全屏障",
-          "保护与建设"
+          "规划修编"
         ],
         "适合申报企业": []
       },
@@ -1731,6 +2847,611 @@
       ],
       "reasons": [
         "🎯 支持方向: 生态保护, 生态建设"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "b9c0dddefe2ccfbc",
+      "title": "国家发展改革委新闻发言人就《国家发展改革委等部门关于加快招标投标领域人工智能推广应用的实施意见》答记者问",
+      "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202602/t20260210_1403683.html \"国家发展改革委新闻发言人就《国家发展改革委等部门关于加快招标投标领域人工智能推广应用的实施意见》答记者问\"",
+      "source": "国家发改委",
+      "source_level": "国家级",
+      "published_at": "",
+      "deadline": "",
+      "days_left": 0,
+      "parsed": {
+        "id": "b9c0dddefe2ccfbc",
+        "title": "国家发展改革委新闻发言人就《国家发展改革委等部门关于加快招标投标领域人工智能推广应用的实施意见》答记者问",
+        "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202602/t20260210_1403683.html \"国家发展改革委新闻发言人就《国家发展改革委等部门关于加快招标投标领域人工智能推广应用的实施意见》答记者问\"",
+        "source": "国家发改委",
+        "source_level": "国家级",
+        "published_at": "",
+        "parsed_at": "2026-05-14T14:45:23.838826+00:00",
+        "confidence": 0.75,
+        "parse_error": null,
+        "级别": "国家级",
+        "地区": [],
+        "主管部门": [
+          "发改委"
+        ],
+        "发布时间": null,
+        "申报截止时间": null,
+        "政策类型": null,
+        "支持方向": [
+          "人工智能",
+          "招标投标"
+        ],
+        "支持金额": {},
+        "申报条件": {},
+        "材料要求": [],
+        "评审方式": null,
+        "是否后补贴": null,
+        "验收要求": null,
+        "风险提示": [
+          "政策原文内容无法访问(404)"
+        ],
+        "政策原文关键词": [
+          "人工智能",
+          "招标投标"
+        ],
+        "适合申报企业": []
+      },
+      "match_score": 0.29,
+      "matched_tags": [],
+      "missing_tags": [],
+      "score": 41.8,
+      "level": "C",
+      "priority": "P3",
+      "dimensions": {
+        "amount": 50.0,
+        "difficulty": 100.0,
+        "hit_rate": 29.0,
+        "region": 30.0,
+        "industry": 0.0,
+        "urgency": 50.0
+      },
+      "is_pre_subsidy": true,
+      "risk_level": "低",
+      "risk_score": 0.0,
+      "risk_advice": "风险低，建议申报",
+      "is_worth_applying": true,
+      "roi": {
+        "subsidy": 0,
+        "labor_cost": 2.0,
+        "material_cost": 0.3,
+        "advance_fund": 0,
+        "risk_factor": 0.19,
+        "expected_net": -2.3,
+        "roi": -1.0,
+        "roi_label": "低"
+      },
+      "recommended_project": "人工智能示范项目",
+      "packaging_keywords": [
+        "人工智能",
+        "招标投标",
+        "新质生产力",
+        "补链强链",
+        "数字化转型",
+        "智慧物流"
+      ],
+      "reasons": [
+        "🎯 支持方向: 人工智能, 招标投标"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "be03baa69201893c",
+      "title": "关于印发《长株潭生态绿心加快绿色转型发展实施方案》的通知(发改环资〔2025〕1751号)",
+      "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202601/t20260106_1403093.html \"关于印发《长株潭生态绿心加快绿色转型发展实施方案》的通知(发改环资〔2025〕1751号",
+      "source": "国家发改委",
+      "source_level": "国家级",
+      "published_at": "",
+      "deadline": "",
+      "days_left": 0,
+      "parsed": {
+        "id": "be03baa69201893c",
+        "title": "关于印发《长株潭生态绿心加快绿色转型发展实施方案》的通知(发改环资〔2025〕1751号)",
+        "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202601/t20260106_1403093.html \"关于印发《长株潭生态绿心加快绿色转型发展实施方案》的通知(发改环资〔2025〕1751号",
+        "source": "国家发改委",
+        "source_level": "国家级",
+        "published_at": "",
+        "parsed_at": "2026-05-14T14:47:06.201694+00:00",
+        "confidence": 0.75,
+        "parse_error": null,
+        "级别": "国家级",
+        "地区": [
+          "长株潭生态绿心地区",
+          "湖南"
+        ],
+        "主管部门": [
+          "发改委"
+        ],
+        "发布时间": "2026-01-06",
+        "申报截止时间": null,
+        "政策类型": "专项资金",
+        "支持方向": [
+          "绿色转型",
+          "生态保护",
+          "低碳发展"
+        ],
+        "支持金额": {
+          "描述": "待查看原文",
+          "金额": null,
+          "单位": null
+        },
+        "申报条件": {
+          "必要资质": [],
+          "规模要求": null,
+          "投资要求": null
+        },
+        "材料要求": [],
+        "评审方式": null,
+        "是否后补贴": null,
+        "验收要求": null,
+        "风险提示": [
+          "政策原文页面返回404错误，无法获取具体政策内容",
+          "建议通过国家发改委官网或其他渠道核实完整政策内容"
+        ],
+        "政策原文关键词": [
+          "生态绿心",
+          "绿色转型",
+          "长株潭"
+        ],
+        "适合申报企业": [
+          "绿色产业企业",
+          "生态环保企业"
+        ]
+      },
+      "match_score": 0.29,
+      "matched_tags": [],
+      "missing_tags": [],
+      "score": 41.8,
+      "level": "C",
+      "priority": "P3",
+      "dimensions": {
+        "amount": 50.0,
+        "difficulty": 100.0,
+        "hit_rate": 29.0,
+        "region": 30.0,
+        "industry": 0.0,
+        "urgency": 50.0
+      },
+      "is_pre_subsidy": true,
+      "risk_level": "低",
+      "risk_score": 0.0,
+      "risk_advice": "风险低，建议申报",
+      "is_worth_applying": true,
+      "roi": {
+        "subsidy": 0,
+        "labor_cost": 2.0,
+        "material_cost": 0.3,
+        "advance_fund": 0,
+        "risk_factor": 0.19,
+        "expected_net": -2.3,
+        "roi": -1.0,
+        "roi_label": "低"
+      },
+      "recommended_project": "绿色转型示范项目",
+      "packaging_keywords": [
+        "绿色转型",
+        "生态保护",
+        "低碳发展",
+        "新质生产力",
+        "补链强链",
+        "数字化转型",
+        "智慧物流"
+      ],
+      "reasons": [
+        "🎯 支持方向: 绿色转型, 生态保护"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "fded843d045825b3",
+      "title": "国家发展改革委印发《长株潭生态绿心加快绿色转型发展实施方案》",
+      "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202601/t20260109_1403163.html \"国家发展改革委印发《长株潭生态绿心加快绿色转型发展实施方案》\"",
+      "source": "国家发改委",
+      "source_level": "国家级",
+      "published_at": "",
+      "deadline": "",
+      "days_left": 0,
+      "parsed": {
+        "id": "fded843d045825b3",
+        "title": "国家发展改革委印发《长株潭生态绿心加快绿色转型发展实施方案》",
+        "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202601/t20260109_1403163.html \"国家发展改革委印发《长株潭生态绿心加快绿色转型发展实施方案》\"",
+        "source": "国家发改委",
+        "source_level": "国家级",
+        "published_at": "",
+        "parsed_at": "2026-05-14T14:47:26.555556+00:00",
+        "confidence": 0.75,
+        "parse_error": null,
+        "级别": "国家级",
+        "地区": [
+          "长株潭地区",
+          "湖南"
+        ],
+        "主管部门": [
+          "发改委"
+        ],
+        "发布时间": null,
+        "申报截止时间": null,
+        "政策类型": "专项资金",
+        "支持方向": [
+          "绿色转型",
+          "生态保护"
+        ],
+        "支持金额": {
+          "描述": null,
+          "金额": null,
+          "单位": null
+        },
+        "申报条件": {
+          "必要资质": [],
+          "规模要求": null,
+          "投资要求": null
+        },
+        "材料要求": [],
+        "评审方式": null,
+        "是否后补贴": null,
+        "验收要求": null,
+        "风险提示": [
+          "政策原文内容无法获取（404错误）",
+          "申报截止时间未知",
+          "具体支持金额和条件无法确定"
+        ],
+        "政策原文关键词": [
+          "生态绿心",
+          "绿色转型"
+        ],
+        "适合申报企业": [
+          "绿色产业企业",
+          "生态环保企业"
+        ]
+      },
+      "match_score": 0.29,
+      "matched_tags": [],
+      "missing_tags": [],
+      "score": 41.8,
+      "level": "C",
+      "priority": "P3",
+      "dimensions": {
+        "amount": 50.0,
+        "difficulty": 100.0,
+        "hit_rate": 29.0,
+        "region": 30.0,
+        "industry": 0.0,
+        "urgency": 50.0
+      },
+      "is_pre_subsidy": true,
+      "risk_level": "低",
+      "risk_score": 0.0,
+      "risk_advice": "风险低，建议申报",
+      "is_worth_applying": true,
+      "roi": {
+        "subsidy": 0,
+        "labor_cost": 2.0,
+        "material_cost": 0.3,
+        "advance_fund": 0,
+        "risk_factor": 0.19,
+        "expected_net": -2.3,
+        "roi": -1.0,
+        "roi_label": "低"
+      },
+      "recommended_project": "绿色转型示范项目",
+      "packaging_keywords": [
+        "绿色转型",
+        "生态保护",
+        "新质生产力",
+        "补链强链",
+        "数字化转型",
+        "智慧物流"
+      ],
+      "reasons": [
+        "🎯 支持方向: 绿色转型, 生态保护"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "edc87ad6301071b6",
+      "title": "长株潭生态绿心加快绿色转型发展实施方案",
+      "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202601/t20260109_1403161.html \"国家发展改革委有关负责同志就《长株潭生态绿心加快绿色转型发展实施方案》答记者问\"",
+      "source": "国家发改委",
+      "source_level": "国家级",
+      "published_at": "",
+      "deadline": "",
+      "days_left": 0,
+      "parsed": {
+        "id": "edc87ad6301071b6",
+        "title": "长株潭生态绿心加快绿色转型发展实施方案",
+        "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202601/t20260109_1403161.html \"国家发展改革委有关负责同志就《长株潭生态绿心加快绿色转型发展实施方案》答记者问\"",
+        "source": "国家发改委",
+        "source_level": "国家级",
+        "published_at": "",
+        "parsed_at": "2026-05-14T14:47:54.956024+00:00",
+        "confidence": 0.75,
+        "parse_error": null,
+        "级别": "国家级",
+        "地区": [
+          "湖南省长株潭城市群"
+        ],
+        "主管部门": [
+          "发改委"
+        ],
+        "发布时间": null,
+        "申报截止时间": null,
+        "政策类型": "专项资金",
+        "支持方向": [
+          "绿色转型",
+          "生态保护",
+          "低碳发展"
+        ],
+        "支持金额": {
+          "描述": null,
+          "金额": null,
+          "单位": null
+        },
+        "申报条件": {
+          "必要资质": [],
+          "规模要求": null,
+          "投资要求": null
+        },
+        "材料要求": [],
+        "评审方式": null,
+        "是否后补贴": null,
+        "验收要求": null,
+        "风险提示": [
+          "政策原文页面返回404错误，无法获取详细政策内容，请通过官方渠道核实最新政策信息"
+        ],
+        "政策原文关键词": [
+          "生态绿心",
+          "绿色转型"
+        ],
+        "适合申报企业": []
+      },
+      "match_score": 0.29,
+      "matched_tags": [],
+      "missing_tags": [],
+      "score": 41.8,
+      "level": "C",
+      "priority": "P3",
+      "dimensions": {
+        "amount": 50.0,
+        "difficulty": 100.0,
+        "hit_rate": 29.0,
+        "region": 30.0,
+        "industry": 0.0,
+        "urgency": 50.0
+      },
+      "is_pre_subsidy": true,
+      "risk_level": "低",
+      "risk_score": 0.0,
+      "risk_advice": "风险低，建议申报",
+      "is_worth_applying": true,
+      "roi": {
+        "subsidy": 0,
+        "labor_cost": 2.0,
+        "material_cost": 0.3,
+        "advance_fund": 0,
+        "risk_factor": 0.19,
+        "expected_net": -2.3,
+        "roi": -1.0,
+        "roi_label": "低"
+      },
+      "recommended_project": "绿色转型示范项目",
+      "packaging_keywords": [
+        "绿色转型",
+        "生态保护",
+        "低碳发展",
+        "新质生产力",
+        "补链强链",
+        "数字化转型",
+        "智慧物流"
+      ],
+      "reasons": [
+        "🎯 支持方向: 绿色转型, 生态保护"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "799929b70eb89975",
+      "title": "绘就绿心绿色转型发展新画卷——《长株潭生态绿心加快绿色转型发展实施方案》政策解读之一",
+      "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202601/t20260109_1403160.html \"绘就绿心绿色转型发展新画卷——《长株潭生态绿心加快绿色转型发展实施方案》政策解读之一\"",
+      "source": "国家发改委",
+      "source_level": "国家级",
+      "published_at": "",
+      "deadline": "",
+      "days_left": 0,
+      "parsed": {
+        "id": "799929b70eb89975",
+        "title": "绘就绿心绿色转型发展新画卷——《长株潭生态绿心加快绿色转型发展实施方案》政策解读之一",
+        "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202601/t20260109_1403160.html \"绘就绿心绿色转型发展新画卷——《长株潭生态绿心加快绿色转型发展实施方案》政策解读之一\"",
+        "source": "国家发改委",
+        "source_level": "国家级",
+        "published_at": "",
+        "parsed_at": "2026-05-14T14:48:09.770362+00:00",
+        "confidence": 0.75,
+        "parse_error": null,
+        "级别": "省级",
+        "地区": [
+          "湖南省",
+          "长株潭城市群"
+        ],
+        "主管部门": [
+          "发改委"
+        ],
+        "发布时间": "2026-01-09",
+        "申报截止时间": null,
+        "政策类型": "政策解读",
+        "支持方向": [
+          "绿色转型",
+          "生态保护",
+          "低碳发展"
+        ],
+        "支持金额": {
+          "描述": null,
+          "金额": null,
+          "单位": null
+        },
+        "申报条件": {
+          "必要资质": null,
+          "规模要求": null,
+          "投资要求": null
+        },
+        "材料要求": [],
+        "评审方式": null,
+        "是否后补贴": null,
+        "验收要求": null,
+        "风险提示": [
+          "政策原文无法访问(404错误)",
+          "本文档为政策解读文章，非具体申报指南",
+          "建议查阅原始《长株潭生态绿心加快绿色转型发展实施方案》获取详细信息"
+        ],
+        "政策原文关键词": [
+          "生态绿心",
+          "绿色转型",
+          "长株潭"
+        ],
+        "适合申报企业": [
+          "环保企业",
+          "绿色产业企业",
+          "新能源企业"
+        ]
+      },
+      "match_score": 0.29,
+      "matched_tags": [],
+      "missing_tags": [],
+      "score": 41.8,
+      "level": "C",
+      "priority": "P3",
+      "dimensions": {
+        "amount": 50.0,
+        "difficulty": 100.0,
+        "hit_rate": 29.0,
+        "region": 30.0,
+        "industry": 0.0,
+        "urgency": 50.0
+      },
+      "is_pre_subsidy": true,
+      "risk_level": "低",
+      "risk_score": 0.0,
+      "risk_advice": "风险低，建议申报",
+      "is_worth_applying": true,
+      "roi": {
+        "subsidy": 0,
+        "labor_cost": 2.0,
+        "material_cost": 0.3,
+        "advance_fund": 0,
+        "risk_factor": 0.19,
+        "expected_net": -2.3,
+        "roi": -1.0,
+        "roi_label": "低"
+      },
+      "recommended_project": "绿色转型示范项目",
+      "packaging_keywords": [
+        "绿色转型",
+        "生态保护",
+        "低碳发展",
+        "新质生产力",
+        "补链强链",
+        "数字化转型",
+        "智慧物流"
+      ],
+      "reasons": [
+        "🎯 支持方向: 绿色转型, 生态保护"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "8d540812ab28bae6",
+      "title": "打造城市集群绿色转型新标杆——《长株潭生态绿心加快绿色转型发展实施方案》政策解读之二",
+      "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202601/t20260109_1403159.html \"打造城市集群绿色转型新标杆——《长株潭生态绿心加快绿色转型发展实施方案》政策解读之二\"",
+      "source": "国家发改委",
+      "source_level": "国家级",
+      "published_at": "",
+      "deadline": "",
+      "days_left": 0,
+      "parsed": {
+        "id": "8d540812ab28bae6",
+        "title": "打造城市集群绿色转型新标杆——《长株潭生态绿心加快绿色转型发展实施方案》政策解读之二",
+        "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202601/t20260109_1403159.html \"打造城市集群绿色转型新标杆——《长株潭生态绿心加快绿色转型发展实施方案》政策解读之二\"",
+        "source": "国家发改委",
+        "source_level": "国家级",
+        "published_at": "",
+        "parsed_at": "2026-05-14T14:48:21.483766+00:00",
+        "confidence": 0.75,
+        "parse_error": null,
+        "级别": "国家级",
+        "地区": [
+          "长株潭城市群"
+        ],
+        "主管部门": [
+          "发改委"
+        ],
+        "发布时间": null,
+        "申报截止时间": null,
+        "政策类型": null,
+        "支持方向": [
+          "绿色转型"
+        ],
+        "支持金额": {},
+        "申报条件": {
+          "必要资质": [],
+          "规模要求": null,
+          "投资要求": null
+        },
+        "材料要求": [],
+        "评审方式": null,
+        "是否后补贴": null,
+        "验收要求": null,
+        "风险提示": [
+          "原始政策页面返回404错误，无法获取完整政策原文"
+        ],
+        "政策原文关键词": [
+          "绿色转型",
+          "生态绿心",
+          "长株潭"
+        ],
+        "适合申报企业": []
+      },
+      "match_score": 0.29,
+      "matched_tags": [],
+      "missing_tags": [],
+      "score": 41.8,
+      "level": "C",
+      "priority": "P3",
+      "dimensions": {
+        "amount": 50.0,
+        "difficulty": 100.0,
+        "hit_rate": 29.0,
+        "region": 30.0,
+        "industry": 0.0,
+        "urgency": 50.0
+      },
+      "is_pre_subsidy": true,
+      "risk_level": "低",
+      "risk_score": 0.0,
+      "risk_advice": "风险低，建议申报",
+      "is_worth_applying": true,
+      "roi": {
+        "subsidy": 0,
+        "labor_cost": 2.0,
+        "material_cost": 0.3,
+        "advance_fund": 0,
+        "risk_factor": 0.19,
+        "expected_net": -2.3,
+        "roi": -1.0,
+        "roi_label": "低"
+      },
+      "recommended_project": "绿色转型示范项目",
+      "packaging_keywords": [
+        "绿色转型",
+        "新质生产力",
+        "补链强链",
+        "数字化转型",
+        "智慧物流"
+      ],
+      "reasons": [
+        "🎯 支持方向: 绿色转型"
       ],
       "warnings": []
     }

@@ -23,6 +23,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional
 
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import requests
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -93,10 +94,13 @@ def make_jina_url(url: str) -> str:
     return JINA_READER.format(clean)
 
 
-def fetch_jina(url: str, timeout: int = 15) -> Optional[dict]:
-    """使用Jina Reader抓取页面"""
+def fetch_jina(url: str, timeout: int = 8) -> Optional[dict]:
+    """使用Jina Reader抓取页面（带兜底超时）"""
+    import socket
+    socket.setdefaulttimeout(10)
+    
     try:
-        resp = requests.get(make_jina_url(url), headers=HEADERS, timeout=timeout)
+        resp = requests.get(make_jina_url(url), headers=HEADERS, timeout=(5, timeout))
         resp.raise_for_status()
 
         lines = resp.text.split("\n")
@@ -202,10 +206,28 @@ def fetch_source(key: str, limit: int = 20) -> list:
 
 
 def fetch_all(limit_per_source: int = 20) -> list:
-    """抓取所有源"""
+    """并行抓取所有源，跳过超时的源"""
+    import socket
+    socket.setdefaulttimeout(10)
+    
     all_items = []
-    for key in SOURCES:
-        all_items.extend(fetch_source(key, limit_per_source))
+    
+    def fetch_one(key):
+        try:
+            return fetch_source(key, limit_per_source)
+        except Exception:
+            return []
+    
+    with ThreadPoolExecutor(max_workers=8) as executor:
+        futures = {executor.submit(fetch_one, key): key for key in SOURCES}
+        for future in as_completed(futures):
+            key = futures[future]
+            try:
+                items = future.result(timeout=12)
+                all_items.extend(items)
+            except Exception as e:
+                print(f"  [{key} 跳过: {str(e)[:30]}]")
+    
     return all_items
 
 
