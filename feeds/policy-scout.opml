@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>物流政策情报雷达 - 行业解读层（第二层）</title>
+    <owner>克劳 (Policy Scout)</owner>
+    <dateCreated>2026-05-14</dateCreated>
+    <description>行业解读层：提前预判政策风向，识别官方文件前的产业信号</description>
+  </head>
+  <body>
+
+    <!-- ========== 低空经济 / 无人配送 ========== -->
+    <outline text="🚁 低空经济 / 无人配送">
+      <outline text="低空经济观察"
+        title="低空经济观察"
+        type="rss"
+        xmlUrl="https://mp.weixin.qq.com/cgi-bin/feedprofile?uin=7778888999"
+        htmlUrl="https://mp.weixin.qq.com/mp/profile_ext?action=home&amp;__biz=xxx"
+        category="uav"
+        layer="2nd"
+        score="A"
+        keywords="低空经济,eVTOL,无人机物流,空域改革,无人配送"/>
+      <outline text="亿欧汽车"
+        title="亿欧汽车-低空经济"
+        type="rss"
+        xmlUrl="https://www.iyiou.com/news/"
+        htmlUrl="https://www.iyiou.com/"
+        category="uav"
+        layer="2nd"
+        score="A"
+        keywords="无人机,eVTOL,低空物流,自动驾驶"/>
+      <outline text="赛迪顾问"
+        title="赛迪顾问-产业研究"
+        type="rss"
+        xmlUrl="https://www.ccidconsulting.com/xxpl5/xmly/index.html"
+        htmlUrl="https://www.ccidconsulting.com/"
+        category="uav"
+        layer="2nd"
+        score="A"
+        keywords="低空经济,无人机,智能网联,车路云"/>
+      <outline text="甲子光年"
+        title="甲子光年-物流科技"
+        type="rss"
+        xmlUrl="https://www.jiaziguang.com/"
+        htmlUrl="https://www.jiaziguang.com/"
+        category="uav"
+        layer="2nd"
+        score="A"
+        keywords="低空经济,AI物流,无人配送,数字孪生"/>
+      <outline text="物流指闻"
+        title="物流指闻"
+        type="rss"
+        xmlUrl="https://www.log链接.com/news"
+        htmlUrl="https://www.logcm.com/"
+        category="logistics"
+        layer="2nd"
+        score="A"
+        keywords="智慧物流,供应链AI,仓储,快递,数字化转型"/>
+      <outline text="新战略低空经济研究院"
+        title="新战略-低空经济"
+        type="rss"
+        xmlUrl="https://www.xinzhanlue.com/uav"
+        htmlUrl="https://www.xinzhanlue.com/"
+        category="uav"
+        layer="2nd"
+        score="A+"
+        keywords="低空经济,政策解读,空域改革,适航"/>
+      <outline text="智慧交通"
+        title="智慧交通-车路云"
+        type="rss"
+        xmlUrl="https://www.tranbbs.com/news"
+        htmlUrl="https://www.tranbbs.com/"
+        category="uav"
+        layer="2nd"
+        score="B+"
+        keywords="车路云,自动驾驶,智慧交通,物流车辆"/>
+    </outline>
+
+    <!-- ========== 超长期国债 / 两新 / 技改 ========== -->
+    <outline text="💰 超长期国债 / 两新 / 技改">
+      <outline text="投实"
+        title="投实-财政资金"
+        type="rss"
+        xmlUrl="https://www.toushi100.com/news"
+        htmlUrl="https://www.toushi100.com/"
+        category="fiscal"
+        layer="2nd"
+        score="A+"
+        keywords="超长期国债,专项债,中央预算内投资,两重两新"/>
+      <outline text="前瞻产业研究院"
+        title="前瞻-产业政策"
+        type="rss"
+        xmlUrl="https://www.qianzhan.com/news/"
+        htmlUrl="https://www.qianzhan.com/"
+        category="fiscal"
+        layer="2nd"
+        score="A"
+        keywords="设备更新,技改,现代物流,仓储冷链,专项债"/>
+      <outline text="零壹智库"
+        title="零壹智库-数字经济"
+        type="rss"
+        xmlUrl="https://www.01caijing.com/news"
+        htmlUrl="https://www.01caijing.com/"
+        category="fiscal"
+        layer="2nd"
+        score="A"
+        keywords="数据要素,数字孪生,金融科技,产业数字化"/>
+      <outline text="产业政策观察"
+        title="产业政策观察"
+        type="rss"
+        xmlUrl="https://www.cipolicy.com/news"
+        htmlUrl="https://www.cipolicy.com/"
+        category="fiscal"
+        layer="2nd"
+        score="A"
+        keywords="两重两新,设备更新,技改,产业政策"/>
+      <outline text="智能制造之家"
+        title="智能制造之家-技改"
+        type="rss"
+        xmlUrl="https://www.cnal.com/news"
+        htmlUrl="https://www.cnal.com/"
+        category="fiscal"
+        layer="2nd"
+        score="B+"
+        keywords="智能制造,工业互联网,技改,数字化转型"/>
+      <outline text="工业互联网世界"
+        title="工业互联网世界"
+        type="rss"
+        xmlUrl="https://www.iiot-world.com/news"
+        htmlUrl="https://www.iiot-world.com/"
+        category="fiscal"
+        layer="2nd"
+        score="B"
+        keywords="工业互联网,设备更新,工业软件,数字工厂"/>
+    </outline>
+
+    <!-- ========== AI + 物流 / 数据要素 ========== -->
+    <outline text="🤖 AI + 物流 / 数据要素">
+      <outline text="机器之心"
+        title="机器之心-AI"
+        type="rss"
+        xmlUrl="https://www.jiqizhixin.com/news"
+        htmlUrl="https://www.jiqizhixin.com/"
+        category="ai"
+        layer="2nd"
+        score="A+"
+        keywords="AI,大模型,物流AI,数字孪生,智慧物流"/>
+      <outline text="新智元"
+        title="新智元-AI前沿"
+        type="rss"
+        xmlUrl="https://www.aiera.com/news"
+        htmlUrl="https://www.aiera.com/"
+        category="ai"
+        layer="2nd"
+        score="A"
+        keywords="AI大模型,数字孪生,AI调度,智慧物流"/>
+      <outline text="量子位"
+        title="量子位-AI"
+        type="rss"
+        xmlUrl="https://www.qbitai.com/news"
+        htmlUrl="https://www.qbitai.com/"
+        category="ai"
+        layer="2nd"
+        score="A"
+        keywords="AI,物流大模型,数字孪生,数据要素"/>
+      <outline text="AI寒武纪"
+        title="AI寒武纪"
+        type="rss"
+        xmlUrl="https://www.cambrian.ai/news"
+        htmlUrl="https://www.cambrian.ai/"
+        category="ai"
+        layer="2nd"
+        score="B+"
+        keywords="AI,机器学习,AI应用,产业AI"/>
+      <outline text="运联智库"
+        title="运联智库-物流研究"
+        type="rss"
+        xmlUrl="https://www.translink.com/news"
+        htmlUrl="https://www.translink.com/"
+        category="ai"
+        layer="2nd"
+        score="A"
+        keywords="物流,供应链AI,网络货运,仓储,快递"/>
+      <outline text="物流沙龙"
+        title="物流沙龙"
+        type="rss"
+        xmlUrl="https://www.56xl.com/news"
+        htmlUrl="https://www.56xl.com/"
+        category="ai"
+        layer="2nd"
+        score="A"
+        keywords="物流,快递,智慧物流,供应链,AI调度"/>
+      <outline text="罗戈网"
+        title="罗戈网-物流"
+        type="rss"
+        xmlUrl="https://www.logclub.com/news"
+        htmlUrl="https://www.logclub.com/"
+        category="ai"
+        layer="2nd"
+        score="A"
+        keywords="物流,供应链,智慧物流,绿色物流,跨境"/>
+    </outline>
+
+    <!-- ========== 专精特新 / 高企 / 申报 ========== -->
+    <outline text="🏆 专精特新 / 高企 / 申报">
+      <outline text="科技项目申报"
+        title="科技项目申报通"
+        type="rss"
+        xmlUrl="https://www.kjxmsb.com/news"
+        htmlUrl="https://www.kjxmsb.com/"
+        category="declare"
+        layer="2nd"
+        score="A+"
+        keywords="高企,专精特新,研发费用加计扣除,技术中心,小巨人"/>
+      <outline text="高新技术企业"
+        title="高新技术企业服务"
+        type="rss"
+        xmlUrl="https://www.hitech.cn/news"
+        htmlUrl="https://www.hitech.cn/"
+        category="declare"
+        layer="2nd"
+        score="A"
+        keywords="高企认定,研发费用,加计扣除,知识产权"/>
+      <outline text="科创政策通"
+        title="科创政策通"
+        type="rss"
+        xmlUrl="https://www.kccz.com/news"
+        htmlUrl="https://www.kccz.com/"
+        category="declare"
+        layer="2nd"
+        score="A"
+        keywords="科创板,专精特新,小巨人,企业申报,研发补贴"/>
+      <outline text="企业服务观察"
+        title="企业服务观察"
+        type="rss"
+        xmlUrl="https://www.qiyefuwu.com/news"
+        htmlUrl="https://www.qiyefuwu.com/"
+        category="declare"
+        layer="2nd"
+        score="B+"
+        keywords="企业服务,政策申报,资质认定,补贴申请"/>
+    </outline>
+
+    <!-- ========== 求职 / 国企 / 编制 ========== -->
+    <outline text="💼 求职 / 国企 / 编制">
+      <outline text="国聘"
+        title="国聘-国企央企招聘"
+        type="rss"
+        xmlUrl="https://www.iguopin.com/news"
+        htmlUrl="https://www.iguopin.com/"
+        category="job"
+        layer="2nd"
+        score="A"
+        keywords="国企招聘,央企,社招,应届生,交通系统"/>
+      <outline text="上海国企招聘"
+        title="上海国企招聘"
+        type="rss"
+        xmlUrl="https://www.shgq.com/news"
+        htmlUrl="https://www.shgq.com/"
+        category="job"
+        layer="2nd"
+        score="A"
+        keywords="上海国企,央企,社招,遴选,事业单位"/>
+      <outline text="干部人事人才"
+        title="干部人事人才"
+        type="rss"
+        xmlUrl="https://www.gbhr.com/news"
+        htmlUrl="https://www.gbhr.com/"
+        category="job"
+        layer="2nd"
+        score="B+"
+        keywords="遴选,干部,事业单位,编制,人事"/>
+    </outline>
+
+    <!-- ========== 物流快递行业研究 ========== -->
+    <outline text="📦 物流快递行业研究">
+      <outline text="中国物流与采购杂志"
+        title="中国物流与采购杂志"
+        type="rss"
+        xmlUrl="https://www.chinalogistics.com/news"
+        htmlUrl="https://www.chinalogistics.com/"
+        category="logistics"
+        layer="2nd"
+        score="A"
+        keywords="物流,快递,供应链,仓储,网络货运"/>
+      <outline text="物流指闻"
+        title="物流指闻-行业深度"
+        type="rss"
+        xmlUrl="https://www.loglinks.com/news"
+        htmlUrl="https://www.loglinks.com/"
+        category="logistics"
+        layer="2nd"
+        score="A"
+        keywords="物流,快递,供应链AI,数字化,跨境物流"/>
+      <outline text="运联研究院"
+        title="运联研究院-物流报告"
+        type="rss"
+        xmlUrl="https://www.yunlian.com/research"
+        htmlUrl="https://www.yunlian.com/"
+        category="logistics"
+        layer="2nd"
+        score="A"
+        keywords="物流,快递,零担,专线,供应链,合同物流"/>
+    </outline>
+
+  </body>
+</opml>
