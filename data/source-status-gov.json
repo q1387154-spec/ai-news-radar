@@ -39,11 +39,6 @@
     "fail": 0,
     "url": "https://fgw.sh.gov.cn"
   },
-  "上海市邮政管理局": {
-    "ok": 1,
-    "fail": 0,
-    "url": "https://sh.spb.gov.cn"
-  },
   "国务院": {
     "ok": 1,
     "fail": 0,
