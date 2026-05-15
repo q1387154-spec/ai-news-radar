@@ -1,143 +1,154 @@
 {
-  "total": 550,
-  "success": 305,
-  "failed": 245,
-  "last_updated": "2026-05-14T15:00:45.048363+00:00",
+  "total": 869,
+  "success": 555,
+  "failed": 314,
+  "last_updated": "2026-05-15T15:45:06.184319+00:00",
   "recent": [
     {
-      "title": "上海市科学技术委员会关于发布2026年度科技产业高质量发展计划“生物医药创新发展”项目申报指南的通知",
-      "url": "http://stcsm.sh.gov.cn/zwgk/kyjhxm/xmsb/20260430/f061da3f4aae47169ce98072f909e09b.html \"上海市科学技术委员会关于发布2026年度科技产业高质量发展计划“生物医药创新发展”项目申报指南的通知\"",
-      "success": false,
-      "error": "LLM解析失败: LLM解析失败: Error code: 403 - {'error': {'message': '用户额度不足, 剩余额度: ＄0.000000 (request id: 2026051415004547801142Q1npZ9nG)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}"
-    },
-    {
-      "title": "关于加强投资项目在线审批监管平台和工程建设项目审批管理系统数据共享的通知(发改办投资〔2026〕88",
-      "url": "http://www.ndrc.gov.cn/xxgk/zcfb/tz/202602/t20260213_1403763.html \"关于加强投资项目在线审批监管平台和工程建设项目审批管理系统数据共享的通知(发改办投资〔2026〕88号",
-      "success": true,
-      "confidence": 0.75,
-      "level": "国家级"
-    },
-    {
-      "title": "上海市科学技术委员会关于发布2026年度高水平机构建设运行计划“软科学研究”项目申报指南的通知",
-      "url": "http://stcsm.sh.gov.cn/zwgk/kyjhxm/xmsb/20260430/2e358bdafedd4a82b040344feb08a6e1.html \"上海市科学技术委员会关于发布2026年度高水平机构建设运行计划“软科学研究”项目申报指南的通知\"",
-      "success": false,
-      "error": "LLM解析失败: LLM解析失败: Error code: 403 - {'error': {'message': '用户额度不足, 剩余额度: ＄0.000000 (request id: 20260514150033220013948LmKkbHwx)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}"
-    },
-    {
-      "title": "专家解读文章之五 | 以儿童友好建设引领筑牢六大保护",
-      "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404186.html \"专家解读文章之五 | 以儿童友好建设引领筑牢六大保护\"",
-      "success": true,
-      "confidence": 0.75,
-      "level": "国家级"
-    },
-    {
-      "title": "关于开展2026年度高新技术企业认定管理相关工作的通知",
-      "url": "http://stcsm.sh.gov.cn/zwgk/tzgs/zhtz/20260430/afacb50e07e74d27b3b852123654c1ab.html \"关于开展2026年度高新技术企业认定管理相关工作的通知\"",
-      "success": false,
-      "error": "LLM解析失败: LLM解析失败: Error code: 403 - {'error': {'message': '用户额度不足, 剩余额度: ＄0.000000 (request id: 20260514150021621037767dZoba96t)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}"
-    },
-    {
-      "title": "关于组织申报国家重点研发计划“政府间国际科技创新合作”重点专项2026年度第二批联合研发项目的通知",
-      "url": "http://stcsm.sh.gov.cn/zwgk/kyjhxm/xmsb/20260507/3648e6864ab44d439a16c52f35b0f423.html \"关于组织申报国家重点研发计划“政府间国际科技创新合作”重点专项2026年度第二批联合研发项目的通知\"",
-      "success": false,
-      "error": "LLM解析失败: LLM解析失败: Error code: 403 - {'error': {'message': '用户额度不足, 剩余额度: ＄0.000000 (request id: 202605141500121159357073KxKCls7)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}"
-    },
-    {
-      "title": "专家解读文章之四 | 推动公共服务供给充分保障儿童优先",
-      "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404187.html \"专家解读文章之四 | 推动公共服务供给充分保障儿童优先\"",
-      "success": true,
-      "confidence": 0.75,
-      "level": "国家级"
-    },
-    {
-      "title": "关于2026年度上海市社会力量兴办新型研发机构备案结果的公示",
-      "url": "http://stcsm.sh.gov.cn/zwgk/tzgs/gsgg/zhgsgg/20260508/94845c809fe048fbac268fdb51fa53bf.html \"关于2026年度上海市社会力量兴办新型研发机构备案结果的公示\"",
-      "success": false,
-      "error": "LLM解析失败: LLM解析失败: Error code: 403 - {'error': {'message': '用户额度不足, 剩余额度: ＄0.000000 (request id: 20260514150003841698388IJEl42pG)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}"
-    },
-    {
-      "title": "专家解读文章之三 | 推动公共设施建设充分体现儿童友好理念",
-      "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404198.html \"专家解读文章之三 | 推动公共设施建设充分体现儿童友好理念\"",
-      "success": true,
-      "confidence": 0.5,
-      "level": null
-    },
-    {
-      "title": "关于公示上海市2026年第一批拟更名高新技术企业名单的通知",
-      "url": "http://stcsm.sh.gov.cn/zwgk/tzgs/gsgg/zhgsgg/20260508/ec84800d0b574a549aae21f837332a34.html \"关于公示上海市2026年第一批拟更名高新技术企业名单的通知\"",
-      "success": false,
-      "error": "LLM解析失败: LLM解析失败: Error code: 403 - {'error': {'message': '用户额度不足, 剩余额度: ＄0.000000 (request id: 20260514145955366558731lKcEypQF)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}"
-    },
-    {
-      "title": "专家解读文章之二 | 推动公共政策制定充分考虑儿童视角",
-      "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404199.html \"专家解读文章之二 | 推动公共政策制定充分考虑儿童视角\"",
-      "success": true,
-      "confidence": 0.75,
-      "level": "国家级"
-    },
-    {
-      "title": "上海市科学技术委员会关于发布2026年度创新生态计划“国际科技合作”项目申报指南的通知",
-      "url": "http://stcsm.sh.gov.cn/zwgk/kyjhxm/xmsb/20260508/a3b5653025054f098d06c3b83b1bc648.html \"上海市科学技术委员会关于发布2026年度创新生态计划“国际科技合作”项目申报指南的通知\"",
-      "success": false,
-      "error": "LLM解析失败: LLM解析失败: Error code: 403 - {'error': {'message': '用户额度不足, 剩余额度: ＄0.000000 (request id: 20260514145946506540045dbSlCnMU)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}"
-    },
-    {
-      "title": "上海市科学技术委员会关于发布2026年度创新生态建设计划“国内科技合作”项目申报指南的通知",
-      "url": "http://stcsm.sh.gov.cn/zwgk/kyjhxm/xmsb/20260508/8ac2faa4d7b1400ba24e79d176d481b9.html \"上海市科学技术委员会关于发布2026年度创新生态建设计划“国内科技合作”项目申报指南的通知\"",
-      "success": false,
-      "error": "LLM解析失败: LLM解析失败: Error code: 403 - {'error': {'message': '用户额度不足, 剩余额度: ＄0.000000 (request id: 20260514145940246406856CxRHyd6x)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}"
-    },
-    {
-      "title": "专家解读文章之一 | 推进儿童友好建设迈向更高水平",
-      "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404200.html \"专家解读文章之一 | 推进儿童友好建设迈向更高水平\"",
-      "success": true,
-      "confidence": 0.75,
-      "level": "国家级"
-    },
-    {
-      "title": "上海市科学技术委员会关于发布2026年度基础研究计划“探索者计划”（第一批）项目申报指南的通知",
-      "url": "http://stcsm.sh.gov.cn/zwgk/kyjhxm/xmsb/20260509/5ca0abb6e4a749d4a0204a57e01505cb.html \"上海市科学技术委员会关于发布2026年度基础研究计划“探索者计划”（第一批）项目申报指南的通知\"",
-      "success": false,
-      "error": "LLM解析失败: LLM解析失败: Error code: 403 - {'error': {'message': '用户额度不足, 剩余额度: ＄0.000000 (request id: 20260514145932914568544VKGFRHDm)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}"
-    },
-    {
-      "title": "一图读懂 | 关于在全社会推进儿童友好建设的意见",
-      "url": "http://www.ndrc.gov.cn/xxgk/jd/zctj/202603/t20260317_1404201.html \"一图读懂 | 关于在全社会推进儿童友好建设的意见\"",
-      "success": true,
-      "confidence": 0.5,
-      "level": null
-    },
-    {
-      "title": "国家发展改革委新闻发言人就《国家发展改革委国务院妇儿工委办公室关于在全社会推进儿童友好建设的意见》答",
-      "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404203.html \"国家发展改革委新闻发言人就《国家发展改革委国务院妇儿工委办公室关于在全社会推进儿童友好建设的意见》答记者问\"",
-      "success": true,
-      "confidence": 0.75,
-      "level": "国家级"
-    },
-    {
-      "title": "关于举办2026年上海科技节的通知",
-      "url": "http://stcsm.sh.gov.cn/zwgk/tzgs/zhtz/20260511/9d759d6cc92e425ea727a3397987966b.html \"关于举办2026年上海科技节的通知\"",
-      "success": false,
-      "error": "LLM解析失败: LLM解析失败: Error code: 403 - {'error': {'message': '用户额度不足, 剩余额度: ＄0.000000 (request id: 20260514145922114472006c9cVjCRy)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}"
-    },
-    {
-      "title": "_![Image 9: 政策解读",
-      "url": "http://stcsm.sh.gov.cn/images/tu3.png",
-      "success": false,
-      "error": "内容抓取失败"
-    },
-    {
-      "title": "两部门联合印发意见全面推进儿童友好建设",
-      "url": "http://www.ndrc.gov.cn/xxgk/jd/jd/202603/t20260317_1404204.html \"两部门联合印发意见全面推进儿童友好建设\"",
+      "title": "上海市发展和改革委员会关于开展2024年度工程咨询单位监督检查工作的通知",
+      "url": "http://fgw.sh.gov.cn/fgw_gdzctz/20240430/6dfa00f2606c49f5bcfd7a57d5072dda.html",
       "success": true,
       "confidence": 0.65,
-      "level": "国家级"
+      "level": "市级"
     },
     {
-      "title": "《国家邮政局关于支持广西打造面向东盟的区域性国际邮政快递枢纽的意见》解读",
-      "url": "http://www.spb.gov.cn/gjyzj/c200026/202409/c75f10e06d694eaf826aeae627697e26.shtml \"《国家邮政局关于支持广西打造面向东盟的区域性国际邮政快递枢纽的意见》解读\"",
+      "title": "上海市发展和改革委员会关于调整上海大歌剧院项目建设资金来源的批复",
+      "url": "http://fgw.sh.gov.cn/fgw_gdzctz/20240914/eb066320d2a240a49a14f3a34c94d870.html",
+      "success": true,
+      "confidence": 0.85,
+      "level": "市级"
+    },
+    {
+      "title": "关于印发《上海市投资项目在线审批监管平台运行管理办法》的通知",
+      "url": "http://fgw.sh.gov.cn/fgw_gfxwj/20241231/189e799353eb412db7ee2a65cd1592dd.html",
+      "success": true,
+      "confidence": 0.7000000000000001,
+      "level": "市级"
+    },
+    {
+      "title": "上海市发展改革委关于印发部分政府投资项目可行性研究报告（初步设计深度）编制指南（2025年版）的通知",
+      "url": "http://fgw.sh.gov.cn/fgw_gdzctz/20250124/e34550aaaf924c9f8d71c60168c0d7a5.html",
+      "success": true,
+      "confidence": 0.75,
+      "level": "市级"
+    },
+    {
+      "title": "上海市发展和改革委员会关于开展2025年度工程咨询单位监督检查工作的通知",
+      "url": "http://fgw.sh.gov.cn/fgw_gdzctz/20250331/ce29eccdf5104899921feac476125b2a.html",
+      "success": true,
+      "confidence": 0.65,
+      "level": "市级"
+    },
+    {
+      "title": "关于印发《固定资产投资项目审批“一件事”工作实施方案》的通知",
+      "url": "http://fgw.sh.gov.cn/fgw_gdzctz/20250718/bafba42ab5324c04a8421c1f2d7fdeb4.html",
+      "success": true,
+      "confidence": 0.75,
+      "level": "市级"
+    },
+    {
+      "title": "关于延长《关于部分市级建设财力项目建议书格式化审批的通知》有效期的通知",
+      "url": "http://fgw.sh.gov.cn/fgw_gfxwj/20250829/a4ad5a03d7a64cf48abb7a26579756ce.html",
+      "success": true,
+      "confidence": 0.65,
+      "level": "市级"
+    },
+    {
+      "title": "关于印发《上海市市级建设财力项目后评价管理办法》的通知",
+      "url": "http://fgw.sh.gov.cn/fgw_gfxwj/20250918/1c2f2c9f944c4725a40a3edb709ce638.html",
+      "success": true,
+      "confidence": 0.8,
+      "level": "市级"
+    },
+    {
+      "title": "上海市发展改革委关于印发委托投资咨询评估管理办法的通知",
+      "url": "http://fgw.sh.gov.cn/fgw_gfxwj/20251217/384fac0569cb424b8dda1767e33193d9.html",
+      "success": true,
+      "confidence": 0.7000000000000001,
+      "level": "市级"
+    },
+    {
+      "title": "关于延长《上海市市级建设财力投资补助和贴息项目管理办法》有效期的通知",
+      "url": "http://fgw.sh.gov.cn/fgw_gfxwj/20260210/a071baea71b94419bed417fbfcfca792.html",
+      "success": true,
+      "confidence": 0.65,
+      "level": "市级"
+    },
+    {
+      "title": "关于在本市道路旅客运输行业推行应用《道路运输经营许可证》《道路运输证》电子证照的公告",
+      "url": "https://jtw.sh.gov.cn/zxzfxx/20260113/695b6d5e149b49138a6fe1e035b72aa3.html",
+      "success": true,
+      "confidence": 0.65,
+      "level": "市级"
+    },
+    {
+      "title": "上海市发展改革委关于开展2026年度工程咨询单位监督检查工作的通知",
+      "url": "http://fgw.sh.gov.cn/fgw_gdzctz/20260330/49690fab4cc245c4a94858fd19f90837.html",
+      "success": true,
+      "confidence": 0.65,
+      "level": "市级"
+    },
+    {
+      "title": "关于聘请第三批上海市交通建设市场社会监督员的通知",
+      "url": "https://jtw.sh.gov.cn/zxzfxx/20260114/c666be6d08b04079809b4a52e281723b.html",
+      "success": true,
+      "confidence": 0.65,
+      "level": "市级"
+    },
+    {
+      "title": "/ 政策文件",
+      "url": "https://fgw.sh.gov.cn/fgw_zcwjfl/index.html",
+      "success": true,
+      "confidence": 0.65,
+      "level": "市级"
+    },
+    {
+      "title": "/ 政策文件",
+      "url": "https://fgw.sh.gov.cn/fgw_zcwj/index.html",
+      "success": true,
+      "confidence": 0.65,
+      "level": "市级"
+    },
+    {
+      "title": "关于加强贯彻落实《危险货物道路运输企业安全管理规范》的通知",
+      "url": "https://jtw.sh.gov.cn/zxzfxx/20260120/228a8410253241ab9f8bbee7b6df28bd.html",
+      "success": true,
+      "confidence": 0.75,
+      "level": "市级"
+    },
+    {
+      "title": "上海市交通委员会关于印发2025年第二批交通节能减排典型案例的通知",
+      "url": "https://jtw.sh.gov.cn/zxzfxx/20251201/7d987362e0f14d0a9cd153cfb4ee5266.html",
+      "success": true,
+      "confidence": 0.85,
+      "level": "市级"
+    },
+    {
+      "title": "关于推进海铁联运发展项目资金“免申即享”的通知",
+      "url": "https://jtw.sh.gov.cn/zxzfxx/20260206/50bb1e0037a045dcabcfb2f377e64cb9.html",
       "success": false,
-      "error": "LLM解析失败: LLM解析失败: Error code: 403 - {'error': {'message': '用户额度不足, 剩余额度: ＄0.000000 (request id: 20260514145907637756843dQH2E5P9)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}"
+      "error": "LLM解析失败: [MiniMax(costom2)] 解析失败: Expecting ',' delimiter: line 2 column 28 (char 29)"
+    },
+    {
+      "title": "关于我市停止制发道路危险货物运输纸质许可证件的公告",
+      "url": "https://jtw.sh.gov.cn/zxzfxx/20251230/2cbbd832fae44d15810e9a8e51f3d442.html",
+      "success": true,
+      "confidence": 0.65,
+      "level": "市级"
+    },
+    {
+      "title": "关于公布2026年海铁联运揽货扶持资金设定标准的通知",
+      "url": "https://jtw.sh.gov.cn/zxzfxx/20260306/d2c7aff19e00453bbf9a3cd79fd8ccf8.html",
+      "success": true,
+      "confidence": 0.75,
+      "level": "市级"
+    },
+    {
+      "title": "关于划定闵行区第一批自动驾驶开放测试道路的通知",
+      "url": "https://jtw.sh.gov.cn/zxzfxx/20260106/1b34f8f627ac495bb619d4534de6141e.html",
+      "success": true,
+      "confidence": 0.75,
+      "level": "市级"
     }
   ]
 }

@@ -1,27 +1,33 @@
 {
   "id": "e955f25cd45b2baa",
-  "title": "关于废止《国家科技重大专项资金配套管理办法实施细则》的通知",
+  "title": null,
   "url": "http://stcsm.sh.gov.cn/zwgk/kjzc/zcwj/kwzcxwj/20260225/7e9b1bb0e85742548f197eba90927ca6.html \"关于废止《国家科技重大专项资金配套管理办法实施细则》的通知\"",
   "source": "上海科委",
-  "source_level": "市级",
+  "source_level": "P0",
   "published_at": "",
-  "parsed_at": "2026-05-14T14:56:02.112786+00:00",
-  "confidence": 0.0,
-  "parse_error": "LLM解析失败: LLM解析失败: Error code: 403 - {'error': {'message': '用户额度不足, 剩余额度: ＄0.000000 (request id: 202605141456021116060739uX5nMZp)', 'type': 'new_api_error', 'param': '', 'code': 'insufficient_user_quota'}}",
-  "级别": "未知",
+  "parsed_at": "2026-05-15T01:45:41.523211+00:00",
+  "confidence": 0.5,
+  "parse_error": null,
+  "级别": null,
   "地区": [],
   "主管部门": [],
   "发布时间": null,
   "申报截止时间": null,
-  "政策类型": "未知",
+  "政策类型": null,
   "支持方向": [],
   "支持金额": {},
-  "申报条件": {},
+  "申报条件": {
+    "必要资质": null,
+    "规模要求": null,
+    "投资要求": null
+  },
   "材料要求": [],
   "评审方式": null,
-  "是否后补贴": false,
+  "是否后补贴": null,
   "验收要求": null,
-  "风险提示": [],
+  "风险提示": [
+    "政策原文链接已失效(404 Not Found)，无法获取政策内容"
+  ],
   "政策原文关键词": [],
   "适合申报企业": []
 }
