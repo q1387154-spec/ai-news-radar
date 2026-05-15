@@ -220,34 +220,76 @@ def clean_policy_html(html: str) -> str:
     return text[:8000]
 
 
+def playwright_fetch_content(url: str, timeout: int = 30) -> str:
+    """
+    使用 Playwright 浏览器抓取页面内容（绕过 Jina 限速）
+    无速率限制，适合大规模抓取政府政策页面
+    """
+    from playwright.sync_api import sync_playwright
+
+    text = f"[Playwright抓取失败: 未知错误]"
+
+    try:
+        with sync_playwright() as p:
+            # 启动 headless Chrome
+            browser = p.chromium.launch(
+                headless=True,
+                args=["--no-sandbox", "--disable-dev-shm-usage", "--disable-blink-features=AutomationControlled"]
+            )
+            context = browser.new_context(
+                user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+                ignore_https_errors=True
+            )
+            page = context.new_page()
+            page.set_default_timeout(timeout * 1000)
+
+            # 导航 + 等待内容加载
+            response = page.goto(url, wait_until="domcontentloaded", timeout=timeout * 1000)
+
+            if response is None or response.status >= 400:
+                text = f"[HTTP {response.status if response else 'None'}: {url}]"
+            else:
+                # 滚动一下触发懒加载内容
+                try:
+                    page.evaluate("window.scrollTo(0, document.body.scrollHeight / 2)")
+                    page.wait_for_timeout(1000)
+                except Exception:
+                    pass
+
+                # 提取正文
+                content = page.content()
+                text = clean_policy_html(content)
+
+            context.close()
+            browser.close()
+
+    except Exception as e:
+        text = f"[Playwright抓取失败: {e}]"
+
+    return text[:8000]
+
+
 def fetch_policy_content(url: str, session: requests.Session = None) -> str:
-    """抓取政策页面内容（带重试）"""
+    """
+    抓取政策页面内容，优先使用 Playwright 浏览器（无速率限制）
+    降级使用直接 requests 抓取
+    """
+    # 优先：Playwright 浏览器抓取（无速率限制）
+    try:
+        content = playwright_fetch_content(url)
+        if content and len(content) > 200 and "抓取失败" not in content:
+            return content
+    except Exception:
+        pass
+
+    # 降级：直接 requests 抓取
     if session is None:
         session = requests.Session()
-        # 配置重试适配器
-        retry = Retry(total=3, backoff_factor=1, status_forcelist=[500, 502, 503, 504])
+        retry = Retry(total=2, backoff_factor=1, status_forcelist=[500, 502, 503, 504])
         adapter = HTTPAdapter(max_retries=retry)
         session.mount('http://', adapter)
         session.mount('https://', adapter)
 
-    # 尝试Jina Reader（带重试）
-    jina_url = f"https://r.jina.ai/{url}"
-    headers = {
-        "Accept": "text/plain",
-        "X-Timeout": "15",
-        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
-    }
-    for attempt in range(3):
-        try:
-            resp = session.get(jina_url, timeout=25, headers=headers)
-            if resp.status_code == 200 and len(resp.text) > 200:
-                return resp.text[:8000]
-        except Exception:
-            if attempt < 2:
-                time.sleep(2 ** attempt)  # 指数退避
-            pass
-
-    # 降级：直接抓取
     try:
         resp = session.get(url, timeout=15)
         resp.raise_for_status()
@@ -256,66 +298,162 @@ def fetch_policy_content(url: str, session: requests.Session = None) -> str:
         return f"[抓取失败: {e}]"
 
 
+def _call_openai_compatible(client: openai.OpenAI, model: str, messages: list,
+                              temperature: float = 0.1, max_tokens: int = 2048) -> str:
+    """调用 OpenAI 兼容接口，返回文本或抛出异常"""
+    response = client.chat.completions.create(
+        model=model,
+        messages=messages,
+        temperature=temperature,
+        max_tokens=max_tokens
+    )
+    return response.choices[0].message.content
+
+
+def _is_retriable_error(e: Exception) -> bool:
+    """判断错误是否值得重试（配额不足/限速/服务器错误）"""
+    msg = str(e).lower()
+    # 403: 配额耗尽 / 429: 速率限制 / 5xx: 服务器错误
+    retriable_codes = [403, 429, 500, 502, 503, 504]
+    retriable_keywords = [
+        "quota", "rate limit", "insufficient_user_quota",
+        "429", "rate_limit", "too many requests",
+        "500", "502", "503", "service unavailable", "gateway error",
+        "403", "额度", "配额", "limit exceeded"
+    ]
+    for code in retriable_codes:
+        if str(code) in msg:
+            return True
+    for kw in retriable_keywords:
+        if kw.lower() in msg:
+            return True
+    return False
+
+
+def _build_client(api_key: str, base_url: str, timeout: int = 60):
+    """构建 OpenAI 兼容客户端"""
+    import openai as _openai
+    return _openai.OpenAI(
+        api_key=api_key,
+        base_url=base_url,
+        timeout=timeout,
+        max_retries=0  # 我们自己在模型层面重试
+    )
+
+
 def parse_with_llm(content: str, title: str) -> PolicySchema:
-    """使用LLM提取结构化信息 - MiniMax版本"""
-    import openai
+    """
+    使用 LLM 提取结构化信息，带多级模型降级。
 
-    # MiniMax API配置 (costom2)
-    api_key = os.environ.get("MINIMAX_API_KEY") or "sk-d0127b5dd6cff018ed0a0075eab22efe"
-    base_url = os.environ.get("MINIMAX_BASE_URL") or "https://v2.aicodee.com/v1"
+    降级顺序 (自动切换):
+      1. MiniMax costom1  (primary)
+      2. MiniMax costom2  (first fallback)
+      3. Gemini 2.5 Flash (second fallback, via Google API)
+    """
+    import openai as _openai
 
-    try:
-        client = openai.OpenAI(
-            api_key=api_key,
-            base_url=base_url
-        )
+    # ── 模型配置 ──────────────────────────────────────────────
+    # Primary: costom1 MiniMax
+    PRIMARY_KEY = os.environ.get("MINIMAX_API_KEY") or "sk-d0127b5dd6cff018ed0a0075eab22efe"
+    PRIMARY_URL = os.environ.get("MINIMAX_BASE_URL") or "https://v2.aicodee.com/v1"
+    PRIMARY_MODEL = "MiniMax-M2.7-highspeed"
 
-        response = client.chat.completions.create(
-            model="MiniMax-M2.7-highspeed",
-            messages=[
-                {"role": "system", "content": POLICY_EXTRACT_PROMPT},
-                {"role": "user", "content": f"政策标题: {title}\n\n政策内容:\n{content[:6000]}"}
-            ],
-            temperature=0.1,
-            max_tokens=2048
-        )
+    # Fallback 1: costom2 MiniMax (独立配额)
+    COSTOM2_KEY = os.environ.get("MINIMAX_API_KEY_2") or ""
+    COSTOM2_URL = PRIMARY_URL  # 同一家代理商
+    COSTOM2_MODEL = "MiniMax-M2.7-highspeed"
 
-        text = response.choices[0].message.content
+    # Fallback 2: Gemini 2.5 Flash (Google OpenAI-compatible endpoint)
+    # 端点: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
+    GEMINI_KEY = os.environ.get("GEMINI_API_KEY") or ""
+    GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/openai"
+    GEMINI_MODEL = "gemini-2.5-flash"
+    GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta"
+    GEMINI_MODEL = "gemini-2.0-flash-exp"
 
-        # 提取JSON
-        text = text.strip()
-        if text.startswith("```json"):
-            text = text[7:]
-        if text.startswith("```"):
-            text = text[3:]
-        if text.endswith("```"):
-            text = text[:-3]
-        text = text.strip()
+    # Fallback 2: MiniMax-Alt (costom1)
+    ALT_KEY = os.environ.get("MINIMAX_API_KEY_2") or "sk-xxxx-alt"  # 需用户配置
+    ALT_URL = "https://v2.aicodee.com/v1"
+    ALT_MODEL = "MiniMax-M2.7-highspeed"
 
-        data = json.loads(text)
+    # ── Prompt ─────────────────────────────────────────────────
+    system_prompt = POLICY_EXTRACT_PROMPT
+    user_prompt = f"政策标题: {title}\n\n政策内容:\n{content[:6000]}"
+    messages = [
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": user_prompt}
+    ]
 
-        return PolicySchema(
-            title=data.get("title", title),
-            级别=data.get("级别", "未知"),
-            地区=data.get("地区") or [],
-            主管部门=data.get("主管部门") or [],
-            发布时间=data.get("发布时间"),
-            申报截止时间=data.get("申报截止时间"),
-            政策类型=data.get("政策类型", "未知"),
-            支持方向=data.get("支持方向") or [],
-            支持金额=data.get("支持金额"),
-            申报条件=data.get("申报条件") or {},
-            材料要求=data.get("材料要求") or [],
-            评审方式=data.get("评审方式"),
-            是否后补贴=data.get("是否后补贴", False),
-            验收要求=data.get("验收要求"),
-            风险提示=data.get("风险提示") or [],
-            政策原文关键词=data.get("政策原文关键词") or [],
-            适合申报企业=data.get("适合申报企业") or []
-        )
+    # ── 尝试各模型 ───────────────────────────────────────────
+    last_error = None
 
-    except Exception as e:
-        raise RuntimeError(f"LLM解析失败: {e}")
+    candidates = [
+        (PRIMARY_KEY,  PRIMARY_URL,  PRIMARY_MODEL,  "MiniMax(costom1)"),
+        (COSTOM2_KEY,  COSTOM2_URL,  COSTOM2_MODEL, "MiniMax(costom2)"),
+        (GEMINI_KEY,  GEMINI_URL,  GEMINI_MODEL,  "Gemini-2.5-Flash"),
+    ]
+
+    for api_key, base_url, model, model_name in candidates:
+        if not api_key or api_key.startswith("sk-xxxx"):
+            continue  # 跳过未配置的备用 key
+
+        try:
+            client = _build_client(api_key, base_url)
+            raw_text = _call_openai_compatible(client, model, messages)
+            # 成功 → 解析 JSON
+            text = raw_text.strip()
+            if text.startswith("```json"):
+                text = text[7:]
+            elif text.startswith("```"):
+                text = text[3:]
+            if text.endswith("```"):
+                text = text[:-3]
+            text = text.strip()
+
+            data = json.loads(text)
+
+            return PolicySchema(
+                title=data.get("title", title),
+                级别=data.get("级别", "未知"),
+                地区=data.get("地区") or [],
+                主管部门=data.get("主管部门") or [],
+                发布时间=data.get("发布时间"),
+                申报截止时间=data.get("申报截止时间"),
+                政策类型=data.get("政策类型", "未知"),
+                支持方向=data.get("支持方向") or [],
+                支持金额=data.get("支持金额"),
+                申报条件=data.get("申报条件") or {},
+                材料要求=data.get("材料要求") or [],
+                评审方式=data.get("评审方式"),
+                是否后补贴=data.get("是否后补贴", False),
+                验收要求=data.get("验收要求"),
+                风险提示=data.get("风险提示") or [],
+                政策原文关键词=data.get("政策原文关键词") or [],
+                适合申报企业=data.get("适合申报企业") or []
+            )
+
+        except _openai.APIError as e:
+            # 401/403/404: 认证/配额问题，不重试当前模型，尝试下一个
+            if e.status_code in (401, 403, 404):
+                last_error = RuntimeError(f"[{model_name}] 认证/配额错误 ({e.status_code}): {e}")
+                continue
+            elif e.status_code in (429, 500, 502, 503, 504):
+                last_error = RuntimeError(f"[{model_name}] 可重试错误 ({e.status_code}): {e}")
+                continue
+            else:
+                last_error = RuntimeError(f"[{model_name}] API错误 ({e.status_code}): {e}")
+                continue
+
+        except Exception as e:
+            if _is_retriable_error(e):
+                last_error = RuntimeError(f"[{model_name}] 可重试: {e}")
+                continue
+            else:
+                # 不可重试的错误（JSON解析失败等），直接抛出
+                raise RuntimeError(f"[{model_name}] 解析失败: {e}")
+
+    # 所有模型都失败
+    raise RuntimeError(f"所有模型均失败: {last_error}")
 
 
 def assess_confidence(parsed: PolicySchema, raw: str) -> float:

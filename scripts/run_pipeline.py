@@ -31,6 +31,36 @@ from typing import Optional
 # 添加父目录到路径
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
+# ── 从 OpenClaw config 注入 API keys ──────────────────────────
+def _load_openclaw_keys():
+    """从 openclaw.json 读取各 provider 的 API key 并注入环境变量"""
+    import json as _json
+    cfg_path = Path.home() / ".openclaw" / "openclaw.json"
+    if not cfg_path.exists():
+        return
+    try:
+        cfg = _json.loads(cfg_path.read_text(encoding="utf-8"))
+        providers = cfg.get("models", {}).get("providers", {})
+        # costom1 → MINIMAX_API_KEY
+        c1 = providers.get("costom1", {})
+        if c1.get("apiKey"):
+            os.environ.setdefault("MINIMAX_API_KEY", c1["apiKey"])
+            os.environ.setdefault("MINIMAX_BASE_URL", c1.get("baseUrl", "https://v2.aicodee.com/v1"))
+        # costom2 → MINIMAX_API_KEY_2
+        c2 = providers.get("costom2", {})
+        if c2.get("apiKey"):
+            os.environ.setdefault("MINIMAX_API_KEY_2", c2["apiKey"])
+        # google (Gemini) → GEMINI_API_KEY
+        google = providers.get("google", {})
+        if google.get("apiKey"):
+            os.environ.setdefault("GEMINI_API_KEY", google["apiKey"])
+            os.environ.setdefault("GEMINI_BASE_URL", google.get("baseUrl", "https://generativelanguage.googleapis.com/v1beta"))
+    except Exception:
+        pass
+
+_load_openclaw_keys()
+# ────────────────────────────────────────────────────────────────
+
 # 导入各模块
 from scripts.parse_policy import (
     parse_single, load_policy,
@@ -121,55 +151,219 @@ class PolicyOpportunity:
         }
 
 
-def parse_rss_feeds(opml_file: str = None, limit: int = 50) -> list:
-    """抓取RSS源"""
+def _fetch_gov_opml_pages(limit: int = 100) -> list:
+    """
+    直接从 gov.opml 页面抓取政策列表链接（绕过失效RSS）
+    使用 Playwright 浏览器抓取，无速率限制
+    """
+    import xml.etree.ElementTree as ET
+    import re
+    from playwright.sync_api import sync_playwright
+
+    HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+    POLICY_KW = ["通知", "公告", "意见", "办法", "指南", "公示",
+                "决定", "方案", "政策", "解读", "批复", "纲要", "规划", "条例"]
+
+    opml_path = Path(__file__).parent.parent / "feeds" / "gov.opml"
+    if not opml_path.exists():
+        print(f"  gov.opml 不存在，跳过")
+        return []
+
+    tree = ET.parse(opml_path)
+    items = []
+
+    for outline in tree.getroot().iter("outline"):
+        html_url = outline.get("htmlUrl") or outline.get("xmlUrl")
+        title = outline.get("title", "")
+        category = outline.get("category", "")
+        priority = outline.get("priority", "P0")
+        level = outline.get("level", "P0")
+
+        if not html_url:
+            continue
+
+        print(f"  抓取 {title[:20]}... ", end="", flush=True)
+
+        try:
+            from bs4 import BeautifulSoup
+            from urllib.parse import urljoin
+
+            page_html = _playwright_fetch_page(html_url)
+
+            # 提取 HTML 中的链接
+            found = 0
+            soup = BeautifulSoup(page_html, "html.parser")
+            for a in soup.find_all("a", href=True):
+                link_title = a.get_text(strip=True)
+                link_url = urljoin(html_url, a["href"])
+                if not link_title or len(link_title) < 5:
+                    continue
+                if not any(kw in link_title for kw in POLICY_KW):
+                    continue
+                items.append({
+                    "title": link_title.strip(),
+                    "url": link_url.strip(),
+                    "source": title,
+                    "category": category,
+                    "priority": priority,
+                    "level": level,
+                    "published": "",
+                })
+                found += 1
+
+            print(f"获取 {found} 条")
+
+        except Exception as e:
+            print(f"⚠️ {str(e)[:30]}")
+            continue
+
+        if len(items) >= limit:
+            break
+
+    return items[:limit]
+
+
+def _playwright_fetch_page(url: str, timeout: int = 35) -> str:
+    """
+    Playwright 抓取单个页面，返回 HTML 内容（支持 JS 渲染和 tab 点击）
+    """
+    from bs4 import BeautifulSoup
+    from playwright.sync_api import sync_playwright
+
+    html_content = ""
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(
+                headless=True,
+                args=["--no-sandbox", "--disable-dev-shm-usage"]
+            )
+            context = browser.new_context(
+                user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+                ignore_https_errors=True
+            )
+            page = context.new_page()
+            page.set_default_timeout(timeout * 1000)
+
+            # 快速导航（不等待load事件，避免JS重页面卡住）
+            page.goto(url, wait_until="commit", timeout=timeout * 1000)
+            page.wait_for_timeout(4000)  # 等待JS初始化
+
+            # 尝试点击通知/公告tab
+            tab_keywords = ["通知公告", "公示公告", "公告列表", "tzgg", "tz", "gsgg", "政策文件"]
+            for pattern in tab_keywords:
+                try:
+                    clicked = page.evaluate(f"""
+                        () => {{
+                            const els = Array.from(document.querySelectorAll('a, button, [onclick], [data-tab], li'));
+                            for (const el of els) {{
+                                const text = (el.innerText || el.textContent || '').trim();
+                                const href = el.href || '';
+                                if (text.includes('{pattern}') || href.includes('{pattern}')) {{
+                                    if (el.click) {{ el.click(); return true; }}
+                                }}
+                            }}
+                            return false;
+                        }}
+                    """)
+                    if clicked:
+                        page.wait_for_timeout(2500)
+                        break
+                except Exception:
+                    pass
+
+            # 滚动触发懒加载
+            for _ in range(6):
+                page.evaluate("window.scrollBy(0, 600)")
+                page.wait_for_timeout(800)
+
+            html_content = page.content()
+            context.close()
+            browser.close()
+    except Exception as e:
+        html_content = f"[Playwright error: {e}]"
+    return html_content
+
+def parse_rss_feeds(opml_file: str = None, limit: int = 100) -> list:
+    """抓取政策源（RSS → gov-fetched.json → gov.opml直抓）"""
     try:
         import feedparser
     except ImportError:
         print("需要安装 feedparser: pip install feedparser")
         return []
 
+    # 尝试 policy.opml RSS 源
     if opml_file is None:
         opml_file = Path(__file__).parent.parent / "feeds" / "policy.example.opml"
 
     opml_path = Path(opml_file)
     if not opml_path.exists():
         print(f"OPML文件不存在: {opml_file}")
-        return []
+    else:
+        import xml.etree.ElementTree as ET
+        tree = ET.parse(opml_path)
+        root = tree.getroot()
 
-    # 解析OPML
-    import xml.etree.ElementTree as ET
-    tree = ET.parse(opml_path)
-    root = tree.getroot()
+        items = []
+        for outline in root.iter("outline"):
+            xml_url = outline.get("xmlUrl") or outline.get("xml_url")
+            title = outline.get("title", "")
+            html_url = outline.get("htmlUrl", "")
+            category = outline.get("category", "")
+            priority = outline.get("priority", "P1")
 
-    items = []
-    for outline in root.iter("outline"):
-        xml_url = outline.get("xmlUrl") or outline.get("xml_url")
-        title = outline.get("title", "")
-        html_url = outline.get("htmlUrl", "")
-        category = outline.get("category", "")
-        priority = outline.get("priority", "P1")
+            if not xml_url:
+                continue
 
-        if not xml_url:
-            continue
+            try:
+                feed = feedparser.parse(xml_url)
+                for entry in feed.entries[:limit]:
+                    item = {
+                        "title": entry.get("title", ""),
+                        "url": entry.get("link", ""),
+                        "source": title,
+                        "category": category,
+                        "priority": priority,
+                        "published": entry.get("published", "")
+                    }
+                    items.append(item)
+            except Exception as e:
+                print(f"  ⚠️ 抓取失败 {title}: {e}")
+                continue
 
-        try:
-            feed = feedparser.parse(xml_url)
-            for entry in feed.entries[:limit]:
-                item = {
-                    "title": entry.get("title", ""),
-                    "url": entry.get("link", ""),
-                    "source": title,
-                    "category": category,
-                    "priority": priority,
-                    "published": entry.get("published", "")
-                }
-                items.append(item)
-        except Exception as e:
-            print(f"  ⚠️ 抓取失败 {title}: {e}")
-            continue
+        if items:
+            print(f"  从policy.opml RSS获取 {len(items)} 条")
+            return items[:limit]
 
-    return items
+    # 优先尝试 gov.opml 直抓（政府HTML页面 → 提取政策链接）
+    print("  尝试从gov.opml直接抓取政府网站...")
+    items = _fetch_gov_opml_pages(limit=limit)
+    if items:
+        print(f"  从gov.opml直抓获取 {len(items)} 条")
+        return items[:limit]
+
+    # 尝试 gov-fetched.json 兜底
+    print("  尝试从gov-fetched.json兜底...")
+    gov_file = Path(__file__).parent.parent / "data" / "gov-fetched.json"
+    if not gov_file.exists():
+        gov_file = Path(__file__).parent.parent / "data" / "latest-gov.json"
+    if gov_file.exists():
+        import json as _json
+        data = _json.loads(gov_file.read_text(encoding="utf-8"))
+        gov_items = data.get("items", []) if isinstance(data, dict) else data
+        if gov_items:
+            items = [{
+                "title": it.get("title", ""),
+                "url": it.get("url", ""),
+                "source": it.get("source", "政府网站"),
+                "category": it.get("category", ""),
+                "priority": it.get("priority", "P0"),
+                "published": it.get("published_at", "") or it.get("published", "")
+            } for it in gov_items[:limit]]
+            print(f"  从{gov_file.name}加载 {len(items)} 条")
+            return items
+
+    # 尝试 policy.opml RSS
+    print("  尝试policy.opml RSS...")
 
 
 def process_policy(item: dict, profile) -> Optional[PolicyOpportunity]:
@@ -261,15 +455,17 @@ def process_policy(item: dict, profile) -> Optional[PolicyOpportunity]:
 
 def _generate_project_name(parsed, profile) -> str:
     """生成建议项目名称"""
-    # 优先使用企业已有项目匹配
+    schema = parsed.parsed if hasattr(parsed, 'parsed') else parsed
+    支持方向 = getattr(schema, '支持方向', []) or []
+    政策关键词 = getattr(schema, '政策原文关键词', []) or []
     for project in profile.key_projects:
         project_keywords = project.get("keywords", [])
         for kw in project_keywords:
-            if kw in str(parsed.支持方向) or kw in str(parsed.政策原文关键词):
+            if kw in str(支持方向) or kw in str(政策关键词):
                 return project["name"]
 
     # 默认包装
-    directions = parsed.支持方向[:2] if parsed.支持方向 else []
+    directions = 支持方向[:2] if 支持方向 else []
     if directions:
         return f"{directions[0]}示范项目"
     return "智慧物流建设项目"
@@ -277,10 +473,11 @@ def _generate_project_name(parsed, profile) -> str:
 
 def _generate_packaging_keywords(parsed, profile) -> list:
     """生成包装关键词"""
+    schema = parsed.parsed if hasattr(parsed, 'parsed') else parsed
     keywords = []
 
     # 从政策支持方向提取
-    for kw in parsed.支持方向:
+    for kw in getattr(schema, '支持方向', []) or []:
         keywords.append(kw)
 
     # 添加热点关键词
@@ -377,7 +574,7 @@ def main():
     parser.add_argument("--parse-only", action="store_true", help="仅解析政策")
     parser.add_argument("--full", action="store_true", help="完整流程")
     parser.add_argument("--test", action="store_true", help="测试模式")
-    parser.add_argument("--limit", type=int, default=20, help="处理数量限制")
+    parser.add_argument("--limit", type=int, default=50, help="处理数量限制")
 
     args = parser.parse_args()
 
