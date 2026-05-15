@@ -33,14 +33,12 @@ jobs:
           pip install -r requirements.txt
           pip install feedparser requests
 
-      # ── Phase 1: 政府官网抓取（Jina Reader，无需RSS） ──────────────────
+      # ── Phase 1: 政府官网抓取（百度搜索） ────────────────────────────
       - name: Fetch government websites (P0-P2)
         run: |
-          python scripts/fetch_gov.py \
+          python scripts/fetch_gov.baidu.py \
             --output-dir data \
-            --priority all \
-            --window-hours 72 \
-            --delay 2
+            --window-hours 72
 
       # ── Phase 2: 微信公众号抓取（RSSHub，需要自建实例）───────────────
       - name: Fetch WeChat public accounts
