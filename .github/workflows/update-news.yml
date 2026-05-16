@@ -36,7 +36,7 @@ jobs:
       # ── Phase 1: 政府政策抓取 + 关键词解析 + 评分 ──────────────────────
       - name: Fetch and process government policies
         run: |
-          python scripts/run_pipeline.py --test --limit 200 2>&1 | head -30 || true
+          python scripts/run_pipeline.py --test --limit 50 2>&1 | head -30 || true
 
       # ── Phase 2: 微信公众号抓取（RSSHub，需要自建实例）───────────────
       - name: Fetch WeChat public accounts
@@ -90,6 +90,7 @@ jobs:
           # 逐个添加文件
           git add data/latest-gov.json 2>/dev/null && echo "added latest-gov.json" || echo "latest-gov.json not found"
           git add data/latest.json 2>/dev/null && echo "added latest.json" || echo "latest.json not found"
+          git add data/policy-opportunities.json 2>/dev/null && echo "added policy-opportunities.json" || echo "policy-opportunities.json not found"
           git add data/source-status-gov.json 2>/dev/null && echo "added source-status-gov.json" || echo "source-status-gov.json not found"
           git add data/source-status.json 2>/dev/null && echo "added source-status.json" || echo "source-status.json not found"
           # 检查是否有变化
