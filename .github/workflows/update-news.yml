@@ -11,6 +11,7 @@ concurrency:
 
 permissions:
   contents: write
+  pages: write
 
 jobs:
   update:
@@ -100,3 +101,10 @@ jobs:
           else
             echo "No changes to commit"
           fi
+
+      # ── Trigger GitHub Pages rebuild ─────────────────────────────────
+      - name: Trigger GitHub Pages rebuild
+        run: |
+          echo "Triggering Pages rebuild..."
+          gh api repos/${{ github.repository }}/pages/builds -X POST
+          echo "Pages rebuild triggered successfully"
