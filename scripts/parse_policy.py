@@ -703,23 +703,15 @@ def parse_policy_with_fallback(url: str, title: str, source: str = "",
     """带降级策略的解析"""
     policy_id = make_policy_id(url, title)
 
-    # 1. 抓取内容
+    # 1. 抓取内容（失败时降级为标题+URL）
     content = fetch_policy_content(url)
+    effective_content = content if (content and len(content) >= 100) else (title + " " + url)
     if not content or len(content) < 100:
-        return ParsedPolicy(
-            id=policy_id,
-            title=title,
-            url=url,
-            source=source,
-            source_level=source_level,
-            published_at=published_at,
-            raw_content=content,
-            parse_error="内容抓取失败"
-        )
+        print(f"       ! 内容抓取失败，使用标题URL降级解析")
 
     # 2. 关键词解析（无LLM调用，秒级完成）
     try:
-        parsed = parse_with_keywords(content, title, url)
+        parsed = parse_with_keywords(effective_content, title, url)
     except Exception as e:
         return ParsedPolicy(
             id=policy_id,
@@ -728,13 +720,13 @@ def parse_policy_with_fallback(url: str, title: str, source: str = "",
             source=source,
             source_level=source_level,
             published_at=published_at,
-            raw_content=content[:500],
+            raw_content=effective_content[:500],
             parsed=PolicySchema(title=title),
             parse_error=f"关键词解析失败: {str(e)}"
         )
 
     # 3. 置信度
-    confidence = assess_confidence(parsed, content)
+    confidence = assess_confidence(parsed, effective_content)
 
     return ParsedPolicy(
         id=policy_id,
@@ -744,7 +736,7 @@ def parse_policy_with_fallback(url: str, title: str, source: str = "",
         source_level=source_level,
         published_at=published_at,
         parsed=parsed,
-        raw_content=content[:2000],
+        raw_content=effective_content[:2000],
         confidence=confidence
     )
 
