@@ -22,11 +22,12 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 import json
 import os
+import re
 import sys
 from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any
+from typing import Any, Optional
 
 # 添加父目录到路径
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -456,24 +457,245 @@ def parse_with_llm(content: str, title: str) -> PolicySchema:
     raise RuntimeError(f"所有模型均失败: {last_error}")
 
 
+# ── 关键词解析器（替代 LLM） ─────────────────────────────────────
+
+LEVEL_URL_PATTERNS = [
+    (r"ndrc\.gov\.cn|mof\.gov\.cn|miit\.gov\.cn|mot\.gov\.cn|most\.gov\.cn|caac\.gov\.cn|spb\.gov\.cn|nda\.gov\.cn|mohrss\.gov\.cn", "国家级"),
+    (r"sh\.gov\.cn|sww\.sh\.gov\.cn|rsj\.sh\.gov\.cn|stcsm\.sh\.gov\.cn|jtw\.sh\.gov\.cn|fgw\.sh\.gov\.cn|sheitc\.sh\.gov\.cn", "上海市级"),
+    (r"shqp\.gov\.cn", "青浦区级"),
+]
+DEPT_PATTERNS = [
+    (r"发展改革委|发改委", ["发改委"]),
+    (r"经济和信息化委员会|经信委|经信局", ["经信委"]),
+    (r"科学技术委员会|科委|科技局", ["科委"]),
+    (r"财政局|财政厅", ["财政局"]),
+    (r"人力资源和社会保障局|人社局|人社厅", ["人社局"]),
+    (r"商务委员会|商务委|商委", ["商务委"]),
+    (r"交通委员会|交通委|交通局", ["交通委"]),
+]
+SUPPORT_DIRECTION_PATTERNS = [
+    (r"数字化|数智化|数字经济|数字化转型", ["数字化转型"]),
+    (r"低空经济|无人机|eVTOL|飞行汽车|空域改革|通航", ["低空经济"]),
+    (r"智慧物流|智能物流|现代物流|物流配送|无人配送", ["智慧物流"]),
+    (r"人工智能|AI|大模型|机器学习|智能调度", ["人工智能"]),
+    (r"专精特新|中小企业", ["专精特新"]),
+    (r"冷链|冷库|冷藏", ["冷链物流"]),
+    (r"供应链|供应链数字化|产业链", ["供应链"]),
+    (r"技术改造|设备更新|机器换人", ["技术改造"]),
+    (r"高新技术企业|高新企业|高企", ["高企认定"]),
+    (r"科技型中小企业|科小", ["科技型中小企业"]),
+    (r"职业技能|技能培训|人才培训", ["职业培训"]),
+    (r"稳岗|就业见习|见习补贴", ["稳岗就业"]),
+]
+POLICY_TYPE_PATTERNS = [
+    (r"专项资金|重点支持项目|财政补贴", "专项资金"),
+    (r"税收优惠|增值税|所得税|加计扣除", "税收优惠"),
+    (r"资质认定|高企认定|科技型中小企业认定|专精特新", "资质认定"),
+    (r"人才计划|人才引进|人才培养|博士后", "人才计划"),
+    (r"揭榜挂帅|技术攻关|科技重大专项", "揭榜挂帅"),
+    (r"政府采购", "政府采购"),
+    (r"产业基金|投资基金|股权投资", "产业基金"),
+    (r"贷款贴息|融资担保|信贷支持", "贷款贴息"),
+]
+MATERIAL_PATTERNS = [
+    r"项目申报书|申报书", r"营业执照|企业法人营业执照",
+    r"财务报告|财务报表|审计报告|年度审计",
+    r"项目可行性研究报告|可研报告",
+    r"知识产权|专利、软件著作权",
+    r"社保缴纳|社保证明", r"纳税证明|完税证明",
+    r"法人代表|法定代表人", r"申报承诺函|诚信承诺",
+]
+CONDITION_PATTERNS = [
+    (r"高新技术企业|高新企业|高企认定", "必要资质: 高新技术企业"),
+    (r"科技型中小企业|科小企业", "必要资质: 科技型中小企业"),
+    (r"注册时间|成立时间|注册年限", "注册时间要求"),
+    (r"营业收入|年销售额|营收规模", "营收规模要求"),
+    (r"研发投入|研发费用|RD", "研发投入要求"),
+    (r"参保人数|员工规模", "人员规模要求"),
+    (r"在本区注册|注册地|纳税地", "注册地要求"),
+    (r"无不良信用|信用记录", "信用要求"),
+    (r"未享受过|不得申报|有以下情形", "排除条件"),
+]
+REVIEW_PATTERNS = [
+    (r"专家评审|专家论证", "专家评审"),
+    (r"材料审核|书面审查", "材料审核"),
+    (r"竞争性分配|竞争立项", "竞争性分配"),
+    (r"先建后补|事后补贴|验收后补", "后补贴"),
+    (r"先补后建|事前补贴|立项即补", "前补贴"),
+]
+DATE_PATTERNS = [r"(\d{4})年(\d{1,2})月(\d{1,2})日", r"(\d{4})-(\d{1,2})-(\d{1,2})", r"(\d{4})/(\d{1,2})/(\d{1,2})"]
+AMOUNT_PATTERNS = [
+    r"最高(?:资助|补贴|支持|奖励)?(?:达)?([\d,，.]+)\s*(万|万元)",
+    r"(?:资助|补贴|支持|奖励)(?:达)?([\d,，.]+)\s*(万|万元)",
+    r"金额(?:不高于|不超过|最高)?(?:达)?([\d,，.]+)\s*(万|万元)",
+]
+
+def _extract_date(text: str) -> Optional[str]:
+    lines = text.split("\n")
+    for line in lines:
+        s = line.strip()
+        if not any(kw in s for kw in ["截止", "申报截止", "受理截止", "截止日期", "申报期限", "在线提交截止"]):
+            continue
+        for pat in DATE_PATTERNS:
+            m = re.search(pat, s)
+            if m:
+                y, mo, d = m.group(1), m.group(2), m.group(3)
+                if 2018 <= int(y) <= 2030 and 1 <= int(mo) <= 12 and 1 <= int(d) <= 31:
+                    return f"{y}-{int(mo):02d}-{int(d):02d}"
+    for line in lines[:30]:
+        s = line.strip()
+        if "发布时间" in s or "发布日期" in s:
+            for pat in DATE_PATTERNS:
+                m = re.search(pat, s)
+                if m:
+                    y, mo, d = m.group(1), m.group(2), m.group(3)
+                    if 2018 <= int(y) <= 2030 and 1 <= int(mo) <= 12 and 1 <= int(d) <= 31:
+                        return f"{y}-{int(mo):02d}-{int(d):02d}"
+    return None
+
+def _extract_amount(text: str) -> dict:
+    for pat in AMOUNT_PATTERNS:
+        m = re.search(pat, text)
+        if m:
+            s = m.group(1).replace(",", "").replace("，", "")
+            try:
+                return {"描述": f"最高{s}{m.group(2)}", "金额": float(s), "单位": m.group(2)}
+            except ValueError:
+                pass
+    return {}
+
+def _extract_list(text: str, patterns: list) -> list:
+    found = set()
+    for pat, label in patterns:
+        if re.search(pat, text):
+            if isinstance(label, list):
+                found.update(label)
+            else:
+                found.add(label)
+    return list(found)
+
+def _extract_single(text: str, patterns: list) -> str:
+    for pat, label in patterns:
+        if re.search(pat, text):
+            return label
+    return "未知"
+
+def _extract_materials(text: str) -> list:
+    found = [m.group(0) for pat in MATERIAL_PATTERNS if (m := re.search(pat, text))]
+    return list(set(found))[:6]
+
+def _extract_conditions(text: str) -> dict:
+    result = {}
+    for pat, label in CONDITION_PATTERNS:
+        if re.search(pat, text):
+            if "必要资质" in label:
+                result.setdefault("必要资质", []).append(label.split(": ")[1])
+            else:
+                result[label] = "有要求（见原文）"
+    if "必要资质" in result:
+        result["必要资质"] = list(set(result["必要资质"]))
+    return result
+
+def _is_post_subsidy(text: str) -> bool:
+    if re.search(r"验收后|后补贴|事后补贴|先建后补|完成后补贴|验收合格后", text):
+        return True
+    if re.search(r"立项即补|事前补贴|先补后建|立项后即拨付", text):
+        return False
+    return False
+
+def _extract_level_from_url(url: str, text: str) -> str:
+    for pat, level in LEVEL_URL_PATTERNS:
+        if re.search(pat, url, re.IGNORECASE):
+            return level
+    return _extract_single(text, [
+        (r"国家级|国家政策|国务院|部委文件", "国家级"),
+        (r"上海市|上海市级|市政府文件", "上海市级"),
+        (r"青浦区|青浦区区级", "青浦区级"),
+    ])
+
+def _extract_regions(text: str) -> list:
+    regions = []
+    for pat, labels in [
+        (r"全国|国家|国务院各部委", ["全国"]),
+        (r"上海|上海市", ["上海"]),
+        (r"青浦|青浦区", ["青浦"]),
+        (r"长三角|长三角一体化", ["长三角"]),
+    ]:
+        if re.search(pat, text):
+            regions.extend(labels)
+    return list(set(regions)) if regions else ["上海"]
+
+def _extract_published_date(text: str) -> Optional[str]:
+    for line in text.split("\n")[:30]:
+        for kw in ["发布时间", "发布日期", "发文日期", "公布日期"]:
+            if kw in line:
+                date = _extract_date(line)
+                if date:
+                    return date
+    return None
+
+def _extract_risk_hints(text: str) -> list:
+    risks = []
+    for pat, hint in [
+        (r"仅限国有企业|国有独资", "仅限国有企业，中通吉不符合"),
+        (r"仅限外资企业|外商投资企业", "仅限外资企业，中通吉不符合"),
+        (r"需各区推荐|各区名额分配", "需区政府推荐，需确认青浦区名额"),
+        (r"已获同类补贴|不得重复申报", "已获同类补贴不得重复申报"),
+        (r"须通过.*验收|验收不合格", "需通过验收，存在验收不通过风险"),
+        (r"中小微企业", "针对中小微企业，中通吉规模可能超标"),
+    ]:
+        if re.search(pat, text):
+            risks.append(hint)
+    return list(set(risks))
+
+def parse_with_keywords(content: str, title: str, url: str = "") -> PolicySchema:
+    level = _extract_level_from_url(url, content)
+    regions = _extract_regions(content)
+    depts = _extract_list(content, DEPT_PATTERNS)
+    support_directions = _extract_list(content, SUPPORT_DIRECTION_PATTERNS)
+    policy_type = _extract_single(content, POLICY_TYPE_PATTERNS)
+    deadline = _extract_date(content)
+    published = _extract_published_date(content)
+    amount = _extract_amount(content)
+    materials = _extract_materials(content)
+    conditions = _extract_conditions(content)
+    review = _extract_single(content, REVIEW_PATTERNS)
+    is_post = _is_post_subsidy(content)
+    risks = _extract_risk_hints(content)
+    kw_text = (title + " " + content[:500]).lower()
+    policy_kw = [label for pat, label in [
+        (r"新质生产力", "新质生产力"), (r"数字化转型", "数字化转型"),
+        (r"低空经济", "低空经济"), (r"智能制造", "智能制造"),
+        (r"碳达峰|碳中和", "绿色低碳"), (r"补链强链", "产业链协同"),
+    ] if re.search(pat, kw_text)]
+    suitable = []
+    if support_directions:
+        suitable.append("物流/快递企业")
+    if re.search(r"AI|人工智能|数字化", content):
+        suitable.append("科技/数字化企业")
+    if re.search(r"高新技术|科技型", content):
+        suitable.append("高新技术企业/科技型中小企业")
+    return PolicySchema(
+        title=title, 级别=level, 地区=regions, 主管部门=depts,
+        发布时间=published, 申报截止时间=deadline, 政策类型=policy_type,
+        支持方向=support_directions, 支持金额=amount, 申报条件=conditions,
+        材料要求=materials, 评审方式=review, 是否后补贴=is_post,
+        验收要求="见原文" if re.search(r"验收|绩效评价|考核", content) else None,
+        风险提示=risks, 政策原文关键词=policy_kw,
+        适合申报企业=suitable or ["符合支持方向的企业"]
+    )
+
 def assess_confidence(parsed: PolicySchema, raw: str) -> float:
-    """评估解析置信度"""
-    score = 0.5
-
-    if parsed.title and len(parsed.title) > 5:
-        score += 0.1
-    if parsed.级别 and parsed.级别 != "未知":
-        score += 0.05
-    if parsed.申报截止时间:
-        score += 0.1
-    if parsed.支持金额 and parsed.支持金额.get("金额"):
-        score += 0.1
-    if parsed.支持方向 and len(parsed.支持方向) > 0:
-        score += 0.1
-    if len(raw) > 3000:
-        score += 0.05
-
+    score = 0.6
+    if parsed.title and len(parsed.title) > 5: score += 0.05
+    if parsed.级别 and parsed.级别 != "未知": score += 0.05
+    if parsed.申报截止时间: score += 0.1
+    if parsed.支持金额 and parsed.支持金额.get("金额"): score += 0.1
+    if parsed.支持方向 and len(parsed.支持方向) > 0: score += 0.1
+    if len(raw) > 3000: score += 0.05
     return min(score, 1.0)
+
+# ── LLM 解析（保留，降级用）──
 
 
 def parse_policy_with_fallback(url: str, title: str, source: str = "",
@@ -495,11 +717,10 @@ def parse_policy_with_fallback(url: str, title: str, source: str = "",
             parse_error="内容抓取失败"
         )
 
-    # 2. LLM解析
+    # 2. 关键词解析（无LLM调用，秒级完成）
     try:
-        parsed = parse_with_llm(content, title)
+        parsed = parse_with_keywords(content, title, url)
     except Exception as e:
-        # 降级：返回最小结构
         return ParsedPolicy(
             id=policy_id,
             title=title,
@@ -509,7 +730,7 @@ def parse_policy_with_fallback(url: str, title: str, source: str = "",
             published_at=published_at,
             raw_content=content[:500],
             parsed=PolicySchema(title=title),
-            parse_error=f"LLM解析失败: {str(e)}"
+            parse_error=f"关键词解析失败: {str(e)}"
         )
 
     # 3. 置信度
