@@ -104,6 +104,8 @@ jobs:
 
       # ── Trigger GitHub Pages rebuild ─────────────────────────────────
       - name: Trigger GitHub Pages rebuild
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           echo "Triggering Pages rebuild..."
           gh api repos/${{ github.repository }}/pages/builds -X POST
