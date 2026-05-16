@@ -648,12 +648,93 @@ def _extract_risk_hints(text: str) -> list:
             risks.append(hint)
     return list(set(risks))
 
+# 物流企业不相关的标题模式（负面过滤）
+IRRELEVANT_TITLE_PATTERNS = [
+    (r"录用人员公示|拟录用人员|公务员录用|事业单位招聘|人员招聘", "人事招聘信息，非政策补贴"),
+    (r"南水北调|水利工程|水库|江河治理|生态屏障保护", "水利/生态工程，中通吉不适用"),
+    (r"西藏|新疆|青海|四川|贵州|云南.*规划", "地方区域规划，非上海/物流专项"),
+    (r"药品集中采购|医疗器械|医院|中医药", "医疗领域，非物流方向"),
+    (r"电网|电力|煤炭|油气|能源.*价格", "能源价格政策，非物流补贴"),
+    (r"春运|节假日运输|旅客运输|客运", "客运/旅客运输，非货运/快递"),
+    (r"课题征集|研究课题|课题委托|课题承研单位", "课题研究征集，非企业补贴"),
+    (r"学生资助|奖学金|助学金|教育补贴", "教育资助，非企业补贴"),
+    (r"房地产|保障性住房|购房补贴|租赁补贴", "房地产政策，非物流方向"),
+    (r"核酸|疫苗|公共卫生|疫情防控", "公共卫生，非物流补贴"),
+]
+
+def _is_irrelevant_for_zhongtong(title: str) -> str:
+    """检查标题是否与中通吉完全无关。返回原因字符串或空字符串。"""
+    for pat, reason in IRRELEVANT_TITLE_PATTERNS:
+        if re.search(pat, title):
+            return reason
+    return ""
+
+# 扩展支持方向（从标题中识别）
+TITLE_SUPPORT_DIRECTION_PATTERNS = [
+    (r"低空经济|无人机物流|eVTOL|飞行汽车|无人配送|低空物流", ["低空经济"]),
+    (r"智慧物流|智能物流|现代物流|物流配送|快递|同城配送", ["智慧物流"]),
+    (r"数字化|数智化|数字经济|数字化转型|企业上云", ["数字化转型"]),
+    (r"专精特新|中小企业", ["专精特新"]),
+    (r"高新技术|高新企业|高企认定", ["高企认定"]),
+    (r"冷链|冷库|冷藏配送|生鲜配送", ["冷链物流"]),
+    (r"新能源|电动配送|绿色配送|碳排放|绿色物流", ["绿色物流"]),
+    (r"跨境电商|国际快递|海外仓|跨境物流", ["跨境物流"]),
+    (r"供应链|供应链数字化|产业链协同|供应链金融", ["供应链"]),
+    (r"人工智能|AI调度|智能调度|大模型|自动驾驶", ["人工智能"]),
+]
+
+# 扩展政策类型（从标题中识别）
+TITLE_POLICY_TYPE_PATTERNS = [
+    (r"税收优惠|加计扣除|增值税优惠|所得税减免", "税收优惠"),
+    (r"专项资金|财政补贴|资助金额|奖励资金|补贴资金", "专项资金"),
+    (r"高企认定|科技型中小企业|专精特新认定|资质认定", "资质认定"),
+    (r"人才计划|人才引进|人才培养|博士后|职业培训", "人才计划"),
+    (r"贷款贴息|融资担保|信货支持|普惠金融", "贷款贴息"),
+    (r"技术改造|设备更新|数字化改造|机器换人", "技术改造"),
+    (r"产业基金|股权投资|投资补贴", "产业基金"),
+    (r"课题征集|研究课题|揭榜挂帅|科技重大专项", "课题征集"),
+    (r"稳岗补贴|就业见习|技能培训|职业技能补贴", "稳岗补贴"),
+]
+
+def _extract_directions_from_title(title: str) -> list:
+    found = set()
+    for pat, labels in TITLE_SUPPORT_DIRECTION_PATTERNS:
+        if re.search(pat, title):
+            found.update(labels)
+    return list(found)
+
+def _extract_policy_type_from_title(title: str) -> str:
+    for pat, ptype in TITLE_POLICY_TYPE_PATTERNS:
+        if re.search(pat, title):
+            return ptype
+    return "未知"
+
 def parse_with_keywords(content: str, title: str, url: str = "") -> PolicySchema:
+    # 负面过滤：中通吉完全不相关的政策
+    irrelevant_reason = _is_irrelevant_for_zhongtong(title)
+    if irrelevant_reason:
+        # 返回一个低分结果，带上不相关标记，pipeline会决定是否跳过
+        return PolicySchema(
+            title=title,
+            级别=_extract_level_from_url(url, content),
+            地区=_extract_regions(content),
+            主管部门=_extract_list(content, DEPT_PATTERNS),
+            政策类型="已过滤",
+            支持方向=["已过滤"],
+            风险提示=[irrelevant_reason],
+        )
+
     level = _extract_level_from_url(url, content)
     regions = _extract_regions(content)
     depts = _extract_list(content, DEPT_PATTERNS)
+    # 优先从内容提取，其次从标题提取
     support_directions = _extract_list(content, SUPPORT_DIRECTION_PATTERNS)
+    if not support_directions:
+        support_directions = _extract_directions_from_title(title)
+    # 政策类型：内容优先，标题补充
     policy_type = _extract_single(content, POLICY_TYPE_PATTERNS)
+    if policy_type == "未知":
+        policy_type = _extract_policy_type_from_title(title)
     deadline = _extract_date(content)
     published = _extract_published_date(content)
     amount = _extract_amount(content)
@@ -667,20 +748,21 @@ def parse_with_keywords(content: str, title: str, url: str = "") -> PolicySchema
         (r"新质生产力", "新质生产力"), (r"数字化转型", "数字化转型"),
         (r"低空经济", "低空经济"), (r"智能制造", "智能制造"),
         (r"碳达峰|碳中和", "绿色低碳"), (r"补链强链", "产业链协同"),
+        (r"创新驱动", "科技创新"),
     ] if re.search(pat, kw_text)]
     suitable = []
     if support_directions:
         suitable.append("物流/快递企业")
-    if re.search(r"AI|人工智能|数字化", content):
+    if re.search(r"AI|人工智能|数字化", kw_text):
         suitable.append("科技/数字化企业")
-    if re.search(r"高新技术|科技型", content):
+    if re.search(r"高新技术|科技型", kw_text):
         suitable.append("高新技术企业/科技型中小企业")
     return PolicySchema(
         title=title, 级别=level, 地区=regions, 主管部门=depts,
         发布时间=published, 申报截止时间=deadline, 政策类型=policy_type,
         支持方向=support_directions, 支持金额=amount, 申报条件=conditions,
         材料要求=materials, 评审方式=review, 是否后补贴=is_post,
-        验收要求="见原文" if re.search(r"验收|绩效评价|考核", content) else None,
+        验收要求="见原文" if re.search(r"验收|绩效评价|考核", kw_text) else None,
         风险提示=risks, 政策原文关键词=policy_kw,
         适合申报企业=suitable or ["符合支持方向的企业"]
     )

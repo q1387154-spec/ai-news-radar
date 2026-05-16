@@ -395,7 +395,12 @@ def process_policy(item: dict, profile) -> Optional[PolicyOpportunity]:
         print(f"  ❌ 解析失败，跳过")
         return None
 
-    # 2. 企业匹配
+    # 1.5 负面过滤：跳过与中通吉完全不相关的政策
+    if parsed.parsed.支持方向 and "已过滤" in parsed.parsed.支持方向:
+        reason = parsed.parsed.风险提示[0] if parsed.parsed.风险提示 else "不相关"
+        print(f"  ⛔ 过滤（{reason}），跳过")
+        return None
+
     matcher = PolicyMatcher(profile)
     match_result = matcher.match(parsed.to_dict())
 
