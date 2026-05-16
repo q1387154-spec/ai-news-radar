@@ -3,263 +3,135 @@
   <head>
     <title>物流政策情报雷达 - 精简高价值源池</title>
     <owner>克劳 (Policy Scout)</owner>
-    <dateCreated>2026-05-14</dateCreated>
-    <description>只抓通知/申报/实施细则/公示/专项资金，不做自媒体和泛新闻</description>
+    <dateCreated>2026-05-16</dateCreated>
+    <description>物流/快递企业政策申报专用源池，按优先级排序</description>
   </head>
   <body>
 
     <!-- ================================================
-         第一层：国家部委（一级源 · 高可信）
+         第一优先级：上海经信委（最核心）
          ================================================ -->
 
-    <outline text="🏛 国家发改委">
-      <outline text="国家发展和改革委员会"
-        title="国家发展和改革委员会-通知公告"
-        type="rss"
-        xmlUrl="https://www.ndrc.gov.cn/xxgk/zcfb/tz/"
-        htmlUrl="https://www.ndrc.gov.cn/"
-        category="national"
-        level="P0"
-        keywords="超长期国债,两重两新,设备更新,现代物流,冷链,低空经济"/>
-      <outline text="国家发改委-政策文件"
-        title="国家发展和改革委员会-政策文件"
-        type="rss"
-        xmlUrl="https://www.ndrc.gov.cn/xxgk/zcfb/"
-        htmlUrl="https://www.ndrc.gov.cn/"
-        category="national"
-        level="P0"
-        keywords="专项债,中央预算内投资,现代物流"/>
-    </outline>
-
-    <outline text="🏛 工信部">
-      <outline text="工业和信息化部-政策文件"
-        title="工信部-政策文件"
-        type="rss"
-        xmlUrl="https://www.miit.gov.cn/zwgk/zcwj/"
-        htmlUrl="https://www.miit.gov.cn/"
-        category="national"
-        level="P0"
-        keywords="数字化转型,人工智能,专精特新,工业互联网,技术改造,算力"/>
-      <outline text="工信部-AI专项"
-        title="工信部-AI/数字化专项"
-        type="rss"
-        xmlUrl="https://www.miit.gov.cn/zwgk/zcwj/bmgzj/"
-        htmlUrl="https://www.miit.gov.cn/"
-        category="national"
-        level="P0"
-        keywords="大模型,人工智能,数字化转型,工业互联网"/>
-    </outline>
-
-    <outline text="🚚 交通运输部（核心主线）">
-      <outline text="交通运输部-通知公告"
-        title="交通运输部-通知公告"
-        type="rss"
-        xmlUrl="https://www.mot.gov.cn/zhengcej/wjjd/"
-        htmlUrl="https://www.mot.gov.cn/"
-        category="national"
-        level="P0"
-        keywords="无人配送,自动驾驶,智慧物流,路权,多式联运,低空物流"/>
-      <outline text="交通运输部-政策解读"
-        title="交通运输部-政策解读"
-        type="rss"
-        xmlUrl="https://www.mot.gov.cn/zhengcej/zcjd/"
-        htmlUrl="https://www.mot.gov.cn/"
-        category="national"
-        level="P0"
-        keywords="智慧物流,自动驾驶,车路云"/>
-    </outline>
-
-    <outline text="💰 财政部">
-      <outline text="财政部-政策发布"
-        title="财政部-政策发布"
-        type="rss"
-        xmlUrl="https://www.mof.gov.cn/zhengwuxinxi/zhengcefabu/"
-        htmlUrl="https://www.mof.gov.cn/"
-        category="national"
-        level="P1"
-        keywords="专项资金,稳岗,技改补贴,税收优惠,超长期国债"/>
-    </outline>
-
-    <outline text="💼 人力资源和社会保障部">
-      <outline text="人社部-通知公告"
-        title="人社部-通知公告"
-        type="rss"
-        xmlUrl="https://www.mohrss.gov.cn/zwgk/zt/"
-        htmlUrl="https://www.mohrss.gov.cn/"
-        category="national"
-        level="P1"
-        keywords="职业技能补贴,稳岗补贴,博士后,人才政策"/>
-    </outline>
-
-    <outline text="🔬 科技部">
-      <outline text="科技部-通知公告"
-        title="科技部-通知公告"
-        type="rss"
-        xmlUrl="https://www.most.gov.cn/zwgk/tz/"
-        htmlUrl="https://www.most.gov.cn/"
-        category="national"
-        level="P0"
-        keywords="大模型,国家重点研发计划,科技专项,人工智能"/>
-    </outline>
-
-    <outline text="📊 国家数据局">
-      <outline text="国家数据局-政策文件"
-        title="国家数据局-政策文件"
-        type="rss"
-        xmlUrl="https://www.nda.gov.cn/zwgk/zcwj/"
-        htmlUrl="https://www.nda.gov.cn/"
-        category="national"
-        level="P1"
-        keywords="数据要素,数据流通,数字经济"/>
-    </outline>
-
-    <outline text="📮 国家邮政局">
-      <outline text="国家邮政局-通知公告"
-        title="国家邮政局-通知公告"
-        type="rss"
-        xmlUrl="http://www.spb.gov.cn/zwgk/tz/"
-        htmlUrl="http://www.spb.gov.cn/"
-        category="national"
-        level="P0"
-        keywords="无人配送车,智慧快递,无人机物流,末端配送"/>
-    </outline>
-
-    <!-- ================================================
-         第二层：上海市级（二级源）
-         ================================================ -->
-
-    <outline text="🏙 上海市发改委">
-      <outline text="上海市发展和改革委员会"
-        title="上海发改委-通知公告"
-        type="rss"
-        xmlUrl="https://fgw.sh.gov.cn/fgw_jggl/"
-        htmlUrl="https://fgw.sh.gov.cn/fgw_jggl/"
-        category="municipal"
-        level="P0"
-        keywords="两新,重大项目,现代物流,战略新兴产业,超长期国债,专项债"/>
-    </outline>
-
-    <outline text="🏙 上海市经信委（最关键）">
-      <outline text="上海经信委-通知公告"
-        title="上海经信委-通知公告"
+    <outline text="上海经信委">
+      <outline text="上海经信委-通知资金补贴公告"
+        title="上海经信委-通知资金补贴公告"
         type="rss"
         xmlUrl="https://www.sheitc.sh.gov.cn/zxzjtzgg/index.html"
         htmlUrl="https://www.sheitc.sh.gov.cn/zxzjtzgg/index.html"
         category="municipal"
         level="P0"
         keywords="AI,数字化,技改,专精特新,工业互联网,数字化转型,算力,产业补贴,专项资金"/>
-      <outline text="上海经信委-政策文件"
-        title="上海经信委-政策文件"
+      <outline text="上海经信委-公示公告"
+        title="上海经信委-公示公告"
+        type="rss"
+        xmlUrl="https://sheitc.sh.gov.cn/gg/index.html"
+        htmlUrl="https://sheitc.sh.gov.cn/gg/index.html"
+        category="municipal"
+        level="P0"
+        keywords="专项资金,技改,数字化,专精特新"/>
+      <outline text="上海经信委-最新公开信息"
+        title="上海经信委-最新公开信息"
         type="rss"
         xmlUrl="https://www.sheitc.sh.gov.cn/zxgkxx/index.html"
         htmlUrl="https://www.sheitc.sh.gov.cn/zxgkxx/index.html"
         category="municipal"
         level="P0"
-        keywords="AI,技改,专精特新,数字化转型"/>
+        keywords="专项资金,产业,数字化转型"/>
     </outline>
 
-    <outline text="🚇 上海市交通委">
-      <outline text="上海交通委-通知公告"
-        title="上海交通委-通知公告"
+    <!-- ================================================
+         第二优先级：上海市发改委（产业/物流相关）
+         ================================================ -->
+
+    <outline text="上海发改委">
+      <outline text="上海发改委-价格管理通知"
+        title="上海发改委-价格管理通知"
         type="rss"
-        xmlUrl="https://jtw.sh.gov.cn/zwgk/tz/"
-        htmlUrl="https://jtw.sh.gov.cn/"
+        xmlUrl="https://fgw.sh.gov.cn/fgw_jggl/"
+        htmlUrl="https://fgw.sh.gov.cn/fgw_jggl/"
         category="municipal"
         level="P0"
-        keywords="无人配送,自动驾驶,智慧物流,低空经济,多式联运,车路云"/>
+        keywords="重大项目,产业政策,物流,交通"/>
     </outline>
 
-    <outline text="💼 上海市人社局">
-      <outline text="上海人社局-通知公告"
-        title="上海人社局-通知公告"
+    <!-- ================================================
+         第三优先级：青浦区政府（地理最相关）
+         ================================================ -->
+
+    <outline text="青浦区政府">
+      <outline text="青浦-公示公告"
+        title="青浦区公示公告"
+        type="rss"
+        xmlUrl="https://www.shqp.gov.cn/shqp/gsgg/"
+        htmlUrl="https://www.shqp.gov.cn/shqp/gsgg/"
+        category="district"
+        level="P0"
+        keywords="专项资金,重大项目,低空经济,长三角"/>
+      <outline text="青浦-政务公开"
+        title="青浦区政务公开"
+        type="rss"
+        xmlUrl="https://www.shqp.gov.cn/shqp/zwgk/index.html"
+        htmlUrl="https://www.shqp.gov.cn/shqp/zwgk/index.html"
+        category="district"
+        level="P0"
+        keywords="专项资金,重大项目,低空经济"/>
+    </outline>
+
+    <!-- ================================================
+         第四优先级：国家工信部（政策方向参考）
+         ================================================ -->
+
+    <outline text="工信部">
+      <outline text="工信部-政策文件"
+        title="工信部-政策文件"
+        type="rss"
+        xmlUrl="https://www.miit.gov.cn/zwgk/zcwj/"
+        htmlUrl="https://www.miit.gov.cn/zwgk/zcwj/"
+        category="national"
+        level="P1"
+        keywords="数字化转型,人工智能,专精特新,工业互联网,技术改造,算力"/>
+    </outline>
+
+    <!-- ================================================
+         第五优先级：国家邮政局（快递行业主管）
+         ================================================ -->
+
+    <outline text="国家邮政局">
+      <outline text="国家邮政局-通知公告"
+        title="国家邮政局-通知公告"
+        type="rss"
+        xmlUrl="http://www.spb.gov.cn/zwgk/tz/"
+        htmlUrl="http://www.spb.gov.cn/zwgk/tz/"
+        category="national"
+        level="P0"
+        keywords="无人配送车,智慧快递,无人机物流,末端配送"/>
+    </outline>
+
+    <!-- ================================================
+         第六优先级：人社部/局（稳岗补贴）
+         ================================================ -->
+
+    <outline text="上海人社局">
+      <outline text="上海人社局-公示公告"
+        title="上海人社局-公示公告"
         type="rss"
         xmlUrl="https://rsj.sh.gov.cn/tgsgg_17341/index.html"
         htmlUrl="https://rsj.sh.gov.cn/tgsgg_17341/index.html"
         category="municipal"
         level="P1"
-        keywords="稳岗,技能补贴,博士后,创业补贴,职业技能"/>
-    </outline>
-
-    <outline text="🏢 上海市国资委">
-      <outline text="上海国资委-通知公告"
-        title="上海国资委-通知公告"
-        type="rss"
-        xmlUrl="https://shgzw.sh.gov.cn/zwgk/tz/"
-        htmlUrl="https://shgzw.sh.gov.cn/"
-        category="municipal"
-        level="P1"
-        keywords="国企招聘,数字化转型,国资项目"/>
-    </outline>
-
-    <outline text="📋 上海市公务员局">
-      <outline text="上海市公务员局"
-        title="上海市公务员局-考试录用"
-        type="rss"
-        xmlUrl="https://www.shpta.gov.cn/kslmn/kslmlist.htm"
-        htmlUrl="https://www.shpta.gov.cn/"
-        category="municipal"
-        level="P2"
-        keywords="社招,遴选,事业单位,编制,公务员"/>
+        keywords="稳岗,技能补贴,创业补贴,就业见习"/>
     </outline>
 
     <!-- ================================================
-         第三层：青浦区（三级高价值）
+         专题：低空经济
          ================================================ -->
 
-    <outline text="📍 青浦区政府">
-      <outline text="青浦区人民政府-通知公告"
-        title="青浦区政府-通知公告"
-        type="rss"
-        xmlUrl="http://www.shqp.gov.cn/zwgk/tzgg/"
-        htmlUrl="http://www.shqp.gov.cn/"
-        category="district"
-        level="P0"
-        keywords="低空经济,长三角,重大项目,专项资金"/>
-    </outline>
-
-    <outline text="📍 青浦区发改委">
-      <outline text="青浦区发展和改革委员会"
-        title="青浦发改委-通知公告"
-        type="rss"
-        xmlUrl="https://www.shqp.gov.cn/fgw/"
-        htmlUrl="https://www.shqp.gov.cn/fgw/"
-        category="district"
-        level="P0"
-        keywords="长三角,低空经济,国债项目,重大项目"/>
-    </outline>
-
-    <outline text="📍 青浦区经委（申报密集区）">
-      <outline text="青浦区经济委员会"
-        title="青浦经委-通知公告"
-        type="rss"
-        xmlUrl="http://www.shqp.gov.cn/jjw/"
-        htmlUrl="http://www.shqp.gov.cn/jjw/"
-        category="district"
-        level="P0"
-        keywords="技改,数字化,AI,专精特新,企业扶持,智能制造"/>
-    </outline>
-
-    <outline text="📍 青浦区人社局">
-      <outline text="青浦区人力资源和社会保障局"
-        title="青浦人社-通知公告"
-        type="rss"
-        xmlUrl="https://www.shqp.gov.cn/rsj/"
-        htmlUrl="https://www.shqp.gov.cn/rsj/"
-        category="district"
-        level="P1"
-        keywords="稳岗补贴,创业补贴,技能补贴"/>
-    </outline>
-
-    <!-- ================================================
-         专题池：低空经济
-         ================================================ -->
-
-    <outline text="🚁 低空经济专题池">
+    <outline text="低空经济">
       <outline text="民航局-政策"
         title="中国民用航空局-政策文件"
         type="rss"
         xmlUrl="https://www.caac.gov.cn/zwgk/zcwj/"
-        htmlUrl="https://www.caac.gov.cn/"
+        htmlUrl="https://www.caac.gov.cn/zwgk/zcwj/"
         category="uav"
         level="P0"
         keywords="低空经济,无人机,空域改革,eVTOL,适航,通航"/>

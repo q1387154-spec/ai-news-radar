@@ -165,8 +165,24 @@ def _fetch_gov_opml_pages(limit: int = 100) -> list:
     from playwright.sync_api import sync_playwright
 
     HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+    # 政策相关关键词（必须在）
     POLICY_KW = ["通知", "公告", "意见", "办法", "指南", "公示",
                 "决定", "方案", "政策", "解读", "批复", "纲要", "规划", "条例"]
+    # 排除词（含这些词的政策直接跳过）
+    EXCLUDE_KW = [
+        "录用", "招聘", "公务员", "事业单位招聘", "人员招聘",  # 人事
+        "课题征集", "研究课题", "课题承研", "课题委托", "课题指南",  # 课题研究
+        "南水北调", "水利工程", "水库", "生态屏障",  # 水利/生态
+        "药品采购", "医疗器械", "医院", "中医药",  # 医疗
+        "电价调整", "气价调整", "油价调整", "价格联动",  # 公用事业价格
+        "学生资助", "奖学金", "助学金",  # 教育
+        "购房补贴", "保障性住房",  # 房地产
+        "核酸", "疫苗", "疫情防控",  # 公共卫生
+        "西藏", "新疆", "青海", "四川", "贵州", "云南",  # 偏远地区（不含上海关联）
+        "铁路规划", "高速公路规划", "机场规划",  # 基础设施规划（非补贴）
+        "网络安全", "信息安全",  # 非物流
+    ]
+    MAX_PER_SOURCE = 15  # 每源最多15条
 
     opml_path = Path(__file__).parent.parent / "feeds" / "gov.opml"
     if not opml_path.exists():
@@ -192,7 +208,7 @@ def _fetch_gov_opml_pages(limit: int = 100) -> list:
             from bs4 import BeautifulSoup
             from urllib.parse import urljoin
 
-            page_html = _playwright_fetch_page(html_url)
+            page_html = _playwright_fetch_page(html_url, timeout=12)
 
             # 提取 HTML 中的链接
             found = 0
@@ -202,7 +218,11 @@ def _fetch_gov_opml_pages(limit: int = 100) -> list:
                 link_url = urljoin(html_url, a["href"])
                 if not link_title or len(link_title) < 5:
                     continue
+                # 必须含政策关键词
                 if not any(kw in link_title for kw in POLICY_KW):
+                    continue
+                # 排除词过滤
+                if any(ex in link_title for ex in EXCLUDE_KW):
                     continue
                 items.append({
                     "title": link_title.strip(),
@@ -214,6 +234,9 @@ def _fetch_gov_opml_pages(limit: int = 100) -> list:
                     "published": "",
                 })
                 found += 1
+                # 每源上限
+                if found >= MAX_PER_SOURCE:
+                    break
 
             print(f"获取 {found} 条")
 
