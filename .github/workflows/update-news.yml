@@ -36,7 +36,7 @@ jobs:
       # ── Phase 1: 政府政策抓取 + 关键词解析 + 评分 ──────────────────────
       - name: Fetch and process government policies
         run: |
-          python scripts/run_pipeline.py --test --limit 50 2>&1 | head -20 || true
+          python scripts/run_pipeline.py --test --limit 200 2>&1 | head -30 || true
 
       # ── Phase 2: 微信公众号抓取（RSSHub，需要自建实例）───────────────
       - name: Fetch WeChat public accounts
