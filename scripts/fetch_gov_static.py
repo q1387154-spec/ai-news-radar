@@ -210,7 +210,7 @@ def fetch_article_content(url: str, timeout: int = 12) -> dict:
             if paras:
                 content = "\n".join(paras)[:3000]
 
-        # 提取日期
+        # 提取日期（优先从页面元数据，其次从正文）
         date_text = ""
         for sel in [".date", ".time", ".info-date", ".article-date",
                     "[class*='date']", "[class*='time']"]:
@@ -219,11 +219,18 @@ def fetch_article_content(url: str, timeout: int = 12) -> dict:
                 date_text = el.get_text(strip=True)
                 break
 
+        # 如果元数据日期为空，从正文中查找（fallback）
+        if not date_text and content:
+            # 匹配 "来源：发布日期：2025-02-14" 或类似格式
+            date_in_content = re.search(r"(?:来源：)?发布日期[：:]?\s*(\d{4})[-年/](\d{1,2})[-月/](\d{1,2})", content)
+            if date_in_content:
+                date_text = f"{date_in_content.group(1)}-{int(date_in_content.group(2)):02d}-{int(date_in_content.group(3)):02d}"
+
         # 标准化日期
         date_match = re.search(r"(\d{4})[年\-\/](\d{1,2})[月\-\/](\d{1,2})", date_text)
         if date_match:
             published = f"{date_match.group(1)}-{int(date_match.group(2)):02d}-{int(date_match.group(3)):02d}"
-        else:
+        if not date_match:
             published = ""
 
         return {

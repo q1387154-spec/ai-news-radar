@@ -175,13 +175,20 @@ def score_item(item: dict) -> dict:
     else:
         level = "C"
 
-    # 是否值得申报
+    # 是否值得申报（必须：行业匹配 + 地域匹配 + 未过期）
     is_worth = (
         scores["industry"] >= 0.5 and
         (scores["region"] >= 0.5 or "国家" in text) and
         final >= 40 and
-        scores["deadline"] > 0
+        scores["deadline"] > 0  # 有截止日期且未过期
     )
+
+    # 已过期政策直接降级
+    deadline = extract_deadline(item)
+    days_for_filter = calc_days_left(deadline) if deadline else 999
+    if days_for_filter == 0:
+        final = final * 0.3  # 过期政策评分打三折
+        level = "C"
 
     # 优先级
     priority = "P1"
@@ -334,11 +341,11 @@ def analyze_opportunities(input_file: str, output_file: str):
     opportunities = []
     for i, item in enumerate(items):
         result = score_item(item)
-        if result["final"] < 30 and not result["is_worth_applying"]:
-            continue  # 跳过完全不相关的
+        # 过滤已过期政策（days_left=0表示截止日期已过）
+        if result["days_left"] == 0:
+            continue  # 跳过已过期政策
 
         deadline = extract_deadline(item)
-        days_left = calc_days_left(deadline)
         amount_info = extract_amount(item.get("content", "")[:3000])
         project_name = generate_project_name(item)
 
@@ -350,8 +357,8 @@ def analyze_opportunities(input_file: str, output_file: str):
             "source_level": item.get("level", item.get("_source", "")),
             "type": item.get("_source", "unknown"),
             "published_at": item.get("published_at", ""),
-            "deadline": deadline.isoformat() if deadline else "",
-            "days_left": days_left,
+            "deadline": result["deadline"],
+            "days_left": result["days_left"],
 
             # 评分
             "score": result["final"],
