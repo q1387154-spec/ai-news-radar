@@ -32,7 +32,7 @@ from datetime import datetime, timezone
 # Jaccard similarity for Chinese text
 # ---------------------------------------------------------------------------
 
-CHINESE_PUNCT = re.compile(r'[，。！？；：、""''《》（）【】『』「」\s,.!?;:"\'()\[\]{}]+')
+CHINESE_PUNCT = re.compile(r"[，。！？；：、「」『』《》（）【】\s,.!?;:\"'()\[\]{}]+")
 
 def tokenize_chinese(text: str) -> set:
     """Split Chinese text into tokens using punctuation and delimiters."""
