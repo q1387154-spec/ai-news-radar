@@ -23,7 +23,9 @@ log = logging.getLogger("score_policies")
 # ── Constants ─────────────────────────────────────────────────────────────────
 BASE_URL = "https://v2.aicodee.com/v1"
 MODEL = "MiniMax-M2.7-highspeed"
-BATCH_SIZE = 15
+BATCH_SIZE = 5  # Claude设计模式: 小批次=低风险，失败重试成本低
+MAX_RETRIES = 2
+CHECKPOINT_EVERY = 5  # 每5批保存一次checkpoint
 
 GRADE_THRESHOLDS = {"S": 85, "A": 70, "B": 50}
 DEFAULT_DATE = datetime.now().strftime("%Y-%m-%d")
@@ -232,25 +234,28 @@ def _guess_channel(text: str) -> str:
 
 # ── LLM Scoring ──────────────────────────────────────────────────────────────
 
-SCORING_PROMPT = """你是一名政策分析师，服务于上海中通吉网络技术有限公司（青浦区，中通快递集团子公司）。
+SCORING_PROMPT = """你是一名政策分析师，服务于上海中通吉网络技术有限公司（中通快递集团子公司，青浦区）。
 
-请为以下政策打分，输出严格合法的JSON数组，每条政策一个对象，字段精简：
-[id, score, grade, deadline, amount, requirements, fit_summary, risk_flags, apply_recommendation, channel]
+任务：为一组政策打分，返回JSON数组。
 
-要求：
-- 只输出JSON数组，不要任何解释文字
-- 严格JSON语法：数组元素之间必须有逗号，最后一个元素后无逗号
-- score: 0-100整数
-- grade: S(85+)/A(70-84)/B(50-69)/C(<50)
-- deadline: YYYY-MM-DD或空字符串""
-- amount: 资助金额描述，无则""
-- requirements: 条件字符串数组，无则[]
-- fit_summary: 一句话匹配说明
-- risk_flags: 风险列表，无则[]
-- apply_recommendation: "建议申报"/"可考虑"/"暂不推荐"
-- channel: "低空经济"/"数字化转型"/"超长期国债"/"高企研发"/"一般政策"
+字段定义（必须严格遵守）：
+- id: string, 原始ID
+- score: integer 0-100
+- grade: "S" | "A" | "B" | "C"
+- deadline: "YYYY-MM-DD" 或 ""
+- amount: string 或 ""
+- requirements: string[] 或 []
+- fit_summary: string
+- risk_flags: string[] 或 []
+- apply_recommendation: "建议申报" | "可考虑" | "暂不推荐"
+- channel: "低空经济" | "数字化转型" | "超长期国债" | "高企研发" | "一般政策"
 
-公司偏好：物流快递智慧物流战略；规避垫资/陪跑；关注低空经济/AI调度/数字化转型。"""
+评分标准：S(85+)高度匹配+A有金额+B部分匹配+C关联低
+
+输出格式（示例）：
+[{"id":"p1","score":85,"grade":"S","deadline":"2026-06-30","amount":"最高100万元","requirements":["物流企业"],"fit_summary":"高度匹配低空经济","risk_flags":[],"apply_recommendation":"建议申报","channel":"低空经济"}]
+
+只输出JSON数组，不要任何其他文字。"""
 
 
 def build_llm_messages(batch: list[dict]) -> list[dict]:
@@ -302,35 +307,48 @@ def extract_json_objects(text: str) -> list[dict]:
 
 
 def call_llm_batch(client: OpenAI, batch: list[dict]) -> Optional[list[dict]]:
-    """Call MiniMax LLM for a batch of items. Returns parsed JSON or None on failure."""
-    try:
-        response = client.chat.completions.create(
-            model=MODEL,
-            messages=build_llm_messages(batch),
-            temperature=0.2,
-            max_tokens=4096,
-        )
-        raw = response.choices[0].message.content.strip()
-        # Strip markdown fences
-        raw = re.sub(r"^```json\s*", "", raw)
-        raw = re.sub(r"^```\s*", "", raw)
-        raw = raw.rstrip("`")
-        # Try robust extraction
-        results = extract_json_objects(raw)
-        if results:
-            return results
-        # Fallback: try direct parse
-        results = json.loads(raw)
-        if isinstance(results, list):
-            return results
-        log.warning("LLM returned non-list, treating as parse failure")
-        return None
-    except json.JSONDecodeError as e:
-        log.warning(f"JSON parse error: {e}")
-        return None
-    except Exception as e:
-        log.warning(f"LLM API error: {e}")
-        return None
+    """Call MiniMax LLM for a batch. Claude设计模式: 重试机制 + Robust解析.
+    
+    Fallback chain: 批次解析 → 重试(MAX_RETRIES次) → individual fallback
+    """
+    for attempt in range(MAX_RETRIES + 1):
+        try:
+            response = client.chat.completions.create(
+                model=MODEL,
+                messages=build_llm_messages(batch),
+                temperature=0.2,
+                max_tokens=2048,
+            )
+            raw = response.choices[0].message.content.strip()
+            # Strip markdown fences
+            raw = re.sub(r"^```json\s*", "", raw)
+            raw = re.sub(r"^```\s*", "", raw)
+            raw = raw.rstrip("`")
+            # Try robust extraction (Claude设计: 解析失败不立即放弃)
+            results = extract_json_objects(raw)
+            if results:
+                return results
+            # Fallback: direct parse
+            results = json.loads(raw)
+            if isinstance(results, list):
+                return results
+            if attempt < MAX_RETRIES:
+                log.warning(f"Batch parse failed, retry {attempt+1}/{MAX_RETRIES}")
+                continue
+            log.warning("LLM returned non-list after retries, treating as parse failure")
+            return None
+        except json.JSONDecodeError as e:
+            if attempt < MAX_RETRIES:
+                log.warning(f"JSON parse error (attempt {attempt+1}), retrying: {e}")
+                continue
+            log.warning(f"JSON parse error after {MAX_RETRIES+1} attempts: {e}")
+            return None
+        except Exception as e:
+            if attempt < MAX_RETRIES:
+                log.warning(f"LLM API error (attempt {attempt+1}), retrying: {e}")
+                continue
+            log.warning(f"LLM API error after {MAX_RETRIES+1} attempts: {e}")
+            return None
 
 
 def score_via_llm(client: OpenAI, item: dict) -> Optional[dict]:
@@ -447,6 +465,24 @@ def process_items(items: list[dict], use_llm: bool, client: Optional[OpenAI] = N
             g = merged.get("grade", "C")
             if g in graded:
                 graded[g] += 1
+
+        # Claude设计模式: Checkpoint机制 - 每N批保存一次，防止长任务中途失败丢失数据
+        batch_idx = i // BATCH_SIZE
+        if batch_idx > 0 and batch_idx % CHECKPOINT_EVERY == 0:
+            checkpoint_data = {
+                "scored_at": datetime.now().isoformat(timespec="seconds") + "+08:00",
+                "total_input": len(items),
+                "graded": graded,
+                "llm_count": llm_count,
+                "backup_count": backup_count,
+                "items": results,
+                "_checkpoint": True,
+                "_batches_done": batch_idx,
+            }
+            cp_path = f"data/scored/_checkpoint_{batch_idx}.json"
+            with open(cp_path, "w", encoding="utf-8") as f:
+                json.dump(checkpoint_data, f, ensure_ascii=False, indent=2)
+            log.info(f"[Checkpoint] Batch {batch_idx} done, saved {len(results)} items")
 
     return results, {
         "graded": graded,
