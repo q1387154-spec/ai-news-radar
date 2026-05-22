@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "description": "Policy sources - auto-discovered and manually approved",
+  "sources": {
+    "approved": [
+      {
+        "id": "shanghai-jxw",
+        "name": "上海市经信委",
+        "url": "https://www.sheitc.gov.cn",
+        "type": "gov",
+        "tier": 1,
+        "addedAt": "2026-05-22",
+        "topics": ["AI", "数字化转型", "技改", "专精特新", "低空经济", "无人配送"]
+      },
+      {
+        "id": "shanghai-fgw",
+        "name": "上海市发改委",
+        "url": "https://fgw.sh.gov.cn",
+        "type": "gov",
+        "tier": 1,
+        "addedAt": "2026-05-22",
+        "topics": ["超长期国债", "两重两新", "设备更新", "专项资金"]
+      },
+      {
+        "id": "shanghai-jtw",
+        "name": "上海市交通委",
+        "url": "https://jtw.sh.gov.cn",
+        "type": "gov",
+        "tier": 2,
+        "addedAt": "2026-05-22",
+        "topics": ["智慧物流", "自动驾驶", "无人配送", "快递", "供应链"]
+      },
+      {
+        "id": "qingpu-jfw",
+        "name": "青浦区经委",
+        "url": "https://www.qingpu.gov.cn",
+        "type": "gov",
+        "tier": 3,
+        "addedAt": "2026-05-22",
+        "topics": ["物流", "快递", "青浦", "补贴", "申报"]
+      },
+      {
+        "id": "qingpu-rsj",
+        "name": "青浦区人社局",
+        "url": "https://www.qingpu.gov.cn",
+        "type": "gov",
+        "tier": 3,
+        "addedAt": "2026-05-22",
+        "topics": ["稳岗", "技能补贴", "培训", "就业"]
+      },
+      {
+        "id": "national-ndrc",
+        "name": "国家发改委",
+        "url": "https://www.ndrc.gov.cn",
+        "type": "gov",
+        "tier": 1,
+        "addedAt": "2026-05-22",
+        "topics": ["超长期国债", "两重两新", "设备更新"]
+      },
+      {
+        "id": "national-miit",
+        "name": "工信部",
+        "url": "https://www.miit.gov.cn",
+        "type": "gov",
+        "tier": 1,
+        "addedAt": "2026-05-22",
+        "topics": ["AI", "数字化转型", "专精特新", "小巨人", "低空经济"]
+      },
+      {
+        "id": "national-post",
+        "name": "国家邮政局",
+        "url": "https://www.spb.gov.cn",
+        "type": "gov",
+        "tier": 1,
+        "addedAt": "2026-05-22",
+        "topics": ["快递", "物流", "无人机配送", "无人配送"]
+      },
+      {
+        "id": "national-mohrss",
+        "name": "人社部",
+        "url": "https://www.mohrss.gov.cn",
+        "type": "gov",
+        "tier": 1,
+        "addedAt": "2026-05-22",
+        "topics": ["稳岗", "技能补贴", "培训", "就业见习"]
+      }
+    ],
+    "pending": []
+  }
+}

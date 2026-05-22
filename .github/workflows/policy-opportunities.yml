@@ -1,26 +1,36 @@
-name: Policy Opportunities - Daily Snapshot
+name: Policy Radar Pipeline
 
 on:
-  workflow_dispatch:  # 仅手动触发，本地跑用 cron
+  schedule:
+    # 每天 3 次：8:00 / 13:00 / 20:00（北京时间）
+    - cron: "0 0 * * *"   # 08:00 北京 = 00:00 UTC
+    - cron: "30 5 * * *"  # 13:30 北京 = 05:30 UTC
+    - cron: "0 12 * * *"  # 20:00 北京 = 12:00 UTC
+  workflow_dispatch:
+    inputs:
+      run_date:
+        description: "Run date (YYYY-MM-DD, default today)"
+        required: false
+        default: ""
 
 concurrency:
-  group: policy-opportunities-${{ github.ref }}
+  group: policy-radar-${{ github.ref }}
   cancel-in-progress: true
 
 permissions:
   contents: write
   pages: write
+  id-token: none
 
 env:
   PYTHON_VERSION: "3.11"
 
 jobs:
   # ═══════════════════════════════════════════════════════════
-  # Job 1: 静态抓取（GitHub 数据层）
-  # 优先级：requests > bs4 > Firecrawl > browser
+  # Job 1: 抓取 → 合并 → 评分 → 源发现（全量管道）
   # ═══════════════════════════════════════════════════════════
-  fetch:
-    timeout-minutes: 45
+  pipeline:
+    timeout-minutes: 50
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -36,101 +46,247 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install feedparser requests beautifulsoup4 lxml pandas
+          pip install requests beautifulsoup4 lxml pandas \
+                     python-dateutil openai tqdm \
+                     tavily 2>&1 | tail -5
 
-      # ── Step 1: 政府 HTML 页面（requests+bs4，主力） ─────────────
-      # 注：gov.opml 中的 RSS 大量无效（XML 解析失败），改用 HTML 直抓更可靠
-      - name: Fetch government HTML pages (static, no RSS)
+      # ── 创建目录结构 ────────────────────────────────────
+      - name: Prepare directories
         run: |
-          python scripts/fetch_gov_static.py \
-            --output-dir data \
-            --limit 150 2>&1
-
-      # ── Step 2: 微信公众号（搜狗免费搜索 + Jina Reader免费tier） ─
-      - name: Fetch WeChat articles (free)
-        run: |
-          python scripts/fetch_wechat_free.py \
-            --output-dir data \
-            --window-hours 72 2>&1
-
-      # ── Step 3: 合并所有数据 ───────────────────────────────
-      - name: Merge all fetched data
-        run: |
-          python scripts/merge_raw.py \
-            --output-dir data 2>&1
-
-      # ── Step 4: Commit 数据文件 ───────────────────────────
-      - name: Commit raw data
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --global --add safe.directory /github/workspace
-
+          mkdir -p data/raw data/merged data/scored data/sources
           ls -la data/
 
-          # 只提交数据文件
-          git add data/latest-gov.json data/gov-pages.json data/wechat.json data/merged.json 2>/dev/null || true
-          git add data/*.json 2>/dev/null || true
+      # ── Step 1: 抓取（三路并行） ────────────────────────
+      - name: Fetch policies (3 channels)
+        id: fetch
+        env:
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          MINIMAX_API_KEY: ${{ secrets.MINIMAX_API_KEY }}
+        run: |
+          echo "=== Step 1: Fetching from 3 channels ==="
+          # 传入日期参数（支持手动触发的 date override）
+          RUN_DATE="${RUN_DATE:-}"
+          if [ -n "${{ inputs.run_date }}" ]; then
+            RUN_DATE="${{ inputs.run_date }}"
+          fi
+          if [ -n "$RUN_DATE" ]; then
+            python scripts/fetch_policies.py "$RUN_DATE" 2>&1
+          else
+            python scripts/fetch_policies.py 2>&1
+          fi
+          echo "fetch_exit=$?" >> $GITHUB_ENV
+
+      # ── Step 2: 合并去重 ────────────────────────────────
+      - name: Merge and deduplicate
+        id: merge
+        env:
+          MINIMAX_API_KEY: ${{ secrets.MINIMAX_API_KEY }}
+        run: |
+          echo "=== Step 2: Merging & deduplicating ==="
+          if [ -n "${{ inputs.run_date }}" ]; then
+            python scripts/merge.py "${{ inputs.run_date }}" 2>&1
+          else
+            python scripts/merge.py 2>&1
+          fi
+          echo "merge_exit=$?" >> $GITHUB_ENV
+
+      # ── Step 3: MiniMax 评分 ────────────────────────────
+      - name: Score policies with MiniMax
+        id: score
+        env:
+          MINIMAX_API_KEY: ${{ secrets.MINIMAX_API_KEY }}
+        run: |
+          echo "=== Step 3: Scoring with MiniMax ==="
+          if [ -n "${{ inputs.run_date }}" ]; then
+            python scripts/score_policies.py "${{ inputs.run_date }}" 2>&1
+          else
+            python scripts/score_policies.py 2>&1
+          fi
+          echo "score_exit=$?" >> $GITHUB_ENV
+
+      # ── Step 4: 源自动发现 ─────────────────────────────
+      - name: Discover new sources
+        id: discover
+        run: |
+          echo "=== Step 4: Source discovery ==="
+          if [ -n "${{ inputs.run_date }}" ]; then
+            python scripts/discover_sources.py "${{ inputs.run_date }}" 2>&1
+          else
+            python scripts/discover_sources.py 2>&1
+          fi
+
+      # ── Step 5: Commit 所有数据文件 ────────────────────
+      - name: Commit all data files
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "418-actions[bot]@users.noreply.github.com"
+          git config --global --add safe.directory /github/workspace
+
+          echo "=== Files to commit ==="
+          find data -name "*.json" -newer .git/refs/heads/master 2>/dev/null | head -20
+
+          git add data/raw/*.json data/merged/*.json data/scored/*.json data/sources/*.json 2>/dev/null || true
 
           if ! git diff --cached --quiet; then
-            git commit -m "chore: update policy data $(date +%Y-%m-%dT%H:%M)"
+            git commit -m "chore(policy-radar): update $(date +%Y-%m-%dT%H:%M)"
             git push
+            echo "committed=true" >> $GITHUB_ENV
           else
             echo "No data changes to commit"
+            echo "committed=false" >> $GITHUB_ENV
+          fi
+
+      # ── Step 6: 生成简报 ────────────────────────────────
+      - name: Generate briefing
+        if: env.committed == 'true'
+        run: |
+          echo "=== Step 6: Generating briefing ==="
+          # 从 scored 结果读取 grade 分布，写入 reports/
+          if [ -n "${{ inputs.run_date }}" ]; then
+            REPORT_DATE="${{ inputs.run_date }}"
+          else
+            REPORT_DATE=$(date +%Y-%m-%d)
+          fi
+          mkdir -p reports
+          python - <<'PYEOF' 2>&1
+          import json, os
+          date_str = os.environ.get("REPORT_DATE", "")
+          scored_path = f"data/scored/scored_{date_str}.json" if date_str else None
+          if scored_path and os.path.exists(scored_path):
+              with open(scored_path) as f:
+                  data = json.load(f)
+              grades = data.get("graded", {})
+              items = data.get("items", [])
+              top5 = sorted(items, key=lambda x: x.get("score", 0), reverse=True)[:5]
+              report = {
+                  "date": date_str or "unknown",
+                  "grades": grades,
+                  "total": sum(grades.values()),
+                  "has_sa": grades.get("S", 0) + grades.get("A", 0) > 0,
+                  "top5": [{"title": i.get("title",""), "grade": i.get("grade",""), "score": i.get("score",0), "recommendation": i.get("apply_recommendation","")} for i in top5]
+              }
+              out_path = f"reports/{date_str}.json" if date_str else "reports/latest.json"
+              with open(out_path, "w") as f:
+                  json.dump(report, f, ensure_ascii=False, indent=2)
+              print(f"Briefing written to {out_path}")
+              print(f"Grades: {grades}")
+          else:
+              print(f"Scored file not found: {scored_path}")
+          PYEOF
+
+      # ── Step 7: 尝试触发 GitHub Pages ─────────────────
+      - name: Trigger GitHub Pages rebuild
+        if: env.committed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          echo "=== Step 7: Triggering Pages rebuild ==="
+          # fork 限制：GITHUB_TOKEN + pages:write = 403，需手动触发
+          # 尝试 API 触发，失败不影响
+          gh api repos/${{ github.repository }}/pages/builds -X POST 2>&1 || \
+          echo "Pages rebuild skipped (fork limitation — manual trigger needed)"
+
+      # ── 上报 OpenClaw（S/A 级政策发现） ─────────────────
+      - name: Notify OpenClaw webhook
+        if: env.committed == 'true'
+        run: |
+          echo "=== Step 8: Checking for S/A policies ==="
+          # 检查是否有 .has_sa_notification 文件
+          if [ -f "data/.has_sa_notification" ]; then
+            echo "🔥 S/A级政策发现，通知 OpenClaw"
+            # 读取并打印供后续步骤使用
+            cat data/.has_sa_notification
+          else
+            echo "📭 今日无S/A级政策，静默结束"
           fi
 
   # ═══════════════════════════════════════════════════════════
-  # Job 2: OpenClaw AI 分析层（单独的 job，方便独立重跑）
-  # 触发条件：fetch job 完成或 schedule
+  # Job 2: 仅生成页面（Pages 重建用，独立触发）
   # ═══════════════════════════════════════════════════════════
-  analyze:
-    timeout-minutes: 30
+  build-pages:
+    timeout-minutes: 15
     runs-on: ubuntu-latest
-    needs: fetch
+    needs: pipeline
+    if: env.committed == 'true'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
-
-      - name: Install dependencies
-        run: pip install feedparser requests beautifulsoup4 lxml pandas
-
-      # ── 分析政策机会（纯本地计算，无需 AI） ───────────────
-      - name: Analyze policy opportunities
+      - name: Generate static page
         run: |
-          python scripts/analyze_opportunities.py \
-            --input data/merged.json \
-            --output data/policy-opportunities.json 2>&1
+          echo "=== Generating static page ==="
+          python - <<'PYEOF' 2>&1
+          import json, os
+          date_str = os.environ.get("REPORT_DATE", "")
+          scored_path = f"data/scored/scored_{date_str}.json" if date_str else None
+          if scored_path and os.path.exists(scored_path):
+              with open(scored_path) as f:
+                  data = json.load(f)
+              items = data.get("items", [])
+              grades = data.get("graded", {})
+              top_s = [i for i in items if i.get("grade") == "S"][:3]
+              top_a = [i for i in items if i.get("grade") == "A"][:5]
+              top_b = [i for i in items if i.get("grade") == "B"][:10]
+              
+              html = f"""<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>物流政策情报雷达 {date_str or ""}</title>
+<style>
+  body {{ font-family: -apple-system, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 20px; background: #fafafa; }}
+  h1 {{ color: #1a1a2e; border-bottom: 3px solid #e94560; padding-bottom: 10px; }}
+  .grade-s {{ background: #ff4757; color: white; padding: 2px 8px; border-radius: 4px; }} 
+  .grade-a {{ background: #ff7f50; color: white; padding: 2px 8px; border-radius: 4px; }}
+  .grade-b {{ background: #3498db; color: white; padding: 2px 8px; border-radius: 4px; }}
+  .grade-c {{ background: #95a5a6; color: white; padding: 2px 8px; border-radius: 4px; }}
+  .card {{ background: white; border-radius: 8px; padding: 16px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }}
+  .meta {{ color: #888; font-size: 13px; }}
+  .summary {{ display: flex; gap: 20px; margin: 20px 0; }}
+  .stat {{ background: #1a1a2e; color: white; padding: 16px 24px; border-radius: 8px; text-align: center; }}
+  .stat strong {{ font-size: 28px; display: block; }}
+  a {{ color: #e94560; text-decoration: none; }}
+  a:hover {{ text-decoration: underline; }}
+</style>
+</head>
+<body>
+<h1>🦞 物流政策情报雷达</h1>
+<p class="meta">最后更新: {date_str or 'unknown'} | 上海中通吉网络技术有限公司</p>
 
-      # ── 生成前端页面 ─────────────────────────────────────
-      - name: Build static pages
-        run: |
-          python scripts/build_pages.py \
-            --input data/policy-opportunities.json \
-            --output index.html 2>&1
+<div class="summary">
+  <div class="stat"><strong>{grades.get('S',0)}</strong>S级</div>
+  <div class="stat"><strong>{grades.get('A',0)}</strong>A级</div>
+  <div class="stat"><strong>{grades.get('B',0)}</strong>B级</div>
+  <div class="stat"><strong>{grades.get('C',0)}</strong>C级</div>
+</div>
+"""
+              for item in top_s + top_a:
+                  html += f"""
+<div class="card">
+  <span class="grade-{item.get('grade','').lower()}">{item.get('grade','?')}</span>
+  <strong>{item.get('title','')}</strong>
+  <p>{item.get('fit_summary','')}</p>
+  <div class="meta">
+    💰 {item.get('amount','金额未知')} | 📅 截止: {item.get('deadline','未知')} | 📊 {item.get('score',0)}分
+  </div>
+  <div class="meta" style="color:#e94560">{item.get('apply_recommendation','')}</div>
+</div>"""
+              
+              html += "</body></html>"
+              with open("index.html", "w") as f:
+                  f.write(html)
+              print("index.html written")
+          else:
+              print("No scored data, skipping page")
+          PYEOF
 
-      # ── Commit 机会文件和页面 ────────────────────────────
-      - name: Commit results
+      - name: Commit page
         run: |
           git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.email "418-actions[bot]@users.noreply.github.com"
           git config --global --add safe.directory /github/workspace
-
-          git add data/policy-opportunities.json index.html 2>/dev/null || true
-
+          git add index.html 2>/dev/null || true
           if ! git diff --cached --quiet; then
-            git commit -m "chore: update policy opportunities $(date +%Y-%m-%dT%H:%M)"
+            git commit -m "chore: update index.html $(date +%Y-%m-%dT%H:%M)"
             git push
-          else
-            echo "No opportunity changes to commit"
           fi
-
-      - name: Trigger GitHub Pages rebuild
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          gh api repos/${{ github.repository }}/pages/builds -X POST || true
