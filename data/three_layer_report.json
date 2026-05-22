@@ -1,0 +1,161 @@
+{
+  "report_date": "2026-05-22",
+  "source": "ai-news-radar pipeline v2.0",
+  "total_raw": 179,
+  "total_unique": 179,
+  "scoring_method": "keyword_backup (LLM in progress)",
+  "layers": {
+    "national": {
+      "label": "国家层面",
+      "count": 3,
+      "policies": [
+        {
+          "id": "nat-001",
+          "doc_number": "工信部等八部门 2026年",
+          "program_name": ""人工智能+制造"专项行动",
+          "support_direction": "AI大模型+工业智能体、行业模型、数字化转型",
+          "subsidy_type": "专项支持（各省市配套文件为准）",
+          "deadline": "各省配套文件陆续发布",
+          "apply_conditions": "制造业企业，应用AI技术",
+          "source_url": "https://www.nda.gov.cn/sjj/zwgk/zcfb/0112/20260107214358696030895_pc.html",
+          "status": "各省配套文件中",
+          "company_fit": "高",
+          "risk": "具体补贴方案未明确，需等上海配套"
+        },
+        {
+          "id": "nat-002",
+          "doc_number": "工信部联信软〔2025〕某号",
+          "program_name": "中小企业数字化赋能专项行动方案（2025-2027）",
+          "support_direction": "中小企业数字化转型、上云用平台、工业软件",
+          "subsidy_type": "专项补贴（以各地配套为准）",
+          "deadline": "常年申报",
+          "apply_conditions": "中小企业",
+          "source_url": "https://iitime.com.cn/html/10214/12105593.htm",
+          "status": "常年申报",
+          "company_fit": "中",
+          "risk": "需联系上海市经信委确认配套政策"
+        },
+        {
+          "id": "nat-003",
+          "doc_number": "工信部联电子〔2025〕181号",
+          "program_name": "电子信息制造业稳增长行动方案",
+          "support_direction": "电子信息制造业稳增长、智能化升级",
+          "subsidy_type": "首台套：≤30%合同金额，最高2000万元",
+          "deadline": "常年申报",
+          "apply_conditions": "符合条件的电子信息制造企业",
+          "source_url": "https://www.gov.cn/zhengce/zhengceku/202509/content_7039199.htm",
+          "status": "常年申报",
+          "company_fit": "低",
+          "risk": "主要针对电子信息制造业，物流关联度较低"
+        }
+      ]
+    },
+    "shanghai": {
+      "label": "上海市层面",
+      "count": 3,
+      "policies": [
+        {
+          "id": "sh-001",
+          "doc_number": "沪府办规〔2025〕20号",
+          "program_name": "上海市支持先进制造业转型升级三年行动方案（2026-2028）",
+          "support_direction": "低空经济/eVTOL、AI+制造、首台套重大技术装备、研发费用补助",
+          "subsidy_type": "研发补助：1亿+/年→1000万；5000万-1亿→500万；1000万-5000万→200万；技改贴息累计≤2000万；首台套≤2000万；绿色工厂20万",
+          "deadline": "常年有效（按各专项通知申报）",
+          "apply_conditions": "上海市注册制造业企业（各专项条件不同）",
+          "source_url": "https://www.shanghai.gov.cn/nw12344/20260109/3c4f820bca7b46cd878efcb121337bdd.html",
+          "status": "重点储备",
+          "company_fit": "极高",
+          "risk": "无统一申报入口，需对照各专项通知"
+        },
+        {
+          "id": "sh-002",
+          "doc_number": "沪数规〔2025〕1号",
+          "program_name": "2026年支持数字化转型（区块链创新应用）",
+          "support_direction": "区块链+物联网+AI融合应用、供应链管理、物流区块链",
+          "subsidy_type": "上链用链：≤30%总投资，最高100万；重大示范：≤500万；免申即享：≤50万",
+          "deadline": "申请类：2026-04-17（已截止）；免申即享：2026-06-30",
+          "apply_conditions": "独立法人单位，项目建设期≤2027-12-31",
+          "source_url": "https://dt.sheitc.sh.gov.cn/cms/slddt/2752.jhtml",
+          "status": "🔴 免申即享仍有效",
+          "company_fit": "极高",
+          "risk": "申请类已截止；免申即享需确认链上数据范围"
+        },
+        {
+          "id": "sh-003",
+          "doc_number": "未查到",
+          "program_name": "2026年技术改造专项（投资补助方向）",
+          "support_direction": "制造业企业技术改造",
+          "subsidy_type": "投资补助",
+          "deadline": "2026-02-04",
+          "apply_conditions": "本市依法经营企业",
+          "source_url": "https://www.sheitc.sh.gov.cn/cyfz/20260121/7986fbfe0c5449f1abd24c73a0bbdb46.html",
+          "status": "❌ 已截止",
+          "company_fit": "中",
+          "risk": "已截止"
+        }
+      ]
+    },
+    "qingpu": {
+      "label": "青浦区层面",
+      "count": 2,
+      "policies": [
+        {
+          "id": "qp-001",
+          "doc_number": "青经规〔2023〕1号、青经发〔2024〕23号",
+          "program_name": "青浦区技术改造专项资金",
+          "support_direction": "工业企业技术改造（设备投入+软性投入）",
+          "subsidy_type": "无偿资助：核定投入8%（战新行业12%），最高200万",
+          "deadline": "第一批：2026-03-16至04-15（已截止）",
+          "apply_conditions": "规上工业企业（青浦区）；项目≥300万；设备80%+；软性≤设备20%；不可连续2年申报",
+          "source_url": "https://www.shqp.gov.cn/econ/tzgg/20260311/1366017.html",
+          "status": "❌ 第一批已截止，关注第二批",
+          "company_fit": "高",
+          "risk": "已截止；中通吉在青浦区符合条件，关注下一批"
+        },
+        {
+          "id": "qp-002",
+          "doc_number": "青市监规〔2024〕1号",
+          "program_name": "青浦区知识产权专项资金",
+          "support_direction": "知识产权质押融资、认证、运营、托管",
+          "subsidy_type": "视项目类型（以操作指南为准）",
+          "deadline": "第一批：2026-03-01至03-31（已截止）",
+          "apply_conditions": "青浦区注册企事业单位",
+          "source_url": "https://www.shqp.gov.cn/cindu/tzgg/20260225/1352404.html",
+          "status": "❌ 第一批已截止",
+          "company_fit": "低",
+          "risk": "物流企业非知识产权密集型"
+        }
+      ]
+    }
+  },
+  "action_items": [
+    {
+      "priority": "🔴 立即",
+      "action": "联系上海市数据局，确认中通吉是否在区块链"免申即享"链上数据匹配范围内",
+      "deadline": "2026-06-30前",
+      "contact": "021-23118421、23118418"
+    },
+    {
+      "priority": "🔴 立即",
+      "action": "核查研发费用账目：是否≥1000万/年（可获200-1000万一次性补助）",
+      "deadline": "尽快",
+      "contact": "财务部"
+    },
+    {
+      "priority": "🟠 重点",
+      "action": "联系青浦区经委，确认2026年技术改造专项资金第二批申报时间",
+      "deadline": "近期",
+      "contact": "杜平 59732846"
+    },
+    {
+      "priority": "🟠 重点",
+      "action": "确认高新技术企业认定状态（影响部分政策申报资格）",
+      "deadline": "近期"
+    },
+    {
+      "priority": "🟡 跟踪",
+      "action": "关注工信部"AI+制造"专项行动上海配套文件出台",
+      "deadline": "待通知"
+    }
+  ]
+}
