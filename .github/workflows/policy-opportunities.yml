@@ -2,10 +2,8 @@ name: Policy Radar Pipeline
 
 on:
   schedule:
-    # 每天 3 次：8:00 / 13:00 / 20:00（北京时间）
-    - cron: "0 0 * * *"   # 08:00 北京 = 00:00 UTC
-    - cron: "30 5 * * *"  # 13:30 北京 = 05:30 UTC
-    - cron: "0 12 * * *"  # 20:00 北京 = 12:00 UTC
+    # 每天 09:00 北京时间 = 01:00 UTC
+    - cron: "0 1 * * *"
   workflow_dispatch:
     inputs:
       run_date:
@@ -46,9 +44,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install requests beautifulsoup4 lxml pandas \
-                     python-dateutil openai tqdm \
-                     tavily 2>&1 | tail -5
+          pip install -r requirements.txt 2>&1 | tail -5
 
       # ── 创建目录结构 ────────────────────────────────────
       - name: Prepare directories

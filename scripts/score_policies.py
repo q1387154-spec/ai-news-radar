@@ -23,7 +23,7 @@ log = logging.getLogger("score_policies")
 # ── Constants ─────────────────────────────────────────────────────────────────
 BASE_URL = "https://v2.aicodee.com/v1"
 MODEL = "MiniMax-M2.7-highspeed"
-BATCH_SIZE = 8
+BATCH_SIZE = 15
 
 GRADE_THRESHOLDS = {"S": 85, "A": 70, "B": 50}
 DEFAULT_DATE = datetime.now().strftime("%Y-%m-%d")
@@ -234,37 +234,28 @@ def _guess_channel(text: str) -> str:
 
 SCORING_PROMPT = """你是一名政策分析师，服务于上海中通吉网络技术有限公司（青浦区，中通快递集团子公司）。
 
-请为以下每条政策打分的 JSON 数组。每条政策输出一个对象，字段如下：
-- id: 原始id
-- score: 0-100 分
+请为以下政策打分，输出严格合法的JSON数组，每条政策一个对象，字段精简：
+[id, score, grade, deadline, amount, requirements, fit_summary, risk_flags, apply_recommendation, channel]
+
+要求：
+- 只输出JSON数组，不要任何解释文字
+- 严格JSON语法：数组元素之间必须有逗号，最后一个元素后无逗号
+- score: 0-100整数
 - grade: S(85+)/A(70-84)/B(50-69)/C(<50)
-- deadline: 截止日期（YYYY-MM-DD），没有则 ""
-- amount: 资助金额描述，如"最高300万元"，没有则 ""
-- requirements: 申报条件列表（字符串数组）
-- fit_summary: 一句话说明与公司业务的匹配度
-- risk_flags: 风险提示列表，如"需垫资"、"验收条件不明确"
-- apply_recommendation: 建议申报/暂不推荐等
-- channel: 渠道分类，如"低空经济/无人配送"、"超长期国债/两新"
+- deadline: YYYY-MM-DD或空字符串""
+- amount: 资助金额描述，无则""
+- requirements: 条件字符串数组，无则[]
+- fit_summary: 一句话匹配说明
+- risk_flags: 风险列表，无则[]
+- apply_recommendation: "建议申报"/"可考虑"/"暂不推荐"
+- channel: "低空经济"/"数字化转型"/"超长期国债"/"高企研发"/"一般政策"
 
-评分标准：
-- S(85+): 高度匹配 + 金额明确 + 截止近（30天内）+ 无明显风险
-- A(70-84): 匹配 + 有金额 + 有时间窗口 + 风险可控
-- B(50-69): 部分匹配，可能适合
-- C(<50): 关联度低
-
-公司背景提示：
-- 主营业务：物流快递，智慧物流是战略方向
-- 偏好：先补后类、金额明确、验收量化
-- 规避：垫资类、陪跑类、验收不明确
-- 关注：智慧物流、无人机配送、AI调度、低空经济、数字化转型
-- 规模：大型企业，研发投入有一定规模
-
-只输出 JSON 数组，不要其他文字。"""
+公司偏好：物流快递智慧物流战略；规避垫资/陪跑；关注低空经济/AI调度/数字化转型。"""
 
 
 def build_llm_messages(batch: list[dict]) -> list[dict]:
-    """Build messages for a batch of items."""
-    items_text = json.dumps(batch, ensure_ascii=False, indent=2)
+    """Build messages for a batch of items. Uses compact JSON."""
+    items_text = json.dumps(batch, ensure_ascii=False)  # no indent = fewer tokens
     return [
         {"role": "system", "content": SCORING_PROMPT},
         {
@@ -274,6 +265,42 @@ def build_llm_messages(batch: list[dict]) -> list[dict]:
     ]
 
 
+def extract_json_objects(text: str) -> list[dict]:
+    """Robust JSON parser: extract individual {..} objects from potentially broken JSON."""
+    results = []
+    # Try direct JSON parse first
+    try:
+        parsed = json.loads(text)
+        if isinstance(parsed, list):
+            return parsed
+    except (json.JSONDecodeError, TypeError):
+        pass
+    # Try to find individual JSON objects using regex
+    # Match {...} but handle nested braces
+    try:
+        depth = 0
+        start = None
+        for i, c in enumerate(text):
+            if c == '{':
+                if depth == 0:
+                    start = i
+                depth += 1
+            elif c == '}':
+                depth -= 1
+                if depth == 0 and start is not None:
+                    obj_str = text[start:i+1]
+                    try:
+                        obj = json.loads(obj_str)
+                        if isinstance(obj, dict) and 'id' in obj:
+                            results.append(obj)
+                    except (json.JSONDecodeError, TypeError):
+                        pass
+                    start = None
+    except Exception:
+        pass
+    return results
+
+
 def call_llm_batch(client: OpenAI, batch: list[dict]) -> Optional[list[dict]]:
     """Call MiniMax LLM for a batch of items. Returns parsed JSON or None on failure."""
     try:
@@ -281,13 +308,18 @@ def call_llm_batch(client: OpenAI, batch: list[dict]) -> Optional[list[dict]]:
             model=MODEL,
             messages=build_llm_messages(batch),
             temperature=0.2,
-            max_tokens=8192,
+            max_tokens=4096,
         )
         raw = response.choices[0].message.content.strip()
-        # Strip markdown fences if present
+        # Strip markdown fences
         raw = re.sub(r"^```json\s*", "", raw)
         raw = re.sub(r"^```\s*", "", raw)
         raw = raw.rstrip("`")
+        # Try robust extraction
+        results = extract_json_objects(raw)
+        if results:
+            return results
+        # Fallback: try direct parse
         results = json.loads(raw)
         if isinstance(results, list):
             return results
@@ -310,16 +342,21 @@ def score_via_llm(client: OpenAI, item: dict) -> Optional[dict]:
                 {"role": "system", "content": SCORING_PROMPT},
                 {
                     "role": "user",
-                    "content": f"请为以下政策打分：\n{json.dumps(item, ensure_ascii=False, indent=2)}",
+                    "content": f"请为以下政策打分：\n{json.dumps(item, ensure_ascii=False)}",
                 },
             ],
             temperature=0.2,
-            max_tokens=2048,
+            max_tokens=1024,
         )
         raw = response.choices[0].message.content.strip()
         raw = re.sub(r"^```json\s*", "", raw)
         raw = re.sub(r"^```\s*", "", raw)
         raw = raw.rstrip("`")
+        # Try robust extraction first
+        objs = extract_json_objects(raw)
+        if objs and isinstance(objs[0], dict):
+            return objs[0]
+        # Fallback direct parse
         result = json.loads(raw)
         if isinstance(result, dict):
             return result
