@@ -140,11 +140,18 @@ def load_raw_items(patterns: list[str]) -> tuple[list[dict], list[str]]:
             try:
                 with open(filepath, 'r', encoding='utf-8') as f:
                     data = json.load(f)
-                # Normalize: data may be a list or a dict with an 'items' key
+                # Normalize: data may be a list, or dict with 'items', or dict with 'channels'
                 if isinstance(data, list):
                     file_items = data
                 elif isinstance(data, dict):
-                    file_items = data.get('items', [])
+                    # fetch_policies.py v2 outputs {channels: {tavily: [...], cn-search: [...], gov_html: [...]}}
+                    if 'channels' in data:
+                        file_items = []
+                        for channel_items in data['channels'].values():
+                            if isinstance(channel_items, list):
+                                file_items.extend(channel_items)
+                    else:
+                        file_items = data.get('items', [])
                 else:
                     file_items = []
                 for item in file_items:
@@ -291,7 +298,10 @@ def group_by_domain(counts: dict) -> dict:
 def main():
     # Determine input pattern
     if len(sys.argv) > 1:
-        patterns = [sys.argv[1]]
+        date_arg = sys.argv[1]
+        # Treat date argument as a prefix in data/raw/{date}_*.json
+        base = Path(__file__).parent.parent / 'data' / 'raw'
+        patterns = [str(base / f'{date_arg}_*.json')]
     else:
         # Default: data/raw/*.json
         base = Path(__file__).parent.parent / 'data' / 'raw'

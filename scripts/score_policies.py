@@ -21,9 +21,9 @@ logging.basicConfig(
 log = logging.getLogger("score_policies")
 
 # ── Constants ─────────────────────────────────────────────────────────────────
-BASE_URL = "https://api.minimax.chat/v1"
-MODEL = "MiniMax-Text-01"
-BATCH_SIZE = 5
+BASE_URL = "https://v2.aicodee.com/v1"
+MODEL = "MiniMax-M2.7-highspeed"
+BATCH_SIZE = 8
 
 GRADE_THRESHOLDS = {"S": 85, "A": 70, "B": 50}
 DEFAULT_DATE = datetime.now().strftime("%Y-%m-%d")
@@ -52,8 +52,13 @@ def load_input(date: str) -> list[dict]:
         raise FileNotFoundError(f"Input file not found: {path}")
     with open(path, "r", encoding="utf-8") as f:
         data = json.load(f)
-    log.info(f"Loaded {len(data)} items from {path}")
-    return data
+    # Support both list format and dict with 'items' key
+    if isinstance(data, list):
+        items = data
+    else:
+        items = data.get('items', [])
+    log.info(f"Loaded {len(items)} items from {path}")
+    return items
 
 
 def save_output(items: list[dict], date: str, stats: dict) -> None:
@@ -104,15 +109,22 @@ def parse_deadline(text: str | None) -> str | None:
 
 
 def deadline_score(deadline_str: str | None) -> int:
-    """+15 if deadline within 30 days, else 0."""
+    """+15 if deadline within 30 days, +5 if no deadline (ongoing), 0 if expired."""
     if not deadline_str:
-        return 0
+        return 5  # No deadline = ongoing program, give partial credit
     try:
         dl = datetime.strptime(deadline_str[:10], "%Y-%m-%d")
         days = (dl - datetime.now()).days
-        return 15 if 0 <= days <= 30 else 0
+        if days < 0:
+            return -20  # Expired = strong penalty
+        elif days <= 30:
+            return 15  # Urgent
+        elif days <= 90:
+            return 10  # Within 3 months
+        else:
+            return 5   # Future deadline
     except Exception:
-        return 0
+        return 5
 
 
 def amount_score(text: str | None) -> int:

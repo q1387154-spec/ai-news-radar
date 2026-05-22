@@ -250,7 +250,7 @@ def baidu_gov(keyword: str) -> list[dict[str, Any]]:
                     href = r.url
                 except Exception:
                     pass
-            snippet_el = result.select_one("span.new灵犀)
+            snippet_el = result.select_one("span.new")
             if not snippet_el:
                 snippet_el = result.select_one("div.c-abstract")
             snippet = snippet_el.get_text(strip=True) if snippet_el else ""
