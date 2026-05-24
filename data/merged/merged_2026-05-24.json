@@ -1,14 +1,18 @@
 {
-  "scored_at": "2026-05-24T09:02:06+08:00",
-  "total_input": 246,
-  "graded": {
-    "S": 40,
-    "A": 12,
-    "B": 39,
-    "C": 89
+  "merged_at": "2026-05-24T01:02:04+08:00",
+  "source_files": [
+    "C:\\Users\\liuhanwen664\\.openclaw\\workspace\\ai-news-radar\\data\\raw\\2026-05-22_5bd3bc1e-43a.json",
+    "C:\\Users\\liuhanwen664\\.openclaw\\workspace\\ai-news-radar\\data\\raw\\2026-05-22_b76bb2d8-bf4.json",
+    "C:\\Users\\liuhanwen664\\.openclaw\\workspace\\ai-news-radar\\data\\raw\\2026-05-22_da6b5b8a-5e9.json",
+    "C:\\Users\\liuhanwen664\\.openclaw\\workspace\\ai-news-radar\\data\\raw\\2026-05-23_25c4bdf8-376.json",
+    "C:\\Users\\liuhanwen664\\.openclaw\\workspace\\ai-news-radar\\data\\raw\\2026-05-24_7767414f-3cd.json"
+  ],
+  "total_raw": 706,
+  "total_unique": 246,
+  "by_domain": {
+    "gov.cn": 139,
+    "other": 107
   },
-  "llm_count": 0,
-  "backup_count": 180,
   "items": [
     {
       "url": "https://13115299.s21i.faiusr.com/61/1/abuiaba9gaago7pungyokjjqmgm.pdf",
@@ -20,16 +24,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 45,
-      "grade": "C",
-      "deadline": "",
-      "amount": "30万元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://qks.sufe.edu.cn/j/pdffull/a0shcjdxxb-2022-2-108.pdf",
@@ -41,16 +36,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 25,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://jtw.sh.gov.cn/cmsres/4e/4e2b88930cd04100a74eecb18f29677f/0db07955cce864210068e5ffd34f8c59.pdf",
@@ -62,16 +48,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 65,
-      "grade": "B",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.sdecu.com/virtual_attach_file.vsb?afc=dmzf-vlrf7mrqrnwrnam4ldulm2unrhfnmu8lmvamnwrol70gihfp2hmcia0n1ybmyypnkypm7mfu8r7o7limz9ynmcplr9zn7qklzlslmafm4c8m8cslmffm8nkum-jv2nto4oeosmnqimi_khxptq0g4-8lz70lzuyozcpgta8pugcc&oid=2123883912&tid=2411&nid=142961&e=.pdf",
@@ -83,16 +60,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 100,
-      "grade": "S",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "低空经济/无人配送"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.pwccn.com/zh/research-and-insights/greater-bay-area/guangdong-special-new-little-giant-growth-handbook-jan2024.pdf",
@@ -104,16 +72,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 25,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://sheitc.sh.gov.cn/cmsres/63/6351eaee8c534914a876e30ca34d97f8/df6ff0f3e3e568ec9bcc9fa1ab8534a3.pdf",
@@ -125,16 +84,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 95,
-      "grade": "S",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "超长期国债/两新"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.wuzhong.gov.cn/hdjl/myzj/202512/p020251224626167628725.pdf",
@@ -146,16 +96,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 65,
-      "grade": "B",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "低空经济/无人配送"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "http://niis.cssn.cn/xscgnew/xslwnew/202501/p020250121573910683989.pdf",
@@ -167,16 +108,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 25,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "http://www.qx-sh.cn/e/tags?tagname=研发费用加计扣除",
@@ -188,16 +120,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 45,
-      "grade": "C",
-      "deadline": "2019-09-29",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://pdf.dfcfw.com/pdf/h3_ap202503031643675448_1.pdf",
@@ -209,16 +132,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 85,
-      "grade": "S",
-      "deadline": "",
-      "amount": "1000万元",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "低空经济/无人配送"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.shanghaiinvest.com/cn/viewfile.php?id=18831",
@@ -230,16 +144,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 65,
-      "grade": "B",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.shanghai.gov.cn/nw12344/20230814/e946902bdcaf40e292602ac6e8818f61.html",
@@ -251,16 +156,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 75,
-      "grade": "A",
-      "deadline": "2023-07-24",
-      "amount": "5000亿元",
-      "requirements": [],
-      "fit_summary": "匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "建议申报",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://pdf.dfcfw.com/pdf/h3_ap202605071822035684_1.pdf?1778181712000.pdf=",
@@ -272,16 +168,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 85,
-      "grade": "S",
-      "deadline": "2026-07-01",
-      "amount": "5060亿元",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "低空经济/无人配送"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://yangtze.silkroadinfo.org.cn/2022/8/20220822153807619上海居住服务业数字化转型实践及治理创新.pdf",
@@ -293,16 +180,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 65,
-      "grade": "B",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://sheitc.sh.gov.cn/gg/20251020/9576f35feade421ab1f9eb6f5f81635a.html",
@@ -314,16 +192,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 15,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.dikongjingji.com.cn/sh/5071.html",
@@ -335,16 +204,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 75,
-      "grade": "A",
-      "deadline": "2026-01-01",
-      "amount": "800亿元",
-      "requirements": [],
-      "fit_summary": "匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "建议申报",
-      "channel": "低空经济/无人配送"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://wri.org.cn/sites/default/files/2021-08/new-energy-freight-vehicles-final.pdf",
@@ -356,16 +216,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 75,
-      "grade": "A",
-      "deadline": "2021-01-20",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "建议申报",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.xintraining.com/一篇文章带您了解上海市职业技能提升补贴新政",
@@ -377,16 +228,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 15,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.shobserver.com/staticsg/res/html/web/newsdetail.html?id=1107618",
@@ -398,16 +240,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 45,
-      "grade": "C",
-      "deadline": "2026-05-05",
-      "amount": "43.9亿元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "设备更新/以旧换新"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://pdf.dfcfw.com/pdf/h3_ap202309131598384528_1.pdf",
@@ -419,16 +252,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 85,
-      "grade": "S",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.sheitc.sh.gov.cn/cyfz/20260507/cd1dcb1e5cb4449cbc36c69befafcc0a.html",
@@ -440,16 +264,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 45,
-      "grade": "C",
-      "deadline": "2026-05-07",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.dikongjingji.com.cn/sh",
@@ -461,16 +276,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 100,
-      "grade": "S",
-      "deadline": "2026-04-15",
-      "amount": "800亿元",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "低空经济/无人配送"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.sh-hitech.com/ryrd/18816.html",
@@ -482,16 +288,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 75,
-      "grade": "A",
-      "deadline": "",
-      "amount": "最高500万元",
-      "requirements": [],
-      "fit_summary": "匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "建议申报",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.aotuwuliu.com/xueshuyanjiu/1722.html",
@@ -503,16 +300,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 85,
-      "grade": "S",
-      "deadline": "2027-12-31",
-      "amount": "最高100万元",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.shobserver.com/staticsg/res/html/web/newsdetail.html?id=1114724",
@@ -524,16 +312,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 15,
-      "grade": "C",
-      "deadline": "2026-01-05",
-      "amount": "17万元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.shanghai.gov.cn/cmsres/53/53d7f4b38530489d94e9ecc0038a2363/e1f53df70e36834dde1494b5d2016e72.pdf",
@@ -545,16 +324,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 65,
-      "grade": "B",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.headscm.com/fingertip/detail/id/50113.html",
@@ -566,16 +336,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 75,
-      "grade": "A",
-      "deadline": "",
-      "amount": "0.45元",
-      "requirements": [],
-      "fit_summary": "匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "建议申报",
-      "channel": "设备更新/以旧换新"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "http://bjjnxh.org.cn/zhengce_show.aspx?id=1030",
@@ -587,16 +348,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 45,
-      "grade": "C",
-      "deadline": "",
-      "amount": "20万元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.aamshanghai.com/low-altitude-economy-research-report.html",
@@ -608,16 +360,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 85,
-      "grade": "S",
-      "deadline": "2025-03-28",
-      "amount": "1174亿元",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "低空经济/无人配送"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "http://sh-gaoxin.com/detail.php?id=1249",
@@ -629,16 +372,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 55,
-      "grade": "B",
-      "deadline": "2023-03-26",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "http://ts.shtaixie.org/article/1790",
@@ -650,16 +384,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 65,
-      "grade": "B",
-      "deadline": "2026-01-05",
-      "amount": "1500元",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "超长期国债/两新"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://tradeinservices.mofcom.gov.cn/article/dlxxfw/dlxwfb/202601/181172.html",
@@ -671,16 +396,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 95,
-      "grade": "S",
-      "deadline": "",
-      "amount": "800亿元",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "低空经济/无人配送"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.csf-cn.com/sys-nd/210.html",
@@ -692,16 +408,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 100,
-      "grade": "S",
-      "deadline": "2026-05-14",
-      "amount": "800亿元",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "低空经济/无人配送"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "http://vip.stock.finance.sina.com.cn/corp/view/vcb_allbulletindetail.php?stockid=603056&id=4565371",
@@ -713,16 +420,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 35,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://fgw.sh.gov.cn/fgw_zyjyhhjbh/20260416/28bc161eae9049b9853ea0e5c6b7305f.html",
@@ -734,16 +432,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 55,
-      "grade": "B",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "超长期国债/两新"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "http://www.qx-sh.cn/article/caishui/141.html",
@@ -755,16 +444,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 45,
-      "grade": "C",
-      "deadline": "",
-      "amount": "100万元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.shanghai.gov.cn/rkqnjy2/20230410/b445f745e6bd4052bc4adb2c354d44ca.html",
@@ -776,16 +456,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 15,
-      "grade": "C",
-      "deadline": "2021-11-01",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.egag.org.cn/index.php?m=article&a=index&id=1340",
@@ -797,16 +468,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 100,
-      "grade": "S",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.shanghaiinvest.com/cn/viewfile.php?id=21321",
@@ -818,16 +480,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 100,
-      "grade": "S",
-      "deadline": "2025-10-15",
-      "amount": "3000亿元",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "超长期国债/两新"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.fsemi.tech/cms/policyhighlights/2482.html",
@@ -839,16 +492,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 65,
-      "grade": "B",
-      "deadline": "2026-09-03",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://sheitc.sh.gov.cn/cyfz/20250728/e571042d40384fcf859a347eb99e10df.html",
@@ -860,16 +504,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 45,
-      "grade": "C",
-      "deadline": "",
-      "amount": "6亿元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.ssme.sh.gov.cn/public/product!servicedetail.do?productid=2c91c28c89ba7432018a211610f66c1c",
@@ -881,16 +516,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 55,
-      "grade": "B",
-      "deadline": "",
-      "amount": "5000亿元",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://news.sina.cn/gn/2021-01-24/detail-ikftpnny1271580.d.html",
@@ -902,16 +528,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 65,
-      "grade": "B",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "http://sh.bendibao.com/news/202625/303946.shtm",
@@ -923,16 +540,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 25,
-      "grade": "C",
-      "deadline": "2026-02-04",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "设备更新/以旧换新"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.sh-hitech.com/ryrd/13108.html",
@@ -944,16 +552,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 100,
-      "grade": "S",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "低空经济/无人配送"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "http://www.news.cn/fortune/20250818/cccfb41582f44efdbad18e3bc10d3890/c.html",
@@ -965,16 +564,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 100,
-      "grade": "S",
-      "deadline": "2025-08-18",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "低空经济/无人配送"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.shkjdw.gov.cn/c/2021-05-18/527306.shtml",
@@ -986,16 +576,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 45,
-      "grade": "C",
-      "deadline": "2021-05-18",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://czj.sh.gov.cn/cmsres/76/760e8a8235d34e92a6202958365b73fd/eac018c2b2bf7423bf2512f3a6b083c1.pdf",
@@ -1007,16 +588,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 35,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.shanghai.gov.cn/202502bgtwj/20250220/77b163177e954e8c929f90ec43fc92b7.html",
@@ -1028,16 +600,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 95,
-      "grade": "S",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "低空经济/无人配送"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.jiading.gov.cn/ztpd/szzfzt/jdxcszhzx/content_937602",
@@ -1049,16 +612,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 75,
-      "grade": "A",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "建议申报",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.smartcity.team/policies/smartcitypolicies/《上海市促进城市数字化转型的若干政策措施》全",
@@ -1070,16 +624,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 65,
-      "grade": "B",
-      "deadline": "2021-09-01",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.cq.gov.cn/zt/sbgxhxfpyjhx",
@@ -1091,16 +636,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 65,
-      "grade": "B",
-      "deadline": "",
-      "amount": "最高1.5万元",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "设备更新/以旧换新"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "http://www.sh-gaoxin.com/detail.php?id=3980",
@@ -1112,16 +648,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 100,
-      "grade": "S",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "低空经济/无人配送"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.sh-italent.com/article/202405/202405140001.shtml",
@@ -1133,16 +660,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 45,
-      "grade": "C",
-      "deadline": "2023-01-01",
-      "amount": "500万元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.sh-hitech.com/ryrd/21394.html",
@@ -1154,16 +672,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 85,
-      "grade": "S",
-      "deadline": "",
-      "amount": "800亿元",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "低空经济/无人配送"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "http://www.news.cn/fortune/20250211/9b6b1f1ce0a441419ae162df15fc0221/c.html",
@@ -1175,16 +684,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 100,
-      "grade": "S",
-      "deadline": "",
-      "amount": "100元",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "低空经济/无人配送"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "http://rsj.np.gov.cn/cms/html/npsrlzyhshbzj/2023-12-12/1862480431.html",
@@ -1196,16 +696,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 25,
-      "grade": "C",
-      "deadline": "2023-12-12",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.stcn.com/article/detail/3611783.html",
@@ -1217,16 +708,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 95,
-      "grade": "S",
-      "deadline": "2026-01-26",
-      "amount": "800亿元",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "低空经济/无人配送"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.rmlt.com.cn/2026/0326/748381.shtml",
@@ -1238,16 +720,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 65,
-      "grade": "B",
-      "deadline": "",
-      "amount": "8000亿元",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "超长期国债/两新"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.hr-channel.com/policyinformation/info.aspx?itemid=809",
@@ -1259,16 +732,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 15,
-      "grade": "C",
-      "deadline": "2025-01-31",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.stcn.com/article/detail/3569220.html",
@@ -1280,16 +744,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 100,
-      "grade": "S",
-      "deadline": "2026-01-04",
-      "amount": "800亿元",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "低空经济/无人配送"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.shqp.gov.cn/shqp/zwgk/zcwj/20221013/974800.html",
@@ -1301,16 +756,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 45,
-      "grade": "C",
-      "deadline": "2022-08-29",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.thepaper.cn/newsdetail_forward_31067407",
@@ -1322,16 +768,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 85,
-      "grade": "S",
-      "deadline": "2024-07-31",
-      "amount": "630元",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "设备更新/以旧换新"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "http://sh-gaoxin.com/detail.php?id=3852",
@@ -1343,16 +780,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 100,
-      "grade": "S",
-      "deadline": "2026-03-02",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "低空经济/无人配送"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.shace.org.cn/newsinfo/10916519.html",
@@ -1364,16 +792,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 65,
-      "grade": "B",
-      "deadline": "2026-12-31",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "超长期国债/两新"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.ssme.sh.gov.cn/public/product!servicedetail.do?productid=2c9e883c9a911e20019b2c0f6e6a1cf7",
@@ -1385,16 +804,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 75,
-      "grade": "A",
-      "deadline": "",
-      "amount": "最高100万元",
-      "requirements": [],
-      "fit_summary": "匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "建议申报",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://shanghai.chinatax.gov.cn/zcfw/zcjd/202209/t464343.html",
@@ -1406,16 +816,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 35,
-      "grade": "C",
-      "deadline": "2022-09-28",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://yuanxiangsky.com/n/713.html",
@@ -1427,16 +828,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 85,
-      "grade": "S",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "低空经济/无人配送"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.mot.gov.cn/hudong/zaixianfangtan/202512/t20251223_4182653.html",
@@ -1448,16 +840,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 100,
-      "grade": "S",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "低空经济/无人配送"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.shanghai.gov.cn/nw12344/20211021/3f0138f0342e4e4f8acb5f5da4e179a7.html",
@@ -1469,16 +852,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 35,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.yicai.com/news/102907847.html",
@@ -1490,16 +864,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 45,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.whipcy.com/h-col-166.html",
@@ -1511,16 +876,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 95,
-      "grade": "S",
-      "deadline": "2025-04-19",
-      "amount": "3000亿元",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "低空经济/无人配送"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "http://ts.shtaixie.org/article/1516",
@@ -1532,16 +888,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 5,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "http://jjs.mof.gov.cn/zhengcefagui/202406/t20240618_3937446.htm",
@@ -1553,16 +900,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 35,
-      "grade": "C",
-      "deadline": "2017-11-21",
-      "amount": "600万元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://finance.sina.cn/stock/jdts/2026-03-23/detail-inhryxfq2276714.d.html?oid=纪梵希黑色包包正品价格▌微信11582001▌y6ek&vt=4",
@@ -1574,16 +912,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 55,
-      "grade": "B",
-      "deadline": "2025-08-15",
-      "amount": "5000元",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "超长期国债/两新"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://fzggw.nx.gov.cn/zcgh/fgwwj/202601/t20260130_5154810.html",
@@ -1595,16 +924,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 65,
-      "grade": "B",
-      "deadline": "2026-12-31",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "超长期国债/两新"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.yicai.com/news/102427045.html",
@@ -1616,18 +936,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 55,
-      "grade": "B",
-      "deadline": "2025-01-03",
-      "amount": "1000亿元",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [
-        "垫资"
-      ],
-      "apply_recommendation": "可考虑申报",
-      "channel": "超长期国债/两新"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.sh-hitech.com/kjcx/19526.html",
@@ -1639,16 +948,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 85,
-      "grade": "S",
-      "deadline": "2027-12-31",
-      "amount": "0元",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "http://rst.fujian.gov.cn/zw/xw/jlyd/202112/t20211208_5790556.htm",
@@ -1660,16 +960,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 55,
-      "grade": "B",
-      "deadline": "2021-11-26",
-      "amount": "800元",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.shangjixun.com/news/27294.html",
@@ -1681,16 +972,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 85,
-      "grade": "S",
-      "deadline": "",
-      "amount": "1000亿元",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "http://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/202007/t20200716_3550843.htm",
@@ -1702,16 +984,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 55,
-      "grade": "B",
-      "deadline": "2020-01-01",
-      "amount": "10万元",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.sh-hitech.com/tzbt/5241.html",
@@ -1723,16 +996,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 35,
-      "grade": "C",
-      "deadline": "",
-      "amount": "0元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.shpt.gov.cn/hudong/wisdom/intelligence/label?testpara=0&tag=就业&pageno=50&pagesize=10",
@@ -1744,16 +1008,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 25,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://kaizencpa.com/chs/mobile/knowledge/info/id/862.html",
@@ -1765,16 +1020,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 25,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.ncss.cn/ncss/zt/jyjx.shtml",
@@ -1786,16 +1032,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 25,
-      "grade": "C",
-      "deadline": "",
-      "amount": "700元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.pudong.gov.cn/zwgk/qsjj_zcwj_gfxwj/2025/168/341709.html",
@@ -1807,16 +1044,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 65,
-      "grade": "B",
-      "deadline": "2025-06-10",
-      "amount": "最高100万元",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.peoplecen.com/html/2023/zhengj_0825/6963.html",
@@ -1828,16 +1056,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 65,
-      "grade": "B",
-      "deadline": "2023-08-25",
-      "amount": "1亿元",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/zwdt/content/post_11075099.html",
@@ -1849,16 +1068,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 95,
-      "grade": "S",
-      "deadline": "2026-12-31",
-      "amount": "1000万元",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "低空经济/无人配送"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.sh-italent.com/article/202308/202308250011.shtml",
@@ -1870,16 +1080,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 45,
-      "grade": "C",
-      "deadline": "2023-08-25",
-      "amount": "25万元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.jingjidaokan.com/icms/null/null/ns:lhq6lgy6lgm6mmm5ztg1nte5mwiynjuwodaxoti3mdq1yty3ntawmzescdosytosbto=/show.vsml",
@@ -1891,16 +1092,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 85,
-      "grade": "S",
-      "deadline": "",
-      "amount": "3000亿元",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "超长期国债/两新"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.mee.gov.cn/zcwj/zclcfh/202509/t20250903_1126764.shtml",
@@ -1912,18 +1104,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 35,
-      "grade": "C",
-      "deadline": "",
-      "amount": "1.8亿元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [
-        "垫资"
-      ],
-      "apply_recommendation": "暂不推荐",
-      "channel": "超长期国债/两新"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.wuhan.gov.cn/zwgk/xxgk/zfwj/bgtwj/202601/t20260115_2711897.shtml",
@@ -1935,16 +1116,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 100,
-      "grade": "S",
-      "deadline": "2025-12-27",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "低空经济/无人配送"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "http://sh-gaoxin.com/detail.php?id=1928",
@@ -1956,16 +1128,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 55,
-      "grade": "B",
-      "deadline": "2024-01-02",
-      "amount": "60万元",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.mee.gov.cn/zcwj/gwywj/202507/t20250709_1123159.shtml",
@@ -1977,16 +1140,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 25,
-      "grade": "C",
-      "deadline": "2025-07-09",
-      "amount": "1500元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.mee.gov.cn/zcwj/zclcfh/202501/t20250113_1100423.shtml",
@@ -1998,16 +1152,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 55,
-      "grade": "B",
-      "deadline": "2025-01-13",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "超长期国债/两新"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.sh-hitech.com/ryrd/zcjd/7327.html",
@@ -2019,16 +1164,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 75,
-      "grade": "A",
-      "deadline": "",
-      "amount": "25万元",
-      "requirements": [],
-      "fit_summary": "匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "建议申报",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://jrj.sh.gov.cn/scdt197/20250520/28e491ecd6434becb931e7f4952aa870.html",
@@ -2040,18 +1176,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 55,
-      "grade": "B",
-      "deadline": "2025-05-20",
-      "amount": "7000亿元",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [
-        "垫资"
-      ],
-      "apply_recommendation": "可考虑申报",
-      "channel": "超长期国债/两新"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.ln.gov.cn/web/ywdt/jrln/wzxx2018/2026032308420092497/index.shtml",
@@ -2063,16 +1188,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 65,
-      "grade": "B",
-      "deadline": "2026-03-23",
-      "amount": "48.6亿元",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "超长期国债/两新"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.sh-hitech.com/kjcx/21991.html",
@@ -2084,16 +1200,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 100,
-      "grade": "S",
-      "deadline": "2026-06-30",
-      "amount": "0元",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.hnacargo.com/updatelang.aspx?lang=en-us&url=/portal2/newsview.aspx?id=3f3ad682c72fce08",
@@ -2105,16 +1212,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 75,
-      "grade": "A",
-      "deadline": "2026-02-02",
-      "amount": "4.7元",
-      "requirements": [],
-      "fit_summary": "匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "建议申报",
-      "channel": "低空经济/无人配送"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.sh-hitech.com/tzbt/21951.html",
@@ -2126,16 +1224,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 35,
-      "grade": "C",
-      "deadline": "",
-      "amount": "0元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.chacewang.com/newsdetail/news882444.html",
@@ -2147,16 +1236,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 35,
-      "grade": "C",
-      "deadline": "2025-10-20",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.afdata.org.cn/policy/26440b4a-5c47-11ef-82b3-fa163e9af115",
@@ -2168,16 +1248,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 65,
-      "grade": "B",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "http://www.hunan.gov.cn/zqt/zcsd/202601/t20260129_33905389.html",
@@ -2189,16 +1260,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 65,
-      "grade": "B",
-      "deadline": "2026-01-23",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "低空经济/无人配送"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "http://www.wlzb.org.cn?m=home&c=view&a=index&aid=567",
@@ -2210,16 +1272,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 100,
-      "grade": "S",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "低空经济/无人配送"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.cinn.cn/yc/2026/01-07/mdzm2qlr.html",
@@ -2231,16 +1284,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 45,
-      "grade": "C",
-      "deadline": "",
-      "amount": "1500元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "超长期国债/两新"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://m12333.cn/qa/pydcu.html",
@@ -2252,16 +1296,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 25,
-      "grade": "C",
-      "deadline": "2025-04-23",
-      "amount": "1000元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.sh-hitech.com/kjcx/6982.html",
@@ -2273,16 +1308,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 65,
-      "grade": "B",
-      "deadline": "",
-      "amount": "0元",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.nsec.org.cn/article-item-1182.html",
@@ -2294,16 +1320,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 100,
-      "grade": "S",
-      "deadline": "2023-07-05",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "低空经济/无人配送"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.sh-hitech.com/tzbt/13296.html",
@@ -2315,16 +1332,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 15,
-      "grade": "C",
-      "deadline": "",
-      "amount": "0元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://meeting.qianzhan.com/summit/detail_c56aede67cc04a29.html",
@@ -2336,16 +1344,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 95,
-      "grade": "S",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "低空经济/无人配送"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "http://shanghai.chinatax.gov.cn/hktax/ztzl/yshj/sycz/202405/t472093.html",
@@ -2357,16 +1356,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 35,
-      "grade": "C",
-      "deadline": "2024-05-28",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://dt.sheitc.sh.gov.cn/cms/slddt/2752.jhtml",
@@ -2378,16 +1368,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 75,
-      "grade": "A",
-      "deadline": "2026-03-23",
-      "amount": "最高100万元",
-      "requirements": [],
-      "fit_summary": "匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "建议申报",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://shanghai.chinatax.gov.cn/zcfw/zcfgk/sbf/202504/t476135.html",
@@ -2399,16 +1380,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 25,
-      "grade": "C",
-      "deadline": "2025-12-31",
-      "amount": "1000元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.sh-tec.cn/ryrd/17349.html",
@@ -2420,16 +1392,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 85,
-      "grade": "S",
-      "deadline": "",
-      "amount": "0元",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "http://www.news.cn/20251231/34ebec9557e044c28ccc0523dee1dfb2/c.html",
@@ -2441,16 +1404,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 75,
-      "grade": "A",
-      "deadline": "2025-12-31",
-      "amount": "2950亿元",
-      "requirements": [],
-      "fit_summary": "匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "建议申报",
-      "channel": "超长期国债/两新"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.chinaweizheng.com/zscq/xmsb/shzjtx.html",
@@ -2462,16 +1416,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 45,
-      "grade": "C",
-      "deadline": "2021-12-18",
-      "amount": "资助40",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.keceyun.com/policy/newsdetail/494204.html",
@@ -2483,18 +1428,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 25,
-      "grade": "C",
-      "deadline": "",
-      "amount": "1500元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [
-        "垫资"
-      ],
-      "apply_recommendation": "暂不推荐",
-      "channel": "设备更新/以旧换新"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "http://paper.ce.cn/pc/content/202504/28/content_312949.html",
@@ -2506,16 +1440,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 65,
-      "grade": "B",
-      "deadline": "2025-04-28",
-      "amount": "3000亿元",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "超长期国债/两新"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.sh-italent.com/article/202504/202504140002.shtml",
@@ -2527,16 +1452,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 45,
-      "grade": "C",
-      "deadline": "2025-04-03",
-      "amount": "最高1亿元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.mofcom.gov.cn/zcfb/gnmygl/art/2025/art_ed4904de32ff4d029dad4524473ce619.html",
@@ -2548,16 +1464,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 75,
-      "grade": "A",
-      "deadline": "2025-12-31",
-      "amount": "6000元",
-      "requirements": [],
-      "fit_summary": "匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "建议申报",
-      "channel": "设备更新/以旧换新"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://shanghai.chinatax.gov.cn/zcfw/zcfgk/node92/202601/t478927.html",
@@ -2569,16 +1476,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 45,
-      "grade": "C",
-      "deadline": "2026-01-06",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "设备更新/以旧换新"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://fgw.sh.gov.cn/fgw_zyjyhhjbh/20260130/4bfc156492804153a6f43b22f8e15ff7.html",
@@ -2590,18 +1488,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 35,
-      "grade": "C",
-      "deadline": "",
-      "amount": "2万元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [
-        "垫资"
-      ],
-      "apply_recommendation": "暂不推荐",
-      "channel": "超长期国债/两新"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://sww.sh.gov.cn/swdt/20241128/831d3005aec64ce59e3d13dc68cee366.html",
@@ -2613,16 +1500,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 100,
-      "grade": "S",
-      "deadline": "2024-11-26",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.cls.cn/detail/2078225",
@@ -2634,16 +1512,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 45,
-      "grade": "C",
-      "deadline": "",
-      "amount": "2900亿元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://dt.sheitc.sh.gov.cn/cms",
@@ -2655,16 +1524,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 65,
-      "grade": "B",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.jinan.gov.cn/col2615/art/2024/art_2615_4986100.html",
@@ -2676,16 +1536,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 85,
-      "grade": "S",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "http://www.news.cn/2023-08/08/c_1129791830.htm",
@@ -2697,16 +1548,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 15,
-      "grade": "C",
-      "deadline": "",
-      "amount": "284万元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "http://www.sh-gaoxin.com/detail.php?id=3966",
@@ -2718,16 +1560,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 95,
-      "grade": "S",
-      "deadline": "2026-04-01",
-      "amount": "最高100万元",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "http://cn.chinadaily.com.cn/a/202310/27/ws653bb9a3a310d5acd876c381.html",
@@ -2739,16 +1572,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 45,
-      "grade": "C",
-      "deadline": "",
-      "amount": "4.9亿元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.ndrc.gov.cn/xwdt/ztzl/tddgmsbgxhxfpyjhx/gzdt/202501/t20250109_1395606.html",
@@ -2760,18 +1584,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 35,
-      "grade": "C",
-      "deadline": "2025/01/09",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [
-        "垫资"
-      ],
-      "apply_recommendation": "暂不推荐",
-      "channel": "超长期国债/两新"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "http://cpc.people.com.cn/big5/n1/2025/0716/c64387-40522612.html",
@@ -2783,16 +1596,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 25,
-      "grade": "C",
-      "deadline": "",
-      "amount": "7000元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.stdaily.com/web/gdxw/2026-01/03/content_456827.html",
@@ -2804,16 +1608,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 65,
-      "grade": "B",
-      "deadline": "",
-      "amount": "625亿元",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "超长期国债/两新"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.pudong.gov.cn/zwgk/sww-tzhj/2024/296/333276.html",
@@ -2825,16 +1620,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 100,
-      "grade": "S",
-      "deadline": "2024-04-06",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://m.shenkexin.com/news/info-skill-15032.html",
@@ -2846,16 +1632,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 55,
-      "grade": "B",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "超长期国债/两新"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.shyp.gov.cn/shypq/yshj-tzgg/20221125/418794.html",
@@ -2867,16 +1644,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 45,
-      "grade": "C",
-      "deadline": "2022-11-21",
-      "amount": "100万元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.ndrc.gov.cn/xxgk/jd/jd/202512/t20251230_1402853.html",
@@ -2888,16 +1656,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 65,
-      "grade": "B",
-      "deadline": "2025/12/30",
-      "amount": "1500元",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "超长期国债/两新"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.ndrc.gov.cn/wsdwhfz/202504/t20250415_1397211.html",
@@ -2909,16 +1668,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 55,
-      "grade": "B",
-      "deadline": "",
-      "amount": "2万元",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "超长期国债/两新"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.sh-hitech.com/kjcx/21472.html",
@@ -2930,16 +1680,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 65,
-      "grade": "B",
-      "deadline": "",
-      "amount": "0元",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "低空经济/无人配送"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.thepaper.cn/newsdetail_forward_4092179?commtag=true",
@@ -2951,16 +1692,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 45,
-      "grade": "C",
-      "deadline": "2019-08-06",
-      "amount": "120亿元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://news.qq.com/rain/a/20250927a01n6v00",
@@ -2972,16 +1704,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 95,
-      "grade": "S",
-      "deadline": "2025-09-27",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "高度匹配公司业务方向",
-      "risk_flags": [],
-      "apply_recommendation": "强烈建议申报",
-      "channel": "低空经济/无人配送"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.sh-hitech.com",
@@ -2993,16 +1716,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 35,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://dt.sheitc.sh.gov.cn/cms/szzc/index.jhtml",
@@ -3014,16 +1728,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 55,
-      "grade": "B",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://fgw.sh.gov.cn/fgw_zyjyhhjbh/20260312/39b388d70ae54989bc8997e1eb9960f6.html",
@@ -3035,16 +1740,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 25,
-      "grade": "C",
-      "deadline": "2026-03-11",
-      "amount": "379.6709万元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "设备更新/以旧换新"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.jfdaily.com/sgh/detail?id=900138",
@@ -3056,16 +1752,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 15,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://zwdt.sh.gov.cn/govportals/bsfw/item/97af7a1f-e573-42aa-9da6-874108793773",
@@ -3077,16 +1764,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 15,
-      "grade": "C",
-      "deadline": "",
-      "amount": "80万元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://gaj.sh.gov.cn/shga/wzxxfbgj/detail?pa=f41aa3d5accbfad14fcbf784730c1c7f3246599c78cf0fe46b6135622f6874ce2dd98fc984b6727b3864aac500b723a3f89cd8d0bb43e938",
@@ -3098,16 +1776,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 25,
-      "grade": "C",
-      "deadline": "2025-04-25",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.leetsai.com/上海地区关于人工智能产业政策梳理（中国大陆）",
@@ -3119,16 +1788,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 25,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.cls.cn/detail/2191530",
@@ -3140,16 +1800,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 35,
-      "grade": "C",
-      "deadline": "2025-11-05",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://www.chinastarmarket.cn/detail/2374562",
@@ -3161,16 +1812,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 55,
-      "grade": "B",
-      "deadline": "2026-05-18",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "高新技术企业/研发"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "http://policy.cnpbi.com/ztxx/7820.html",
@@ -3182,16 +1824,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 45,
-      "grade": "C",
-      "deadline": "2024-04-29",
-      "amount": "526亿元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "超长期国债/两新"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "https://e.huawei.com/cn/news/2026/industries/transportation/logistics/intelligent-scheduling-planning-engine",
@@ -3203,16 +1836,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 65,
-      "grade": "B",
-      "deadline": "2026-03-19",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "部分匹配，可能适合",
-      "risk_flags": [],
-      "apply_recommendation": "可考虑申报",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://finance.sina.com.cn/jjxw/2025-11-05/doc-infwincz4565749.shtml",
@@ -3224,16 +1848,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 35,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://czj.sh.gov.cn/zys_8908/zt/rmzt/zxwqyckfw/zxqycjwt/20200611/154d2be609d4403cb1fce1fa8f2c84f5.html",
@@ -3245,16 +1860,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T16:06:51.429454+08:00",
-      "score": 15,
-      "grade": "C",
-      "deadline": "2020-06-11",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T16:06:51.429454+08:00"
     },
     {
       "url": "http://www.shesye.com",
@@ -3266,16 +1872,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 35,
-      "grade": "C",
-      "deadline": "2025-09-03",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.shpt.gov.cn/hudong/wisdom/intelligence/label?testpara=0&tag=就业&pageno=32&pagesize=10",
@@ -3287,16 +1884,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 5,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.shnu.edu.cn/92/d5/c26528a627413/page.htm",
@@ -3308,16 +1896,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 15,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.pudong.gov.cn/zwgk/qsjj_zcwj_gfxwj/2025/168/341709/bf65757846f2425a98112e6a5c531570.pdf",
@@ -3329,16 +1908,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 15,
-      "grade": "C",
-      "deadline": "",
-      "amount": "最高200万元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.bita.org.cn/newsinfo/6993778.html",
@@ -3350,16 +1920,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 45,
-      "grade": "C",
-      "deadline": "",
-      "amount": "最高200万元",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://rsj.sh.gov.cn/tdzbzwz_17591/20200916/t0035_1393906.html",
@@ -3371,16 +1932,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 5,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.xd56b.com/m/view.php?aid=50572",
@@ -3392,16 +1944,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 45,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://rsj.sh.gov.cn/tfwwd_17755/20220310/t0035_1406304.html",
@@ -3413,16 +1956,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 15,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.shyp.gov.cn/shypq/yshj-zcjd/20240426/453568.html",
@@ -3434,16 +1968,7 @@
       "source": "tavily",
       "source_name": "Tavily Search",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 5,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.shanghai.gov.cn/zqfzjdq/20220622/54f01944c015439faae65f5cb7ec9010.html",
@@ -3455,16 +1980,7 @@
       "source": "baidu",
       "source_name": "百度: 设备更新 技改 补贴 上海 物流",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 5,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.shqp.gov.cn/shqp/zwgk/zcwj/20210209/819354.html",
@@ -3476,16 +1992,7 @@
       "source": "baidu",
       "source_name": "百度: 设备更新 技改 补贴 上海 物流",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 5,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.shanghai.gov.cn/nw12344/20200813/0001-12344_56434.html",
@@ -3497,16 +2004,7 @@
       "source": "baidu",
       "source_name": "百度: 设备更新 技改 补贴 上海 物流",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 15,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.songjiang.gov.cn/zwgk/009004/009004001/20220817/6d13b404-4e76-4026-b868-f4a6f62b35ed.html",
@@ -3518,16 +2016,7 @@
       "source": "baidu",
       "source_name": "百度: 设备更新 技改 补贴 上海 物流",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 5,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "http://www.xianning.gov.cn/xxgk/xxgkml/qtzdgknr/zfgb/202103/t20210316_2287229.shtml",
@@ -3539,16 +2028,7 @@
       "source": "baidu",
       "source_name": "百度: 设备更新 技改 补贴 上海 物流",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 15,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "http://www.rencheng.gov.cn/art/2023/12/21/art_72514_2779759.html",
@@ -3560,16 +2040,7 @@
       "source": "baidu",
       "source_name": "百度: 设备更新 技改 补贴 上海 物流",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 15,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "http://dlrk.jining.gov.cn/col/col77147/index.html",
@@ -3581,16 +2052,7 @@
       "source": "baidu",
       "source_name": "百度: 设备更新 技改 补贴 上海 物流",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 15,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "http://www.rencheng.gov.cn/art/2023/12/17/art_73223_2779476.html",
@@ -3602,16 +2064,7 @@
       "source": "baidu",
       "source_name": "百度: 设备更新 技改 补贴 上海 物流",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 15,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "http://www.tongzhou.gov.cn/tzqrmzf/qzfbwj/content/fe332c2b-3119-43c7-8c22-9ace99673733.html",
@@ -3623,16 +2076,7 @@
       "source": "baidu",
       "source_name": "百度: 设备更新 技改 补贴 上海 物流",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 15,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.ssme.sh.gov.cn/public/product!servicedetail.do?productid=2c91c293871280d901872b2ca55829b1",
@@ -3644,16 +2088,7 @@
       "source": "baidu",
       "source_name": "百度: 专精特新 小巨人 上海 物流",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 5,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://app.sheitc.sh.gov.cn/gg/693156.htm",
@@ -3665,16 +2100,7 @@
       "source": "baidu",
       "source_name": "百度: 专精特新 小巨人 上海 物流",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 5,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "http://shanghai.chinatax.gov.cn/yptax/ztzl/yshj/ggcx/202401/t470108.html",
@@ -3686,16 +2112,7 @@
       "source": "baidu",
       "source_name": "百度: 专精特新 小巨人 上海 物流",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 5,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.ssme.sh.gov.cn/public/news!loadnewsdetail.do?id=2c91c28d85816a5301859512c6f20992",
@@ -3707,16 +2124,7 @@
       "source": "baidu",
       "source_name": "百度: 专精特新 小巨人 上海 物流",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 5,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "http://www.baidu.com/link?url=tcr-2uyzv1w88mk-_salg3gmqgn8xvt14o_u5ykdk737k--sjrxh6ltpz2uweqnr09ewlx39gwkucgaawbmxzuiiu8cixveq3me1g3u3j_kmtgz9ygkf5m0ujelb2i7h",
@@ -3728,16 +2136,7 @@
       "source": "baidu",
       "source_name": "百度: 专精特新 小巨人 上海 物流",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 15,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://gxj.gz.gov.cn/fw/gzzxqyzhfwpt/zhxw/tpxw/content/post_9180909.html",
@@ -3749,16 +2148,7 @@
       "source": "baidu",
       "source_name": "百度: 专精特新 小巨人 上海 物流",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 5,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "http://www.yz.gov.cn/app-editor/ewebeditor/uploadfile/20240906/附件1-第六批专精特新“小巨人”企业公示名单.pdf",
@@ -3770,16 +2160,7 @@
       "source": "baidu",
       "source_name": "百度: 专精特新 小巨人 上海 物流",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 5,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
     },
     {
       "url": "https://www.miit.gov.cn/cms_files/filemanager/1226211233/attach/20217/71bd4daebeb44632b672b7747a36b65f.pdf",
@@ -3791,18 +2172,799 @@
       "source": "baidu",
       "source_name": "百度: 专精特新 小巨人 上海 物流",
       "published_at": "",
-      "fetched_at": "2026-05-22T15:05:44.825771+08:00",
-      "score": 5,
-      "grade": "C",
-      "deadline": "",
-      "amount": "",
-      "requirements": [],
-      "fit_summary": "关联度较低",
-      "risk_flags": [],
-      "apply_recommendation": "暂不推荐",
-      "channel": "一般政策"
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "http://wap.dezhou.gov.cn/n43517148/n43517627/c98353628/content.html",
+      "title": "财政部:2025年发行超长期特别国债1.3万亿元,持续支持“两重...",
+      "snippet": "",
+      "domain": "wap.dezhou.gov.cn",
+      "published_date": null,
+      "id": "17dcec730326",
+      "source": "baidu",
+      "source_name": "百度: 超长期国债 两重两新 上海",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://www.shhk.gov.cn/xwzx/002003/20241009/d6cbe5ae-0b76-44b6-a24b-d6ef3c5b886a.html",
+      "title": "...加大国债对这些项目的支持……这场发布会信息量很大!-上海市...",
+      "snippet": "",
+      "domain": "shhk.gov.cn",
+      "published_date": null,
+      "id": "5bab99e1ea84",
+      "source": "baidu",
+      "source_name": "百度: 超长期国债 两重两新 上海",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "http://www.shuozhou.gov.cn/ztjs/fzyjzx/zkdt/202501/t20250108_714808.html",
+      "title": "国家发展改革委:增加超长期特别国债规模 加力支持“两重”“两新...",
+      "snippet": "",
+      "domain": "shuozhou.gov.cn",
+      "published_date": null,
+      "id": "6e4e0d96deb3",
+      "source": "baidu",
+      "source_name": "百度: 超长期国债 两重两新 上海",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "http://jtt.sc.gov.cn/jtt/c101508/2025/4/17/c1c9e8fc35b0443c9e5076014e8d9463.shtml",
+      "title": "卢军主持召开研究超长期特别国债支持“两重”“两新”建设专题会议",
+      "snippet": "",
+      "domain": "jtt.sc.gov.cn",
+      "published_date": null,
+      "id": "29a450d73c4a",
+      "source": "baidu",
+      "source_name": "百度: 超长期国债 两重两新 上海",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://zjw.sh.gov.cn/xwfb/20241010/50fcbf6abd1e4f21b499410e778ea942.html",
+      "title": "新闻发布_上海市住房和城乡建设管理委员会",
+      "snippet": "",
+      "domain": "zjw.sh.gov.cn",
+      "published_date": null,
+      "id": "712e912e1689",
+      "source": "baidu",
+      "source_name": "百度: 超长期国债 两重两新 上海",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://fgw.xianyang.gov.cn/fgxw_0/fgyw_7075/202409/t20240926_1814551.html",
+      "title": "国家发展改革委举行专题新闻发布会 介绍“两新”政策总体进展成效...",
+      "snippet": "",
+      "domain": "fgw.xianyang.gov.cn",
+      "published_date": null,
+      "id": "f67260ed2f24",
+      "source": "baidu",
+      "source_name": "百度: 超长期国债 两重两新 上海",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://cgzf.sh.gov.cn/channel_8/20241010/865c16d906b0497cb04c7185f6fb1c50.html",
+      "title": "...加大国债对这些项目的支持……这场发布会信息量很大!_上海市...",
+      "snippet": "",
+      "domain": "cgzf.sh.gov.cn",
+      "published_date": null,
+      "id": "225b686fd872",
+      "source": "baidu",
+      "source_name": "百度: 超长期国债 两重两新 上海",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "http://www.yichang.gov.cn/html/zhengwuyizhantong/zhengwuzixun/jinriyaowen/2024/0924/1063509.html",
+      "title": "市政府专题研究对上争资及2024年超长期特别国债支持“两新”工作...",
+      "snippet": "",
+      "domain": "yichang.gov.cn",
+      "published_date": null,
+      "id": "8dd2859a393c",
+      "source": "baidu",
+      "source_name": "百度: 超长期国债 两重两新 上海",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://rsj.sh.gov.cn/tgwyrsb_17088/20230816/t0035_1417653.html",
+      "title": "切实保障和改善民生!_国务院、人社部_上海市人力资源和社会保障局",
+      "snippet": "",
+      "domain": "rsj.sh.gov.cn",
+      "published_date": null,
+      "id": "ebf20ef46048",
+      "source": "baidu",
+      "source_name": "百度: 稳岗返还 技能培训 上海 快递",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://cq.spb.gov.cn/cqsyzglj/c100065/c100066/202309/2bbf374d38c9460f82d94b51fa20e454.shtml",
+      "title": "重庆市邮政快递业稳经济政策包(第四版)",
+      "snippet": "",
+      "domain": "cq.spb.gov.cn",
+      "published_date": null,
+      "id": "eab4ffeb5c0a",
+      "source": "baidu",
+      "source_name": "百度: 稳岗返还 技能培训 上海 快递",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "http://jshrss.jiangsu.gov.cn/art/2022/7/8/art_78498_10536535.html",
+      "title": "江苏省人力资源和社会保障厅 市县动态 稳就业,我们在行动!",
+      "snippet": "",
+      "domain": "jshrss.jiangsu.gov.cn",
+      "published_date": null,
+      "id": "56d067d7ae3a",
+      "source": "baidu",
+      "source_name": "百度: 稳岗返还 技能培训 上海 快递",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://www.cnjx.gov.cn/about/show/1372928.html",
+      "title": "关于2022年失业保险稳岗返还情况的公示-绩溪县人民政府",
+      "snippet": "",
+      "domain": "cnjx.gov.cn",
+      "published_date": null,
+      "id": "63d7bfe36513",
+      "source": "baidu",
+      "source_name": "百度: 稳岗返还 技能培训 上海 快递",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "http://rsj.qz.gov.cn/art/2022/5/27/art_1532395_58924485.html",
+      "title": "市本级2022年稳岗返还发放名单(第一批)",
+      "snippet": "",
+      "domain": "rsj.qz.gov.cn",
+      "published_date": null,
+      "id": "142dff2c37c4",
+      "source": "baidu",
+      "source_name": "百度: 稳岗返还 技能培训 上海 快递",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://www.nanchong.gov.cn/rsj/xwdt/tzgg/202211/t20221124_1748450.html",
+      "title": "南充市2022年失业保险稳岗返还公示(第六批)-南充市人力资源和社会...",
+      "snippet": "",
+      "domain": "nanchong.gov.cn",
+      "published_date": null,
+      "id": "15dd578ff0d1",
+      "source": "baidu",
+      "source_name": "百度: 稳岗返还 技能培训 上海 快递",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "http://zsrls.zhoushan.gov.cn/art/2022/10/21/art_1228981949_58898402.html",
+      "title": "市本级(含定海区)失业保险稳岗返还名单公示(第十一批)",
+      "snippet": "",
+      "domain": "zsrls.zhoushan.gov.cn",
+      "published_date": null,
+      "id": "c66c24d867ba",
+      "source": "baidu",
+      "source_name": "百度: 稳岗返还 技能培训 上海 快递",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "http://www.haiyan.gov.cn/art/2022/6/19/art_1229413990_59383600.html",
+      "title": "海盐县2022年度失业保险稳岗返还第三批公示名单",
+      "snippet": "",
+      "domain": "haiyan.gov.cn",
+      "published_date": null,
+      "id": "4f3e9f1c6e14",
+      "source": "baidu",
+      "source_name": "百度: 稳岗返还 技能培训 上海 快递",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://www.shqp.gov.cn/shqp/zwgk/zcwjhz/20250324/1274719.html",
+      "title": "...行动方案(2024—2027年》的通知_政策文件汇总_上海市青浦区...",
+      "snippet": "",
+      "domain": "shqp.gov.cn",
+      "published_date": null,
+      "id": "04952ba5f194",
+      "source": "baidu",
+      "source_name": "百度: 无人机配送 政策 上海 青浦",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://www.shanghai.gov.cn/qtsj/20260416/d9581af9c003430b9bdc0a03daa7926c.html",
+      "title": "...2027年)》和《优化提升本市物流仓储设施及服务支持政策》的通知",
+      "snippet": "",
+      "domain": "shanghai.gov.cn",
+      "published_date": null,
+      "id": "87f52630610a",
+      "source": "baidu",
+      "source_name": "百度: 无人机配送 政策 上海 青浦",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://zw.shqp.gov.cn/qpzw/31105/zhengwu/qpzq/zctj/36.pdf",
+      "title": "青浦区加快推进现代服务业高质量发展 实施细则",
+      "snippet": "",
+      "domain": "zw.shqp.gov.cn",
+      "published_date": null,
+      "id": "68bc579820c6",
+      "source": "baidu",
+      "source_name": "百度: 无人机配送 政策 上海 青浦",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://www.shqp.gov.cn/agri/nwzwgk/zcwj/qt/20260127/1349713.html",
+      "title": "...其他政策文件-政策文件-政务公开_农业农村委_上海市青浦区人民...",
+      "snippet": "",
+      "domain": "shqp.gov.cn",
+      "published_date": null,
+      "id": "03d3d4e06c60",
+      "source": "baidu",
+      "source_name": "百度: 无人机配送 政策 上海 青浦",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://sh.spb.gov.cn/shsyzglj/c100057/c100060/202408/36f344f8bad043149170c42a0ceebaf1.shtml",
+      "title": "本市出台低空经济产业发展行动方案行业跨区域物流与低空寄递获支持",
+      "snippet": "",
+      "domain": "sh.spb.gov.cn",
+      "published_date": null,
+      "id": "ed9e39c17d5b",
+      "source": "baidu",
+      "source_name": "百度: 无人机配送 政策 上海 青浦",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://www.shanghai.gov.cn/cmsres/38/38eeb2484cc04eb3900ff42c1079031d/14ef45d670de55fec17372bdfba5adae.pdf",
+      "title": "上海市人民政府办公厅文件",
+      "snippet": "",
+      "domain": "shanghai.gov.cn",
+      "published_date": null,
+      "id": "744d617f7cf1",
+      "source": "baidu",
+      "source_name": "百度: 无人机配送 政策 上海 青浦",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "http://www.ccgp.gov.cn/cggg/dfgg/gkzb/202503/t20250310_24271566.htm",
+      "title": "上海市青浦区人民政府夏阳街道办事处2025年夏阳街道无人机全域...",
+      "snippet": "",
+      "domain": "ccgp.gov.cn",
+      "published_date": null,
+      "id": "bf9ea8e05b63",
+      "source": "baidu",
+      "source_name": "百度: 无人机配送 政策 上海 青浦",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://www.ssme.sh.gov.cn/public/news!loadnewsdetail.do?id=2c9e88319102d6660191683d3f6c3e30",
+      "title": "上海市人民政府办公厅关于印发《上海市低空经济产业高质量发展...",
+      "snippet": "",
+      "domain": "ssme.sh.gov.cn",
+      "published_date": null,
+      "id": "663852c3529e",
+      "source": "baidu",
+      "source_name": "百度: 无人机配送 政策 上海 青浦",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://sh.spb.gov.cn/shsyzglj/c100065/c100067/202408/169d74198b9d4ca8a61a3cba3dca001f.shtml",
+      "title": "《上海市低空经济产业高质量发展行动方案(2024-2027年)》政策解读",
+      "snippet": "",
+      "domain": "sh.spb.gov.cn",
+      "published_date": null,
+      "id": "44a93cf48b8e",
+      "source": "baidu",
+      "source_name": "百度: 无人机配送 政策 上海 青浦",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://sww.sh.gov.cn/zwgkgfqtzcwj/20210715/edfbbe2e081148ae9b24d6542f50f102.html",
+      "title": "上海市商务委员会关于印发《上海市推进商业数字化转型实施方案...",
+      "snippet": "",
+      "domain": "sww.sh.gov.cn",
+      "published_date": null,
+      "id": "fba5059f17dc",
+      "source": "baidu",
+      "source_name": "百度: 智慧物流 数字化转型 上海 政策",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://sheitc.sh.gov.cn/bmgzjxgwj/20211110/95deefdb2e3040e39714927266acdc5c.html",
+      "title": "推进上海经济数字化转型赋能高质量发展行动方案(2021-2023年)",
+      "snippet": "",
+      "domain": "sheitc.sh.gov.cn",
+      "published_date": null,
+      "id": "1e7365e57015",
+      "source": "baidu",
+      "source_name": "百度: 智慧物流 数字化转型 上海 政策",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://www.shanghai.gov.cn/nw12344/20211027/6517c7fd7b804553a37c1165f0ff6ee4.html",
+      "title": "上海市人民政府办公厅关于印发《上海市全面推进城市数字化转型...",
+      "snippet": "",
+      "domain": "shanghai.gov.cn",
+      "published_date": null,
+      "id": "a3b62384e632",
+      "source": "baidu",
+      "source_name": "百度: 智慧物流 数字化转型 上海 政策",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://www.gov.cn/zhengce/zhengceku/202404/content_6948104.htm",
+      "title": "商务部关于印发《数字商务三年行动计划(2024-2026年)》的通知...",
+      "snippet": "",
+      "domain": "gov.cn",
+      "published_date": null,
+      "id": "7a5bd5875e28",
+      "source": "baidu",
+      "source_name": "百度: 智慧物流 数字化转型 上海 政策",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://zwgk.shcn.gov.cn/xxgk/ghjh-kwzhzw/2022/267/17643.html",
+      "title": "关于印发《长宁区全面推进城市数字化转型“十四五”规划》的通知...",
+      "snippet": "",
+      "domain": "zwgk.shcn.gov.cn",
+      "published_date": null,
+      "id": "77380a5c3f3d",
+      "source": "baidu",
+      "source_name": "百度: 智慧物流 数字化转型 上海 政策",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "http://www.zcom.gov.cn/art/2021/6/3/art_1229267969_4651520.html",
+      "title": "省发展改革委 省商务厅关于印发《浙江省国内贸易发展“十四五...",
+      "snippet": "",
+      "domain": "zcom.gov.cn",
+      "published_date": null,
+      "id": "63c499c0c04a",
+      "source": "baidu",
+      "source_name": "百度: 智慧物流 数字化转型 上海 政策",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://www.yn.gov.cn/zzms/zxwj/202205/t20220510_241891.html",
+      "title": "云南省人民政府关于印发“十四五”数字云南规划的通知_最新文件...",
+      "snippet": "",
+      "domain": "yn.gov.cn",
+      "published_date": null,
+      "id": "54dc2d624d0a",
+      "source": "baidu",
+      "source_name": "百度: 智慧物流 数字化转型 上海 政策",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://www.shanghai.gov.cn/nw12344/20240816/da714ee861614ef2abae9a2b7ca317b6.html",
+      "title": "上海市人民政府办公厅关于印发《上海市低空经济产业高质量发展...",
+      "snippet": "",
+      "domain": "shanghai.gov.cn",
+      "published_date": null,
+      "id": "9584f6daeace",
+      "source": "baidu",
+      "source_name": "百度: 低空经济 政策 上海 补贴 2026",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "http://www.baidu.com/link?url=zsefzjazzxko0d45rzi-tjpliv5b0ktax5cmrucyu8122jv8sssw4l5tkin-8t3ggydtxhbh5d3xunnyghdyibdhu9_ka2erqi8ndvqbog0ic0j0jxzhoj3mbunniy8a",
+      "title": "技术破壁与政策护航低空经济2026开启规模化运营新篇章",
+      "snippet": "",
+      "domain": "baidu.com",
+      "published_date": null,
+      "id": "0897c3ce1cc4",
+      "source": "baidu",
+      "source_name": "百度: 低空经济 政策 上海 补贴 2026",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://www.suzhou.gov.cn/szsrmzf/zfbgswj/202402/1ea65ae34733413ba188c04f8690267a.shtml",
+      "title": "市政府办公室关于印发苏州市低空经济高质量发展实施方案(2024...",
+      "snippet": "",
+      "domain": "suzhou.gov.cn",
+      "published_date": null,
+      "id": "129510cef990",
+      "source": "baidu",
+      "source_name": "百度: 低空经济 政策 上海 补贴 2026",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://www.shyp.gov.cn/shypq/xwzx-bmdt/20251229/497073.html",
+      "title": "共话2026低空经济新未来 第二届“链动低空”交流会圆满落幕_上海市杨浦区人 ...",
+      "snippet": "",
+      "domain": "shyp.gov.cn",
+      "published_date": null,
+      "id": "0aa03fc14bc1",
+      "source": "baidu",
+      "source_name": "百度: 低空经济 政策 上海 补贴 2026",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://www.shanghai.gov.cn/wzjd/20240816/9da1c2aefe4a42beb09bf1e421ce18c8.html",
+      "title": "《上海市低空经济产业高质量发展行动方案(2024-2027年)》解读",
+      "snippet": "",
+      "domain": "shanghai.gov.cn",
+      "published_date": null,
+      "id": "d7d723849c62",
+      "source": "baidu",
+      "source_name": "百度: 低空经济 政策 上海 补贴 2026",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "http://www.baidu.com/link?url=ikfublxs-ctb6ks2j1tiozonr1-_vmre3lm_gwzfrvedtcq594rxwylw6c5rjx2bcabqli21b5eoslrdtlnglk",
+      "title": "...政策解读】《大连市低空经济高质量发展行动方(2024-2026年...",
+      "snippet": "",
+      "domain": "baidu.com",
+      "published_date": null,
+      "id": "88d015443e0d",
+      "source": "baidu",
+      "source_name": "百度: 低空经济 政策 上海 补贴 2026",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://fgw.sh.gov.cn/fgw_ndjh/20260212/0d0d16e6f34044888d1606faaae8f69f.html",
+      "title": "关于上海市2025年国民经济和社会发展计划执行情况与2026年国民...",
+      "snippet": "",
+      "domain": "fgw.sh.gov.cn",
+      "published_date": null,
+      "id": "7389655a4129",
+      "source": "baidu",
+      "source_name": "百度: 低空经济 政策 上海 补贴 2026",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://www.ssme.sh.gov.cn/public/product!servicedetail.do?productid=2c91c298892a648f018968a6965121d8",
+      "title": "研发费用加计扣除政策执行指引(2.0版)_上海市企业服务云",
+      "snippet": "",
+      "domain": "ssme.sh.gov.cn",
+      "published_date": null,
+      "id": "95c8918bf767",
+      "source": "baidu",
+      "source_name": "百度: 高企 研发费用加计扣除 上海",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "http://shanghai.chinatax.gov.cn/xwdt/ztzl/zcgll/hsqjzl/xgzc/202303/t466232.html",
+      "title": "...企业购置设备、器具企业所得税税前一次性扣除和100%加计扣除政策",
+      "snippet": "",
+      "domain": "shanghai.chinatax.gov.cn",
+      "published_date": null,
+      "id": "e45b32e74c4b",
+      "source": "baidu",
+      "source_name": "百度: 高企 研发费用加计扣除 上海",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "http://shanghai.chinatax.gov.cn/xwdt/ztzl/zcgll/hsqjzl/xgzc/202303/t466234.html",
+      "title": "2022年企业所得税汇算清缴新政(优惠政策篇)——研发费用加计扣除...",
+      "snippet": "",
+      "domain": "shanghai.chinatax.gov.cn",
+      "published_date": null,
+      "id": "8780df251ce2",
+      "source": "baidu",
+      "source_name": "百度: 高企 研发费用加计扣除 上海",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://www.ssme.sh.gov.cn/public/product!servicedetail.do?productid=2c91c2878a4ad9b5018a82dd796e7b1f",
+      "title": "享受研发费用加计扣除政策的会计核算要求_上海市企业服务云",
+      "snippet": "",
+      "domain": "ssme.sh.gov.cn",
+      "published_date": null,
+      "id": "c2fc3ee2611f",
+      "source": "baidu",
+      "source_name": "百度: 高企 研发费用加计扣除 上海",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://www.shanghai.gov.cn/kjcx-gqwj12/20230510/7bccb256034e43be8aec1ca70ed9466b.html",
+      "title": "关于印发《金山区高新技术企业育苗造林十五条工作举措(2022-2024...",
+      "snippet": "",
+      "domain": "shanghai.gov.cn",
+      "published_date": null,
+      "id": "8767b73caf8e",
+      "source": "baidu",
+      "source_name": "百度: 高企 研发费用加计扣除 上海",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://stcsm.sh.gov.cn/xwzx/zt/2021nshkjndpd/zxbd/20220303/12177d7d456d47a48c851682807ab3fe.html",
+      "title": "2021年上海科技的这些数据你必须知道",
+      "snippet": "",
+      "domain": "stcsm.sh.gov.cn",
+      "published_date": null,
+      "id": "1dad4c03c5a0",
+      "source": "baidu",
+      "source_name": "百度: 高企 研发费用加计扣除 上海",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://stcsm.sh.gov.cn/hdpt/hdzxft/20220818/6bdef7ec07984c54a679dc00241244ca.html",
+      "title": "“高新技术企业认定”政策解读及申报指导活动_在线访谈_上海市...",
+      "snippet": "",
+      "domain": "stcsm.sh.gov.cn",
+      "published_date": null,
+      "id": "efec11fae694",
+      "source": "baidu",
+      "source_name": "百度: 高企 研发费用加计扣除 上海",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "http://zcqc.jscz.gov.cn/pub/cztzx/ywdt/yw/202209/t20220920_138844.html",
+      "title": "江苏省注册会计师协会",
+      "snippet": "",
+      "domain": "zcqc.jscz.gov.cn",
+      "published_date": null,
+      "id": "b65fe97ddfb9",
+      "source": "baidu",
+      "source_name": "百度: 高企 研发费用加计扣除 上海",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://www.shyp.gov.cn/shypq/scyw/20221118/418418.html",
+      "title": "...双创示范基地创新创业指数_上海市杨浦区人民政府",
+      "snippet": "",
+      "domain": "shyp.gov.cn",
+      "published_date": null,
+      "id": "503eb11887e2",
+      "source": "baidu",
+      "source_name": "百度: 高企 研发费用加计扣除 上海",
+      "published_at": "",
+      "fetched_at": "2026-05-22T15:05:44.825771+08:00"
+    },
+    {
+      "url": "https://www.shqp.gov.cn/shqp/zwgk/zwgkzt/csjyth/xgzcwj/20221205/1062351.html",
+      "title": "相关政策文件_长三角一体化_政务公开专题_政务公开_上海市青浦区...",
+      "snippet": "",
+      "domain": "shqp.gov.cn",
+      "published_date": null,
+      "id": "10549923cc6d",
+      "source": "baidu",
+      "source_name": "百度: 无人机配送 政策 上海 青浦",
+      "published_at": "",
+      "fetched_at": "2026-05-23T09:00:03.517312+08:00"
+    },
+    {
+      "url": "https://www.shanghai.gov.cn/nw12344/20250113/2ee66eeb1de74208a604101ab98e15f0.html",
+      "title": "关于印发《青浦区低空经济产业高质量发展行动方案(2024—2027年...",
+      "snippet": "",
+      "domain": "shanghai.gov.cn",
+      "published_date": null,
+      "id": "28b974561bb2",
+      "source": "baidu",
+      "source_name": "百度: 无人机配送 政策 上海 青浦",
+      "published_at": "",
+      "fetched_at": "2026-05-23T09:00:03.517312+08:00"
+    },
+    {
+      "url": "https://www.sheitc.sh.gov.cn/qtzx/20241009/9336828aaeb3481bbf4733c8e607a527.html",
+      "title": "上海市低空经济产业高质量发展行动方案 (2024-2027年)(草案)",
+      "snippet": "",
+      "domain": "sheitc.sh.gov.cn",
+      "published_date": null,
+      "id": "a91abf7d57ad",
+      "source": "baidu",
+      "source_name": "百度: 无人机配送 政策 上海 青浦",
+      "published_at": "",
+      "fetched_at": "2026-05-23T09:00:03.517312+08:00"
+    },
+    {
+      "url": "https://www.nanyang.gov.cn/2024/08-21/595062.html",
+      "title": "上海市人民政府办公厅关于印发《上海市低空经济产业高质量发展行动方案...",
+      "snippet": "",
+      "domain": "nanyang.gov.cn",
+      "published_date": null,
+      "id": "1da484f6f122",
+      "source": "baidu",
+      "source_name": "百度: 无人机配送 政策 上海 青浦",
+      "published_at": "",
+      "fetched_at": "2026-05-23T09:00:03.517312+08:00"
+    },
+    {
+      "url": "https://www.zjtz.gov.cn/art/2021/12/2/art_1229550294_3758760.html",
+      "title": "市发展改革委 台州湾新区管委会关于印发《台州湾新区“十四五...",
+      "snippet": "",
+      "domain": "zjtz.gov.cn",
+      "published_date": null,
+      "id": "23716d31bc46",
+      "source": "baidu",
+      "source_name": "百度: 无人机配送 政策 上海 青浦",
+      "published_at": "",
+      "fetched_at": "2026-05-23T09:00:03.517312+08:00"
+    },
+    {
+      "url": "http://yjglj.sh.gov.cn/xxgk/zfxxgk/zcwj/ghycw/20230203/2a088120ed4c421ebe2ac7ba2fcc9f9b.html",
+      "title": "上海市安全生产委员会关于印发上海市消防事业发展“十四五”规划...",
+      "snippet": "",
+      "domain": "yjglj.sh.gov.cn",
+      "published_date": null,
+      "id": "4502d98bad7c",
+      "source": "baidu",
+      "source_name": "百度: 无人机配送 政策 上海 青浦",
+      "published_at": "",
+      "fetched_at": "2026-05-23T09:00:03.517312+08:00"
+    },
+    {
+      "url": "https://zxta.ahdzzx.gov.cn/info?ids=1209",
+      "title": "关于做好“两重”“两新”、中央预算内、超长期特别国债、专项债...",
+      "snippet": "",
+      "domain": "zxta.ahdzzx.gov.cn",
+      "published_date": null,
+      "id": "c245701da600",
+      "source": "baidu",
+      "source_name": "百度: 超长期国债 两重两新 上海",
+      "published_at": "",
+      "fetched_at": "2026-05-23T09:00:03.517312+08:00"
+    },
+    {
+      "url": "https://rsj.sh.gov.cn/tgwyrsb_17088/20250113/t0035_1429892.html",
+      "title": "“两重”“两新”激发内需潜力_国务院、人社部_上海市人力资源和...",
+      "snippet": "",
+      "domain": "rsj.sh.gov.cn",
+      "published_date": null,
+      "id": "c83b70d3a519",
+      "source": "baidu",
+      "source_name": "百度: 超长期国债 两重两新 上海",
+      "published_at": "",
+      "fetched_at": "2026-05-23T09:00:03.517312+08:00"
+    },
+    {
+      "url": "https://scjgj.sh.gov.cn/601/20250102/a95ebc63e95b41af8caa5347d03c8ec1.html",
+      "title": "上海市市场监督管理局",
+      "snippet": "",
+      "domain": "scjgj.sh.gov.cn",
+      "published_date": null,
+      "id": "e15bea5b8785",
+      "source": "baidu",
+      "source_name": "百度: 超长期国债 两重两新 上海",
+      "published_at": "",
+      "fetched_at": "2026-05-23T09:00:03.517312+08:00"
+    },
+    {
+      "url": "https://jrj.sh.gov.cn/scdt197/20250424/512588ce9ca1438eb7b86de2b8deee4e.html",
+      "title": "2025年超长期特别国债今日起发行_中共上海市委金融委员会办公室...",
+      "snippet": "",
+      "domain": "jrj.sh.gov.cn",
+      "published_date": null,
+      "id": "7db117a600cf",
+      "source": "baidu",
+      "source_name": "百度: 超长期国债 两重两新 上海",
+      "published_at": "",
+      "fetched_at": "2026-05-23T09:00:03.517312+08:00"
+    },
+    {
+      "url": "https://www.gzw.sh.gov.cn/shgzw_xxgk_ghjh/20250402/1eb78aa6022141bb86f2fbd61d064e4a.html",
+      "title": "关于印发《上海市国资委2025年工作要点》的通知_规划计划",
+      "snippet": "",
+      "domain": "gzw.sh.gov.cn",
+      "published_date": null,
+      "id": "6b6c42834e43",
+      "source": "baidu",
+      "source_name": "百度: 超长期国债 两重两新 上海",
+      "published_at": "",
+      "fetched_at": "2026-05-23T09:00:03.517312+08:00"
+    },
+    {
+      "url": "https://www.shjjjc.gov.cn/shsjjjcw/ywyla/content/18b97d4a-9ba8-4d03-8d30-453cc44b5384.html",
+      "title": "中共上海市纪律检查委员会 上海市监察委员会",
+      "snippet": "",
+      "domain": "shjjjc.gov.cn",
+      "published_date": null,
+      "id": "11d3b1dce918",
+      "source": "baidu",
+      "source_name": "百度: 超长期国债 两重两新 上海",
+      "published_at": "",
+      "fetched_at": "2026-05-23T09:00:03.517312+08:00"
+    },
+    {
+      "url": "https://czj.sh.gov.cn/zys_8908/czsj_9054/zfyjs/yjsbg_9056/20250124/xxfboswf0000003119.html",
+      "title": "关于上海市2024年预算执行情况和2025年预算草案的报告",
+      "snippet": "",
+      "domain": "czj.sh.gov.cn",
+      "published_date": null,
+      "id": "b7eedeb2c2ea",
+      "source": "baidu",
+      "source_name": "百度: 超长期国债 两重两新 上海",
+      "published_at": "",
+      "fetched_at": "2026-05-23T09:00:03.517312+08:00"
+    },
+    {
+      "url": "https://www.shio.gov.cn/truecms/shxwbgs/2022n_11y_wdsl/content/5480a748-ce3c-444d-a15e-f87c9e7d20db.html",
+      "title": "...问答实录——上海市人民政府新闻办公室",
+      "snippet": "",
+      "domain": "shio.gov.cn",
+      "published_date": null,
+      "id": "a2144fdce87d",
+      "source": "baidu",
+      "source_name": "百度: 智慧物流 数字化转型 上海 政策",
+      "published_at": "",
+      "fetched_at": "2026-05-24T09:00:03.511593+08:00"
+    },
+    {
+      "url": "https://en.shio.gov.cn/truecms/shxwbgs/2023n_7y_wdsl/content/9e3c49f0-890e-4f51-9a43-69050d0bcac1.html",
+      "title": "2023年7月18日市政府新闻发布会问答实录——上海市人民政府新闻...",
+      "snippet": "",
+      "domain": "en.shio.gov.cn",
+      "published_date": null,
+      "id": "b86a8a706a74",
+      "source": "baidu",
+      "source_name": "百度: 智慧物流 数字化转型 上海 政策",
+      "published_at": "",
+      "fetched_at": "2026-05-24T09:00:03.511593+08:00"
+    },
+    {
+      "url": "https://en.shio.gov.cn/truecms/shxwbgs/ywts/content/c16b30e5-0bbd-4a5e-9532-011a571e9dd4.htm",
+      "title": "上海市人民政府新闻办公室",
+      "snippet": "",
+      "domain": "en.shio.gov.cn",
+      "published_date": null,
+      "id": "ea4d5a040f63",
+      "source": "baidu",
+      "source_name": "百度: 智慧物流 数字化转型 上海 政策",
+      "published_at": "",
+      "fetched_at": "2026-05-24T09:00:03.511593+08:00"
+    },
+    {
+      "url": "http://www.baidu.com/link?url=wp-zo79xy414fhlzchwkzbu-e5ow4-4hbvutyrj_ouxf8iobvphgezqryt_2dbl2_gnszftje_xusebhsg-ired02mz4k2kfef35weohoqicvdyne9qyyqzks9ieq7whykft8hjivjvonhliyltudq",
+      "title": "重庆市邮政快递业稳经济政策包(第四版)",
+      "snippet": "",
+      "domain": "baidu.com",
+      "published_date": null,
+      "id": "ab8efe7135ee",
+      "source": "baidu",
+      "source_name": "百度: 稳岗返还 技能培训 上海 快递",
+      "published_at": "",
+      "fetched_at": "2026-05-24T09:00:03.511593+08:00"
+    },
+    {
+      "url": "http://www.baidu.com/link?url=wp-zo79xy414fhlzchwkzbuuqxd3yjl1bwwlvazgs-jattcdl5vfv883fybpwzldkcm8npklqhhp7xziux_yetrccvf6u9jon0rm72mnesjjtmkcpp_xmsoeba6hpvenw82hvvdbvntqf_l-ipajwk",
+      "title": "《上海市低空经济产业高质量发展行动方案(2024-2027年)》政策解读",
+      "snippet": "",
+      "domain": "baidu.com",
+      "published_date": null,
+      "id": "896df2600b33",
+      "source": "baidu",
+      "source_name": "百度: 低空经济 政策 上海 补贴 2026",
+      "published_at": "",
+      "fetched_at": "2026-05-24T09:00:03.511593+08:00"
     }
-  ],
-  "_checkpoint": true,
-  "_batches_done": 35
+  ]
 }
