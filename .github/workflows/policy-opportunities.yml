@@ -1,6 +1,6 @@
 name: Policy Radar Pipeline
 
-"on":
+on:
   schedule:
     # 每天 09:00 北京时间 = 01:00 UTC
     - cron: "0 1 * * *"
