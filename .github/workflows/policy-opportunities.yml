@@ -179,8 +179,11 @@ jobs:
           echo "=== Step 7: Triggering Pages rebuild ==="
           # fork 限制：GITHUB_TOKEN + pages:write = 403，需手动触发
           # 尝试 API 触发，失败不影响
-          gh api repos/${{ github.repository }}/pages/builds -X POST 2>&1 || \
-          echo "Pages rebuild skipped (fork limitation — manual trigger needed)"
+          if gh api repos/${{ github.repository }}/pages/builds -X POST 2>&1; then
+            echo "Pages rebuild triggered successfully"
+          else
+            echo "Pages rebuild skipped (fork limitation — manual trigger needed)"
+          fi
 
       # ── 上报 OpenClaw（S/A 级政策发现） ─────────────────
       - name: Notify OpenClaw webhook
